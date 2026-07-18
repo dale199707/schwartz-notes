@@ -29,7 +29,7 @@
       if (!lines[i].includes('|') || !lines[i + 1] || !/^\s*\|?\s*:?-+/.test(lines[i + 1])) continue;
       const headers = row(lines[i]); const rows = []; i += 2;
       while (i < lines.length && lines[i].includes('|')) { rows.push(row(lines[i])); i += 1; }
-      i -= 1; output.push({ headers, rows });
+      i -= 1; output.push([headers, ...rows]);
     }
     return output;
   };
@@ -52,11 +52,12 @@
     }];
   };
 
-  window.CLAUDE_NOTES_PENDING = Promise.all(files.map(file => fetch(file).then(response => {
+  window.loadMarkdownNotes = chapterFiles => Promise.all(chapterFiles.map(file => fetch(file).then(response => {
     if (!response.ok) throw new Error(`無法載入 ${file}`);
     return response.text();
   }))).then(texts => {
     const chapters = Object.fromEntries(texts.map(parse).filter(Boolean));
     window.CLAUDE_NOTES = Object.assign(window.CLAUDE_NOTES || {}, chapters);
   }).catch(error => console.error('新增章節載入失敗：', error));
+  window.CLAUDE_NOTES_PENDING = window.loadMarkdownNotes(files);
 }());
