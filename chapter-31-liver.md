@@ -1,0 +1,51 @@
+# Chapter 31: Liver
+
+## 核心整理
+
+- 肝臟外科解剖以 **Couinaud 8 段** 為基礎（依 portal 與 hepatic vein 分界）；**Cantlie line**（IVC 到 gallbladder fossa）分左右功能葉。切除計畫依段落血流供應而非表面裂溝。  
+- 肝血流雙重供應：**portal vein（約 75% 血流）＋hepatic artery（約 25% 血流、約一半氧供）**；膽汁引流與 portal/arterial 走行相伴（portal triad）。  
+- **肝切除的安全關鍵是 future liver remnant（FLR）**：正常肝需保留約 ≥20–25%、化療後或肝硬化需更多（約 30–40%＋）；不足者可 **portal vein embolization** 誘導肥大，或分階段（含 ALPPS）。  
+- 肝功能與手術風險評估：肝硬化以 **Child-Pugh** 與 **MELD** 分級；門脈高壓、膽紅素升高、血小板低下是切除高風險指標。  
+- **良性病灶**：**hemangioma**（最常見，多觀察）、**focal nodular hyperplasia（FNH，中央疤、不需切除）**、**hepatic adenoma**（與口服避孕藥/雄性素相關，\>5 cm、男性、β-catenin 型有出血/惡性風險，考慮切除）。  
+- **肝膿瘍**：pyogenic（多為膽道來源、polymicrobial，處置為引流＋抗生素）與 amebic（Entamoeba，多先以 metronidazole 藥物治療）。  
+- **Hepatocellular carcinoma（HCC）** 多發生於 **肝硬化/慢性 B、C 肝炎、NAFLD** 背景；診斷可依影像特徵（動脈期增強、washout；LI-RADS）於高風險者免切片確診。  
+- **HCC 可切除性看腫瘤範圍與肝功能儲備**：局限、肝功能佳、FLR 足者可切除；不可切除但符合條件者考慮消融、經動脈治療（TACE/TARE）或移植。  
+- **肝移植（HCC）以 Milan criteria** 為經典依據（單顆 ≤5 cm 或 ≤3 顆且各 ≤3 cm、無血管侵犯/轉移）；部分中心採擴大標準。  
+- **大腸直腸癌肝轉移（CRLM）** 是外科可治癒的重要情境：可切除者手術（± 圍手術期化療）帶來長期存活；初始不可切除者可經 **conversion chemotherapy** 或 PVE 後轉為可切除。  
+- **切除原則**：達 negative margin、保留足夠 FLR 與流入/流出道；技術含解剖性 vs 非解剖性切除、低中心靜脈壓麻醉以減少出血、術中超音波定位。  
+- **術後併發症**：出血、膽漏、肝衰竭（post-hepatectomy liver failure，與 FLR 不足相關）、腹水、感染。
+
+## Clinical pearl
+
+- **切多少肝，先算 FLR**：決定能否安全切除的不是腫瘤大小，而是 **殘肝體積與品質**；不足時先 PVE 或分階段——核心 decision point。  
+- **高風險背景的肝腫塊，影像常可免切片**：肝硬化病人典型動脈期增強＋washout 即可診斷 HCC，貿然切片有出血與播種風險。  
+- **CRLM 要「可切就積極」**：即使多發或雙葉，只要能達 R0 並保留足夠殘肝，手術（含 conversion 後）仍可能治癒，別過早判定不可切。  
+- **hepatic adenoma 男性或 \>5 cm 要當心**：出血與惡性轉化風險升高，處置門檻低於一般良性病灶。
+
+## 快速比較表
+
+| 良性病灶 | 特徵 | 處置 |
+| :---- | :---- | :---- |
+| Hemangioma | 最常見、影像典型 | 多觀察 |
+| FNH | 中央疤、女性 | 觀察、少需切除 |
+| Hepatic adenoma | OCP/雄性素相關 | \>5cm/男性/β-catenin 型考慮切除 |
+| 肝囊腫 | 單純、薄壁 | 無症狀觀察 |
+
+| HCC 情境 | 條件 | 主要選項 |
+| :---- | :---- | :---- |
+| 可切除 | 局限、肝功能佳、FLR 足 | 手術切除 |
+| 符合移植 | Milan criteria | 肝移植 |
+| 不可切除局限 | 肝功能受限/位置 | 消融、TACE/TARE |
+| 進展/轉移 | 血管侵犯/肝外 | 系統治療 |
+
+## 後續證據更新
+
+- **晚期 HCC 一線系統治療改為免疫＋抗血管新生**：IMbrave150（NEJM 2020）顯示 **atezolizumab＋bevacizumab** 相較 sorafenib 顯著延長 overall 與 progression-free survival，取代單藥 TKI 成為多數不可切除／晚期 HCC 的一線。**適用／限制**：需評估出血風險（治療前建議處理食道靜脈曲張）、自體免疫與肝功能；Child-Pugh A 為主要證據族群。  
+- **系統治療進步牽動可切除性與移植前橋接策略**：更有效的系統/局部治療使部分原不可切除 HCC 或 CRLM 有 downstaging／conversion 機會，強化多科團隊整合。**適用／限制**：downstaging 後手術/移植的長期結局仍在累積，須個別化並符合中心條件。
+
+## References
+
+- [Finn RS 等（IMbrave150），2020，Atezolizumab plus Bevacizumab in Unresectable Hepatocellular Carcinoma（NEJM）](https://pubmed.ncbi.nlm.nih.gov/32402160/)
+- [Singal AG 等，2023，AASLD Practice Guidance on Prevention, Diagnosis, and Treatment of Hepatocellular Carcinoma（Hepatology）](https://pubmed.ncbi.nlm.nih.gov/37199193/)
+
+註：後續證據更新之文獻經由 PubMed 檢索並核對。教材觀點以《Schwartz's Principles of Surgery, 11e (2019)》為基準；HCC 分期治療與移植標準應以最新指引（如 BCLC）為準。  
