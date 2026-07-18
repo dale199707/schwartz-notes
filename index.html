@@ -26,7 +26,9 @@
   <script src="notes.js"></script>
   <script src="notes-extra.js"></script>
   <script src="notes-extra-2.js"></script>
-  <script>
+  <script src="notes-extra-3.js"></script>
+  <script type="module">
+    await window.CLAUDE_NOTES_PENDING;
     const ready = { ...(window.CLAUDE_NOTES || {}),
       4:{title:'Hemostasis, Surgical Bleeding, and Transfusion',zh:'止血、手術出血與輸血',part:'Basic Considerations',bullets:['手術出血的處置先依循 resuscitation：辨識出血來源、評估 physiology，並同步建立 source control。','Massive hemorrhage 時避免單純大量 crystalloid；應及早啟動以 blood component 為核心的 balanced resuscitation。','Coagulopathy 常由 hypothermia、acidemia、hypocalcemia 與 dilution 交互惡化；處置必須同時逆轉這些因素。','Transfusion 是治療，不是單純校正數值；每次給血都要連結到臨床出血、氧合與灌流目標。'],tip:'處理進行性出血時，請同時追蹤 core temperature、ionized calcium、acid-base status 與凝血功能；只看 hemoglobin 會低估問題。',rows:[['狀況','優先思考','實務提示'],['Uncontrolled bleeding','source control','手術、packing、angioembolization 或暫時性控制依情境選擇。'],['Trauma coagulopathy','damage-control resuscitation','及早與 blood bank 溝通，縮短 component delivery 時間。'],['大量輸血','代謝併發症','留意 citrate-related hypocalcemia 與 hypothermia。']]},
       5:{title:'Shock',zh:'Shock',part:'Basic Considerations',bullets:['Shock 是 tissue perfusion 與 cellular oxygen utilization 失衡的臨床症候群；正常血壓不能排除早期 shock。','先區分 hemorrhagic、cardiogenic、distributive 與 obstructive shock，再針對可逆原因處置。','持續 reassessment 比單點數值重要：mental status、skin perfusion、urine output、lactate trend 與 bedside ultrasound 應整合判讀。','Resuscitation 的終點是恢復 adequate perfusion，而非無限制補液；過量 fluid 會造成 edema、pulmonary complications 與 abdominal compartment syndrome。'],tip:'Shock 的首要問題是「病人為何灌流不足？」；先找出并處理原因，vasopressor 與 fluid 才有正確位置。',rows:[['類型','關鍵病理生理','初始方向'],['Hemorrhagic','intravascular volume loss','止血 + blood product resuscitation'],['Cardiogenic','pump failure','評估 ischemia / mechanical cause，謹慎補液'],['Distributive','vasodilation / maldistribution','處理感染或過敏原因，必要時 vasopressor'],['Obstructive','阻礙 filling 或 outflow','解除 tension pneumothorax、tamponade、massive PE 等原因']]},
