@@ -22,6 +22,8 @@
 
 Claude 交付的 Markdown 原稿保留於專案根目錄；網站使用 `notes.js` 與後續資料檔載入已審核章節。日後新增章節時，先完成 Markdown 與來源核對，再同步更新網站資料。
 
+醫學內容另以 `validate-medical-chapter` skill 進行十題 evidence audit；逐章狀態與修訂前後分數記錄於 `audits/index.md`。格式完整不等同內容已驗證，只有 10/10 題皆獲獨立來源支持才標記通過。
+
 ## Claude 初稿交接格式
 
 Claude 產出的每一章請存為獨立 Markdown 檔，檔名使用 `chapter-XX-slug.md`，並嚴格依照下列欄位順序：

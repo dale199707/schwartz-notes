@@ -4,16 +4,16 @@
 
 - 燒傷嚴重度由 **深度** 與 **範圍（%TBSA）** 決定。深度分：superficial（epidermal，如曬傷，不計入 TBSA）、superficial/deep partial-thickness（dermal）、full-thickness（第三度，無痛、蠟白或焦黑）、與深達肌肉骨骼的第四度。  
 - **TBSA 估算**：成人用 **rule of nines**；不規則區用病人手掌（含指，約 1% TBSA）；兒童頭大腿小，須用 **Lund-Browder chart** 較準確。**只計 partial- 與 full-thickness**。  
-- **液體復甦（Parkland/consensus formula）**：第一個 24 小時給 lactated Ringer's，常用 **2–4 mL × 體重(kg) × %TBSA**；**前一半於前 8 小時**（自受傷時起算）給完，其餘 16 小時給完。兒童另需含糖維持液。  
-- 復甦以 **尿量** 為主要指標：成人目標 **0.5 mL/kg/hr**（約 30–50 mL/hr），兒童約 1 mL/kg/hr；依尿量滴定，避免固定速率。  
+- **Burn shock resuscitation**：成人通常在 ≥20% TBSA 才需公式化 IV resuscitation。2024 ABA guideline 建議以 **2 mL × kg × %TBSA** 的 LR 作初始 24 小時估算，前半自受傷時間起算於 8 小時內給；這只是起始點，不是必須「補滿」的處方。兒童門檻與公式依年齡/中心 protocol，另需 glucose-containing maintenance fluid。  
+- 復甦以成人尿量約 **0.5 mL/kg/hr** 為重要滴定指標，但須合併 MAP、mental status、lactate/base deficit、肢端灌流與 fluid balance；oliguria 也可能來自 AKI 或腹壓升高，不能只追尿量不斷加液。大型燒傷可選擇性監測 intra-abdominal/intraocular pressure。  
 - **Fluid creep**（過度復甦）致 pulmonary edema、腹腔室隔症候群（abdominal compartment syndrome）、四肢／眼窩壓迫；現代重點在「依反應滴定、避免給過頭」。  
-- **Inhalation injury** 大幅提高死亡率與液體需求：懷疑徵象含密閉空間受傷、顏面燒傷、鼻毛焦、碳末痰、聲音沙啞、carboxyhemoglobin 升高；門檻低地早期 **確保氣道（插管）**，因水腫會迅速惡化。  
+- **Inhalation injury** 大幅提高風險：密閉空間、口咽 soot、聲音改變、stridor、呼吸功增加或預期轉送/大量復甦時要及早評估 definitive airway。單有顏面燒傷或鼻毛焦並不足以證明需要插管；有進展性 upper-airway edema 風險時應在困難氣道形成前插管，並以 bronchoscopy 等評估 lower-airway injury。  
 - **Carbon monoxide 中毒**：pulse oximetry 會假性正常，須測 carboxyhemoglobin；治療為 100% O₂。懷疑火場合併 **cyanide** 中毒（持續乳酸性酸中毒、blood gas 異常）者考慮 hydroxocobalamin。  
 - **Escharotomy**：環狀（circumferential）full-thickness 燒傷造成肢體灌流受損或胸壁限制通氣時，需緊急切開焦痂減壓。  
 - **Early excision and grafting**：對 deep partial- 與 full-thickness 傷口，早期切除壞死組織並植皮可降低感染、住院天數與死亡率，是現代燒傷處置核心。  
-- **感染** 是燒傷後主要死因：不建議全身性預防性抗生素；以 **topical antimicrobials**（silver sulfadiazine、mafenide acetate、silver dressings）為主，並警覺 burn wound sepsis。  
-- 代謝：大面積燒傷造成極度 **hypermetabolism 與 catabolism**，需高熱量高蛋白營養支持、早期 enteral feeding、環境保溫；常輔以 β-blockade（propranolol）與 oxandrolone 以減少肌肉流失。  
-- **轉診 burn center** 準則（ABA）：partial-thickness \>10% TBSA、涉及臉/手/足/生殖器/會陰/大關節、任何 full-thickness、電傷（含雷擊）、化學傷、inhalation injury、合併重大共病或創傷、以及需特殊社會/復健照護之孩童。
+- **感染預防**：不建議常規 systemic prophylactic antibiotics。Topical agent/dressing 依深度、位置、滲液與中心流程選擇；**silver sulfadiazine 不應被視為所有 partial-thickness burn 的預設選項**，因多項研究顯示較新 dressing 可減少換藥並較快 re-epithelialization。  
+- 大面積燒傷造成 **hypermetabolism/catabolism**，需早期 enteral nutrition、足量 protein、保溫、復健與血糖管理。Propranolol 只在 burn-center 監測下用於選定病人；**oxandrolone 不宜再寫成常規輔助藥**，美國 FDA 已因缺乏充分 efficacy 且有肝臟/代謝安全疑慮撤回 Oxandrin approval。  
+- **ABA burn center referral（2022）**：立即會診並考慮轉送包括 full-thickness burn、partial-thickness ≥10% TBSA、critical area 的 deep partial/full-thickness burn、疑 inhalation injury、高電壓/雷擊、chemical injury、重要共病/合併創傷或疼痛難控；小於 10% 或任何可能較深的 burn 也建議會診。所有 pediatric burn 都可能因照護、復健或 non-accidental trauma 評估而受益。
 
 ## Clinical pearl
 
@@ -33,19 +33,22 @@
 
 | 復甦要點 | 成人 | 兒童 | 備註 |
 | :---- | :---- | :---- | :---- |
-| 公式 | 2–4 mL×kg×%TBSA LR | 同式＋含糖維持液 | 前半 8 小時給完 |
+| 起始公式 | 2 mL×kg×%TBSA LR（通常 ≥20% TBSA） | 依年齡/中心公式＋含糖維持液 | 自受傷時起算；依反應滴定 |
 | 尿量目標 | 0.5 mL/kg/hr | 1 mL/kg/hr | 主要滴定指標 |
 | 估算工具 | Rule of nines | Lund-Browder | 手掌≈1% |
 | 過度復甦風險 | ACS、肺水腫 | 同 | 稱 fluid creep |
 
 ## 後續證據更新
 
-- **國際燒傷處置以 ISBI 2018 Practice Guidelines 為現行基準**：相較 2019 教材，正式化了「以尿量滴定、避免 over-resuscitation」、早期切除植皮、對常規全身性預防抗生素持保留態度等原則。**適用／限制**：屬 consensus 指引、多為 low–moderate certainty，資源有限地區需調整。  
-- **早期 albumin（colloid rescue）可減少復甦晶體量與 fluid creep**：一項兒童 RCT（Pediatr Crit Care Med 2016）顯示 8–12 小時起給 5% albumin，較 24 小時給者顯著降低所需晶體量、fluid creep 發生率並縮短住院。**適用／限制**：為單中心、小樣本、**兒童（15–45% TBSA）** 研究，不可直接外推成人；反映「colloid 於復甦後段有角色」的方向，具體時機仍依中心經驗與最新指引。
+- **成人 burn shock resuscitation 以 ABA 2024 CPG 更新**：對 ≥20% TBSA 成人，建議 2 mL/kg/%TBSA 作起始估算並依反應調整；較大燒傷可考慮 human albumin 以降低總 resuscitation volume。**適用／限制**：albumin 的確切起始時機與 survival benefit 不確定，不能把小型兒童研究直接外推成人。  
+- **Oxandrolone 常規使用需撤回**：FDA 於 2023 年認定 Oxandrin 因 safety/effectiveness 理由撤市，列出 peliosis hepatis、liver tumor 與不利 lipid change 等風險。教材中的歷史 burn practice 不應再當成一般建議。
 
 ## References
 
 - [ISBI Practice Guidelines Committee，2018，ISBI Practice Guidelines for Burn Care, Part 2（Burns）](https://pubmed.ncbi.nlm.nih.gov/30480960/)  
 - [Müller Dittrich MH 等，2016，Evaluation of the "Early" Use of Albumin in Children with Extensive Burns: A RCT（Pediatr Crit Care Med）](https://doi.org/10.1097/PCC.0000000000000728)
+- [Cartotto R 等，2024，American Burn Association Clinical Practice Guidelines on Burn Shock Resuscitation](https://pubmed.ncbi.nlm.nih.gov/38051821/)  
+- [American Burn Association，2022，Guidelines for Burn Patient Referral](https://www.ameriburn.org/burn-care-team/resources/guidelines-for-burn-patient-referral)  
+- [U.S. FDA，2023，Determination That Oxandrin Was Withdrawn for Reasons of Safety or Effectiveness](https://www.govinfo.gov/content/pkg/FR-2023-09-13/pdf/2023-19796.pdf)
 
 註：後續證據更新之文獻經由 PubMed 檢索並核對。教材觀點以《Schwartz's Principles of Surgery, 11e (2019)》為基準。  

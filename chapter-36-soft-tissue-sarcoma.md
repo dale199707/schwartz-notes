@@ -6,12 +6,12 @@
 - 好發部位：**四肢（最常見，尤其大腿）**、retroperitoneum、軀幹、頭頸；不同部位處置與可切除性差異大。  
 - 危險因子：多為偶發；已知關聯含 **放射線暴露史、某些遺傳症候群（NF1、Li-Fraumeni、Gardner/FAP 相關 desmoid）、慢性淋巴水腫（lymphangiosarcoma）**、特定化學物質。  
 - **警訊（red flags）**：**深部、\>5 cm、快速增大或持續存在的軟組織腫塊** 應視為 sarcoma 直到證實為否。  
-- **診斷靠影像＋切片**：肢體以 **MRI**、腹膜後以 CT；**core needle biopsy**（必要時影像導引）為主，**切片路徑須規劃於日後可一併切除的方向**，避免污染多個腔室。  
-- **分級（grade）是預後與轉移風險的關鍵**：高惡性度腫瘤易 **血行轉移至肺**；淋巴轉移少見（少數組織型例外）。分期整合大小、深度、grade 與轉移。  
-- **治療核心是達 negative margin 的廣泛切除（wide local excision）**；肢體以 **limb-sparing surgery＋放療** 取代截肢已成標準（結果相當且保留功能）。  
+- **診斷靠影像＋切片，且應在未切除前轉介 sarcoma team**：肢體以 **MRI**、retroperitoneum 以 contrast CT；**image-guided core needle biopsy** 為標準。切片路徑由後續手術團隊規劃在可一併切除的方向，但不應為追求理想軌跡而延誤必要診斷。  
+- **分級（grade）是預後與轉移風險的關鍵**：高惡性度腫瘤易 **血行轉移至肺**；淋巴轉移整體少見，但 clear cell sarcoma、epithelioid sarcoma、rhabdomyosarcoma、angiosarcoma 等特定 subtype 須依風險評估 regional nodes。分期整合大小、深度、grade 與轉移。  
+- **治療核心是完整切除並達 negative microscopic margin**，而非套用固定幾公分的「wide margin」。肢體手術以 oncologic control、limb preservation 與功能共同決策；多數可用 limb-sparing surgery ± radiotherapy，截肢保留給無法取得適當邊界或無法保留有功能肢體者。  
 - **放療角色**：對高惡性度、大或深部肢體 STS，**術前或術後放療** 改善局部控制；術前放療野較小、劑量較低但傷口併發症較多，術後反之。  
 - **化療角色有限且具爭議**：對特定組織型（如某些高惡性度、化療敏感型）與轉移病灶考慮，非全體常規。  
-- **Retroperitoneal sarcoma（RPS）** 以 **liposarcoma、leiomyosarcoma** 為主；處置以 **完整 en-bloc 切除（常需合併切除鄰近受累器官）** 為主，局部復發是主要挑戰。  
+- **Retroperitoneal sarcoma（RPS）** 以 **liposarcoma、leiomyosarcoma** 為主；處置是在高量 sarcoma center 依 histology、影像解剖與病人狀態規劃完整 en-bloc resection。鄰近器官是否切除不能只看「肉眼受侵」或一律擴大，而應平衡 subtype-specific local recurrence risk、可取得邊界與手術 morbidity。  
 - **肺轉移（oligometastatic）** 選定病人可考慮 **metastasectomy**；GIST 為特殊 STS，以手術＋imatinib 處置（見胃部章）。
 
 ## Clinical pearl
@@ -19,7 +19,7 @@
 - **深部、\>5 cm、變大的腫塊先當 sarcoma**：不要當「大脂肪瘤」隨意 shell-out——先影像＋core biopsy 與多科規劃，是最關鍵 decision point。  
 - **切片路徑要為日後手術鋪路**：不當的切片方向會污染組織面、增加後續廣切與復發風險，是重要陷阱。  
 - **肢體 STS 追蹤肺部**：高惡性度者主要血行轉移到肺，追蹤影像應涵蓋胸部。  
-- **RPS 靠一次完整切除**：完整 en-bloc（必要時含鄰近器官）比破壞後補救預後好，需在肉瘤中心處理。
+- **RPS 第一刀最重要，但切除範圍要個別化**：由 sarcoma center 依 histology 與解剖做 en-bloc plan；不是「看到相鄰器官就全切」，也不是只切明顯侵犯處。
 
 ## 快速比較表
 
@@ -39,12 +39,15 @@
 
 ## 後續證據更新
 
-- **腹膜後肉瘤「常規術前放療」未改善腹部無復發存活（STRASS）**：STRASS（Bonvalot 等，Lancet Oncol 2020）顯示對 RPS，**術前放療＋手術** 相較 **單純手術**，主要終點（abdominal recurrence-free survival）**無顯著差異**，故不建議常規對所有 RPS 加術前放療。**適用／限制**：可能對特定組織型（如某些 liposarcoma）之次族群有局部控制益處，仍在探討；決策應於肉瘤中心多科評估。  
-- 相較 2019 教材，**肢體 STS 的保肢手術＋（選擇性）放療** 與 **肉瘤中心集中化照護** 更為確立；分子分型與標靶（如 GIST 的 TKI）持續擴展治療選項。**適用／限制**：組織型別高度異質，治療須個別化並由專門團隊主導。
+- **腹膜後肉瘤「常規術前放療」未改善腹部無復發存活（STRASS）**：STRASS 對全體 RPS 的主要終點為陰性，故不應對所有 RPS 常規加術前 radiotherapy。後續 STREXIT pooled analysis 對 well-differentiated 與部分 grade 1–2 dedifferentiated liposarcoma 提出可能訊號，但屬非隨機、探索性結果，不能宣稱已證實 overall-survival benefit。  
+- **分子診斷已是 subtype-specific treatment 的一部分**：例如 GIST 的 KIT/PDGFRA、NTRK fusion sarcoma、ALK-rearranged inflammatory myofibroblastic tumor，以及需要 MDM2 amplification 支持診斷的 liposarcoma。**適用／限制**：檢測與治療選擇須由專業 pathology/molecular tumor board 結合形態學判讀。
 
 ## References
 
 - [Bonvalot S 等（STRASS），2020，Preoperative Radiotherapy plus Surgery versus Surgery Alone for Retroperitoneal Sarcoma（Lancet Oncology）](https://pubmed.ncbi.nlm.nih.gov/32941794/)
 - [Gronchi A 等，2021，ESMO-EURACAN-GENTURIS Clinical Practice Guidelines for Soft Tissue and Visceral Sarcomas](https://pubmed.ncbi.nlm.nih.gov/34303806/)
+- [Raut CP 等，2021，Management of Primary Retroperitoneal Sarcoma in the Adult: TARPSWG Consensus](https://pubmed.ncbi.nlm.nih.gov/33852100/)
+- [Callegaro D 等，2022，STREXIT: Preoperative Radiotherapy in Primary Retroperitoneal Sarcoma](https://pubmed.ncbi.nlm.nih.gov/35833413/)
+- [British Sarcoma Group，2024，UK Guidelines for the Management of Soft Tissue Sarcomas](https://www.nature.com/articles/s41416-024-02674-y)
 
 註：後續證據更新之文獻經由 PubMed 檢索並核對。教材觀點以《Schwartz's Principles of Surgery, 11e (2019)》為基準；肉瘤分型與治療應以最新專科指引與多科團隊評估為準。  

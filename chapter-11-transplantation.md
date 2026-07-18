@@ -3,10 +3,10 @@
 ## 核心整理
 
 - **移植免疫學核心是 MHC/HLA**：class I（HLA-A、B、C，幾乎所有有核細胞）與 class II（HLA-DR、DQ、DP，抗原呈現細胞）。HLA 不合程度與排斥風險相關；腎移植特別重視 HLA 配對與 **panel reactive antibody（PRA）**。  
-- **同種辨識（allorecognition）** 分 **direct**（受者 T 細胞辨識供者 APC 上完整供者 MHC，主導 acute rejection）與 **indirect**（受者 APC 呈現處理過的供者 peptide，主導 chronic rejection）兩條路徑。  
-- **排斥分類**：**hyperacute**（分鐘–小時，預存抗體，現因 crossmatch 已罕見）、**acute cellular**（T 細胞為主，數日–數月）、**acute antibody-mediated（AMR）**（donor-specific antibody，C4d 沉積）、**chronic**（數月–數年，血管內膜增厚、纖維化，難逆轉）。  
-- **移植前檢驗**：ABO 血型相容、**HLA typing**、**crossmatch**（受者血清對供者淋巴球，陽性為禁忌）、PRA/DSA 篩檢。  
-- 免疫抑制分三階段：**induction**（如 basiliximab（anti-IL-2R）、antithymocyte globulin）、**maintenance**、與 **rejection treatment**（高劑量類固醇；抗體介入者用血漿置換、IVIG、rituximab）。  
+- **Allorecognition** 包含 direct、indirect 與 semi-direct pathway。Direct response 常在早期較強，indirect response 對長期 alloantibody/chronic injury 重要；但 acute rejection 可同時有 direct 與 indirect response，不能把兩條路徑硬等同於 acute vs chronic。  
+- **排斥分類**：hyperacute、T-cell–mediated rejection、antibody-mediated rejection（AMR）與 chronic active injury。AMR 診斷須依器官的整合標準；以 kidney Banff 2022 為例需結合 histologic microvascular injury、antibody-endothelium interaction（C4d 或 validated molecular evidence）與 DSA/替代證據，存在 C4d-negative 與 DSA-negative phenotype，不能只寫「DSA＋C4d」。  
+- **移植前 immunologic risk assessment**：ABO、HLA typing、PRA/cPRA、DSA 與 physical/virtual crossmatch。強陽性 donor-specific crossmatch 通常阻止直接進行該次 standard transplant，但不是「永遠不能移植」；優先考慮 compatible donor/kidney-paired exchange，極難配對者可在專門中心討論 desensitization。ABO-incompatible transplant 亦可在特定 protocol 下執行。  
+- 免疫抑制分 induction、maintenance 與 rejection treatment。T-cell–mediated rejection 常用 corticosteroid±T-cell depletion；AMR 治療依 early/late、active/chronic-active phenotype 個別化。Plasma exchange/immunoadsorption±IVIG 是常見 early active AMR 策略，但整體證據低；**rituximab 並非已證實的普遍標準**，尤其 chronic active AMR 缺乏可靠 RCT benefit。  
 - 維持性免疫抑制常用三合一：**calcineurin inhibitor（tacrolimus 或 cyclosporine，骨幹）＋ antimetabolite（mycophenolate）＋ corticosteroid**；部分用 mTOR inhibitor（sirolimus/everolimus）。  
 - **CNI 毒性** 需牢記：**nephrotoxicity**（tacrolimus、cyclosporine 皆是）、neurotoxicity、高血糖（tacrolimus 較易致 new-onset diabetes）、cyclosporine 特有 gingival hyperplasia 與多毛，tacrolimus 較少。  
 - 長期免疫抑制併發症：**機會性感染**（CMV、BK virus、PJP、fungal）與 **惡性腫瘤**（皮膚癌、PTLD／EBV 相關 lymphoproliferative disorder）風險上升；須預防性用藥與監測。  
@@ -28,7 +28,7 @@
 | :---- | :---- | :---- | :---- |
 | Hyperacute | 分鐘–小時 | 預存抗體 | 立即血栓；靠 crossmatch 預防 |
 | Acute cellular | 數日–數月 | T 細胞 | 類固醇衝擊、ATG |
-| Acute AMR | 數日–數週 | DSA、C4d | 血漿置換、IVIG、rituximab |
+| Active AMR | 可早可晚 | MVI＋抗體交互作用證據±DSA；可 C4d-negative | 依 phenotype：PLEX/immunoadsorption±IVIG；其他藥證據有限 |
 | Chronic | 月–年 | 免疫＋非免疫 | 血管硬化/纖維化，難逆轉 |
 
 | 免疫抑制劑 | 類別 | 關鍵毒性 |
@@ -42,9 +42,15 @@
 
 - **DCD 心臟移植經機器灌流已成可行的擴充供器官來源**：一項多中心 RCT（Schroder 等，NEJM 2023）比較 DCD 心臟（多以 normothermic machine perfusion 復原評估）與傳統 DBD 心臟移植，6 個月存活 **non-inferior**，顯著擴大可用心臟供者池。**適用／限制**：需 machine perfusion 技術與經驗、成本較高，長期結局仍在累積。  
 - 相較 2019 教材以 static cold storage 為主，**machine perfusion（含 normothermic）** 已從研究走向臨床，用於評估與復原邊緣供器官（心、肝、腎），是擴大供源的主軸方向。**適用／限制**：不同器官證據成熟度不一，並非所有中心可執行。
+- **Kidney AMR 診斷已不能只背 DSA/C4d**：Banff 2022 新增 probable AMR 與「MVI、DSA-negative、C4d-negative」等 phenotype，反映 histology、serology 與 molecular data 的不完全重疊；治療前須以 transplant pathology 標準定義 phenotype。  
+- **BK surveillance 需具體化**：2024 international consensus 建議 kidney transplant 後 plasma BKPyV-DNAemia monthly 至第 9 月、再每 3 個月至 2 年；持續或高量 DNAemia 時以分階段降低 immunosuppression 為核心，leflunomide/cidofovir/quinolone/IVIG 不作常規。
 
 ## References
 
 - [Schroder JN 等，2023，Transplantation Outcomes with Donor Hearts after Circulatory Death（NEJM）](https://pubmed.ncbi.nlm.nih.gov/37285526/)
+- [Naesens M 等，2024，Banff 2022 Kidney Meeting Report](https://pubmed.ncbi.nlm.nih.gov/38032300/)  
+- [Mamode N 等，2022，European Guideline for Kidney Transplant Patients with HLA Antibodies](https://pubmed.ncbi.nlm.nih.gov/36033645/)  
+- [Kotton CN 等，2024，Second International Consensus Guidelines on BK Polyomavirus](https://pubmed.ncbi.nlm.nih.gov/38605438/)  
+- [Maltzman JS 等，2025，Antibody-mediated Rejection—Treatment Standard](https://pubmed.ncbi.nlm.nih.gov/40440205/)
 
 註：後續證據更新之文獻經由 PubMed 檢索並核對。教材觀點以《Schwartz's Principles of Surgery, 11e (2019)》為基準；免疫抑制與器官分配細節依各國/各中心方案與最新指引為準。  

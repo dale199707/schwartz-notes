@@ -42,8 +42,8 @@
     if (!heading) return null;
     const id = Number(heading[1]);
     return [id, {
-      title: `Chapter ${String(id).padStart(2, '0')} · Claude 初稿（已核對引用）`,
-      zh: clean(heading[2]), part: 'Claude 初稿（已核對引用）',
+      title: `Chapter ${String(id).padStart(2, '0')} · Claude 初稿 · Codex 驗證版`,
+      zh: clean(heading[2]), part: 'Claude 初稿 · Codex 驗證版',
       bullets: bullets(section(text, '核心整理')),
       pearls: bullets(section(text, 'Clinical pearl')),
       tables: tables(section(text, '快速比較表')),

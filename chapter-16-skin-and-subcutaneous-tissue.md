@@ -7,9 +7,9 @@
 - **癌前病變**：**actinic keratosis**（日光曝曬、可進展為 SCC）；**Bowen disease** 為 SCC in situ。  
 - **Basal cell carcinoma（BCC）** 是最常見皮膚癌：日光曝曬區、生長緩慢、**極少轉移**，但局部破壞（rodent ulcer）；處置為切除（高風險/顏面用 **Mohs**）。  
 - **Squamous cell carcinoma（SCC）**：與紫外線、免疫抑制、慢性傷口/瘢痕（Marjolin ulcer）相關，**具轉移潛能**（尤其唇、耳、免疫低下、大/深腫瘤）。  
-- **Melanoma** 診斷警訊 **ABCDE**（Asymmetry、Border、Color、Diameter、Evolving）；**Breslow 厚度** 是最重要預後因子，另看潰瘍與有絲分裂。  
+- **Melanoma** 警訊可用 **ABCDE**，但 amelanotic、nodular、acral 或 mucosal melanoma 可能不典型；確診需適當 biopsy。**Breslow thickness 與 ulceration** 是 T staging 核心，mitotic rate 具預後價值但 AJCC 8 不再用來區分 T1a/T1b。  
 - **Melanoma 切除邊界依 Breslow 厚度**：in situ 約 0.5–1 cm；≤1 mm 約 1 cm；\>1–2 mm 約 1–2 cm；\>2 mm 約 2 cm。  
-- **Sentinel lymph node biopsy（SLNB）** 用於中等厚度（約 \>0.8–1 mm 或有不良特徵）且臨床淋巴結陰性者，做 **分期**（而非治療性）。  
+- **SLNB** 是 staging/prognostic procedure，不是原發腫瘤的治療。通常對 ≥1.0 mm、cN0 melanoma 應提供；0.8–1.0 mm 或 <0.8 mm 但 ulcerated/其他高風險特徵者共同決策。執行時機應在 definitive wide excision 前完成 lymphatic mapping。  
 - **Merkel cell carcinoma**：神經內分泌來源、侵襲性高、與 Merkel cell polyomavirus 及免疫抑制相關，需廣泛切除＋SLNB ± 放療。  
 - **軟組織腫塊警訊**：**大（\>5 cm）、深（筋膜下）、快速增大、固定** 者疑 sarcoma，應 **影像＋core biopsy 並轉介**，**避免直接 shell-out/marginal excision**（會污染組織面）。  
 - **Hidradenitis suppurativa**：頂泌汗腺區慢性化膿、竇道與瘢痕；輕者藥物，重者廣泛切除。  
@@ -42,6 +42,7 @@
 
 - **SLN 陽性 melanoma 不需常規完成淋巴廓清**：MSLT-II（Faries 等，NEJM 2017）顯示 SLN 陽性者立即行 **completion lymph node dissection** 相較 **超音波監測**，未改善 melanoma-specific survival，但增加淋巴水腫。現多改採 **nodal ultrasound surveillance**。**適用／限制**：適用 SLN 陽性、可規律追蹤者；高腫瘤負荷或無法追蹤者仍個別化。  
 - **III 期（含 SLN 陽性）melanoma 術後輔助全身治療**：相較 2019 教材，**checkpoint inhibitor（anti-PD-1）** 與 **BRAF/MEK 抑制劑（BRAF 突變者）** 已成為切除後高風險 melanoma 的輔助標準，降低復發。**適用／限制**：依分期與 BRAF 狀態選擇，需評估免疫相關副作用；本章僅概述，用藥細節見腫瘤治療指引。
+- **Adjuvant therapy 已延伸至部分 stage IIB–IIC**：2024 European guidance 可在完全切除的 stage IIB–IV 討論 adjuvant treatment；stage II 主要為 anti-PD-1。**適用／限制**：需說明 recurrence-free benefit、尚未成熟或依 indication 不同的 overall-survival data 與 toxicity。
 
 ## References
 

@@ -4,14 +4,14 @@
 
 - 小腸分 duodenum、jejunum、ileum，是消化吸收主場：**近端吸收鐵、葉酸、多數養分**；**terminal ileum 專責吸收 vitamin B12 與 bile salts**（切除後易缺乏與膽鹽性腹瀉）。  
 - **Small bowel obstruction（SBO）** 最常見原因：**adhesions（沾黏，術後）**，其次 hernia、tumor；表現腹脹、絞痛、嘔吐、停止排氣排便，影像見擴張腸圈與 air-fluid levels。  
-- **SBO 初始處置**：NPO、鼻胃管減壓、輸液與電解質矯正；多數 **單純沾黏性 SBO 可先非手術處置** 並密切觀察。  
-- **SBO 手術指徵（red flags）**：**strangulation/ischemia**（持續劇痛、腹膜炎、發燒、白血球上升、乳酸升高、CT 見腸壁增厚/氣腫/游離氣體）、closed-loop obstruction、非手術無改善。  
+- **SBO 初始處置**：NPO、isotonic fluid 與電解質矯正；明顯嘔吐或胃/近端小腸擴張者做 nasogastric decompression。沒有 peritonitis、strangulation 或 ischemia 的 adhesive SBO 可先非手術處置並 serial examination。  
+- **SBO 手術指徵（red flags）**：腹膜炎、持續且非絞痛性疼痛、closed-loop、CT 見 reduced bowel-wall enhancement、mesenteric edema/free fluid、pneumatosis/portal venous gas 或 perforation。乳酸升高是晚期警訊，**正常乳酸不能排除早期 ischemia**。穩定 adhesive SBO 的非手術試驗通常不宜無限延長，約 **72 小時**仍無進展即重新評估手術。  
 - **Closed-loop 與 strangulation** 是外科急症：進展快、可致腸壞死，須即時手術，不宜久觀察。  
 - **Ileus（麻痺性腸阻塞）** 與機械性阻塞不同：無機械阻塞點，常見於術後、電解質異常、藥物；處置為支持與矯正誘因。  
-- **Crohn disease**：透壁性、跳躍性、可全消化道，好發 terminal ileum；併發狹窄、瘻管、膿瘍。**手術保留腸段**（僅處理併發症、避免廣泛切除以防 short bowel）。  
+- **Crohn disease**：透壁性、跳躍性、可全消化道，好發 terminal ileum；手術**不能治癒**，但可治療狹窄、瘻管、膿瘍與 refractory disease。原則是 sepsis control、營養與 steroid optimization、保留腸段；選定 localized ileocecal disease 也可由 IBD team 討論 early laparoscopic resection，而非等到所有藥物失敗。  
 - **Meckel diverticulum**：最常見先天性小腸異常（「2 法則」），為真性憩室含異位胃黏膜，可致出血、發炎、阻塞。  
 - **小腸腫瘤少見**：良性（leiomyoma、lipoma、adenoma）與惡性（**adenocarcinoma、neuroendocrine tumor（carcinoid）、lymphoma、GIST**）；小腸是 **NET 好發部位**，可致類癌症候群（肝轉移後）。  
-- **Short bowel syndrome**：廣泛切除後吸收不良，需 **terminal ileum 與 ileocecal valve** 之保留尤其重要；處置含營養支持（必要時 parenteral）、腸適應、藥物。  
+- **Short bowel syndrome/intestinal failure**：風險不只看剩餘公分數，也取決於 colon continuity、terminal ileum 與 ileocecal valve。處置含 oral rehydration、飲食與 antisecretory/antimotility therapy、parenteral support 與監測；對穩定且依賴 parenteral support 的選定病人可考慮 **GLP-2 analog teduglutide**。  
 - **腸繫膜缺血（mesenteric ischemia）**：急性（栓塞/血栓/NOMI）表現「疼痛與理學不成比例」，需緊急影像（CTA）與血管重建/切除；延遲致大範圍腸壞死。
 
 ## Clinical pearl
@@ -41,9 +41,13 @@
 
 - **水溶性顯影劑於沾黏性 SBO 的主要角色是預後分流**：對無腹膜炎或缺血徵象的單純沾黏性 SBO，**water-soluble contrast（如 Gastrografin）到達結腸**可高度預測非手術緩解。2019 年統合分析顯示住院時間縮短幅度有限，且未可靠降低手術率；不應將其當成取代手術的治療。**適用／限制**：不可用於延誤已有 strangulation／ischemia 徵象的手術處置。  
 - 相較 2019 教材，強化了 **CT 對辨識 closed-loop 與早期缺血** 的角色，以及「設定非手術試驗停損點」的實務原則。**適用／限制**：影像判讀需結合臨床與乳酸等指標。
+- **2024 ECCO Crohn surgical guideline**：強調 abscess drainage、營養與 steroid optimization、避免不必要停用 biologic，以及在適當 localized ileocecal disease 比較手術與藥物路徑。**限制**：決策需由 IBD 多科團隊依 phenotype 與既往治療個別化。
 
 ## References
 
 - [Journal of Gastrointestinal Surgery，2019，Therapeutic Role of Water-Soluble Contrast Media in Adhesive Small Bowel Obstruction（統合分析）](https://pubmed.ncbi.nlm.nih.gov/31485900/)
+- [ten Broek RPG 等，2018，Bologna Guidelines for Adhesive Small Bowel Obstruction](https://pubmed.ncbi.nlm.nih.gov/29946347/)
+- [Adamina M 等，2024，ECCO Guidelines on Crohn's Disease: Surgical Treatment](https://pubmed.ncbi.nlm.nih.gov/38878002/)
+- [DiBaise JK 等，2022，AGA Clinical Practice Update on Short Bowel Syndrome](https://doi.org/10.1016/j.cgh.2022.05.032)
 
 註：後續證據更新之文獻經由 PubMed 檢索並核對。教材觀點以《Schwartz's Principles of Surgery, 11e (2019)》為基準。  
