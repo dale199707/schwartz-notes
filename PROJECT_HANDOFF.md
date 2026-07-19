@@ -2,7 +2,7 @@
 
 最後更新：2026-07-19  
 目前正式分支：`main`  
-目前專案狀態：Schwartz 11th Edition 已完成，準備擴充為多書筆記網站
+目前專案狀態：Schwartz 11th Edition 已完成；`codex/multi-book-library` 已建立 ICU Book 53 章內容骨架
 
 ## 1. 新 Chat 必做的第一步
 
@@ -234,14 +234,22 @@ index.html
 
 ## 14. 目前下一步
 
-第一冊暫時不再新增功能。下一個專案目標是接收第二本醫學原文書，將現有單書網站安全改造成多書筆記庫。
+第一冊暫時不再新增內容。多書相容層已在 `codex/multi-book-library` 建立：
 
-新 Chat 應先向使用者確認第二本書的：
+- Schwartz 仍由原本 `notes*.js`、`chapter-*.md` 與 `audits/` 提供內容，54 章未搬動。
+- 新增 `books.js` 與 `books/<bookId>/book.json` 管理書目。
+- 書籍選單、搜尋、完成度、重要標記、個人筆記與 AI context 已加入 `bookId` 範圍。
+- 舊版 Schwartz localStorage 會複製到新鍵，但不刪除舊資料。
+- `The ICU Book, 5th Edition`（2025）已依原書目錄建立 16 sections、53 章占位稿、Markdown loader、Claude 規格與獨立 audit index。
+- ICU 章首 `status: draft` 時只顯示待整理；Claude 完稿並改為 `status: ready` 後會自動載入網站，但仍須另行完成十題 evidence audit 才能標為 `passed`。
+- ICU Chapter 1–10 已為 `ready`、通過結構檢查與逐章十題 evidence audit；目前內容進度 10 / 53，evidence audit 進度 10 / 53。
+- ICU 的 Claude 原稿固定放在 `books/icu-book-5e/claude/`；網站只讀取 `chapters/`。Codex 應先保存原稿，再做格式檢查與同步，不可讓 Claude 直接修改 audit 狀態。
 
-- 書名與 edition
-- 出版年份
-- 檔案所在資料夾
-- 章節數與目前已整理的檔案數
-- 是否沿用本交接檔的醫學內容規格
+下一步由 Claude 依 `books/icu-book-5e/CLAUDE_INSTRUCTIONS.md` 逐章整理，並遵守：
+
+- 只把指定的 ICU chapter Markdown 寫入 `books/icu-book-5e/claude/`，不改 `chapters/`、`audits/` 或 Schwartz 檔案。
+- 不逐段翻譯或大量轉錄原文，不使用教材圖片。
+- 每章完成時改為 `ready`，不可自行標記 `passed`。
+- 後續由 Codex 使用 `validate-medical-chapter` skill 完成每章十題 evidence audit。
 
 確認後先提出 migration 計畫與 branch 範圍，再開始實作。
