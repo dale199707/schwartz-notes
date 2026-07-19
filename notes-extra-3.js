@@ -43,14 +43,11 @@
     const heading = text.match(/^# Chapter\s+(\d+):\s*(.+)\r?$/m);
     if (!heading) return null;
     const id = Number(heading[1]);
-    const isVerified = id >= 1 && id <= 54;
-    const reviewLabel = isVerified
-      ? 'Claude 初稿 · Codex 驗證版'
-      : 'Claude 初稿 · 待 Codex 驗證';
     const validation = section(text, 'Codex 驗證補強（2026）');
     return [id, {
-      title: `Chapter ${String(id).padStart(2, '0')} · ${reviewLabel}`,
-      zh: clean(heading[2]), part: reviewLabel,
+      title: clean(heading[2]),
+      zh: clean(heading[2]),
+      part: '',
       bullets: [
         ...bullets(section(text, '核心整理')),
         ...bullets(validation)
