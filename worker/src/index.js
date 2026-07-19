@@ -62,15 +62,17 @@ export default {
         'Vary': 'Origin'
       }
     });
-    if (request.method !== 'POST' || new URL(request.url).pathname !== '/ask') return json({ error: '找不到服務。' }, 404, allowedOrigin);
+    const pathname = new URL(request.url).pathname;
+    if (request.method !== 'POST' || !['/ask', '/verify'].includes(pathname)) return json({ error: '找不到服務。' }, 404, allowedOrigin);
 
-    const clientKey = `${request.headers.get('CF-Connecting-IP') || 'unknown'}:ask`;
+    const clientKey = `${request.headers.get('CF-Connecting-IP') || 'unknown'}:ai-access`;
     const limit = await env.AI_RATE_LIMITER.limit({ key: clientKey });
     if (!limit.success) return json({ error: '查詢次數過多，請一分鐘後再試。' }, 429, allowedOrigin);
 
     if (!env.AI_ACCESS_PASSWORD) return json({ error: 'AI 使用密碼尚未設定。' }, 503, allowedOrigin);
     const suppliedPassword = request.headers.get('X-AI-Access-Password') || '';
     if (!(await secureEqual(suppliedPassword, env.AI_ACCESS_PASSWORD))) return json({ error: 'AI 使用密碼錯誤。' }, 401, allowedOrigin);
+    if (pathname === '/verify') return json({ ok: true }, 200, allowedOrigin);
 
     let body;
     try { body = await request.json(); } catch { return json({ error: '問題格式錯誤。' }, 400, allowedOrigin); }

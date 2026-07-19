@@ -8,6 +8,7 @@
 - 回傳可點擊的網路引用資料
 - 僅允許正式網站 origin
 - 以 `X-AI-Access-Password` request header 驗證 AI 使用密碼
+- 提供不呼叫 OpenAI 的 `/verify` 密碼驗證端點，成功後前端才解鎖查詢欄位
 - 限制每個來源每分鐘最多 6 次查詢
 - 限制問題長度，且不回傳 OpenAI 的內部錯誤內容
 
