@@ -33,6 +33,20 @@ function extractResult(data) {
   return { answer: part?.text || data.output_text || '', citations };
 }
 
+async function secureEqual(left, right) {
+  if (!left || !right) return false;
+  const encoder = new TextEncoder();
+  const [leftHash, rightHash] = await Promise.all([
+    crypto.subtle.digest('SHA-256', encoder.encode(left)),
+    crypto.subtle.digest('SHA-256', encoder.encode(right))
+  ]);
+  const leftBytes = new Uint8Array(leftHash);
+  const rightBytes = new Uint8Array(rightHash);
+  let difference = 0;
+  for (let index = 0; index < leftBytes.length; index += 1) difference |= leftBytes[index] ^ rightBytes[index];
+  return difference === 0;
+}
+
 export default {
   async fetch(request, env) {
     const allowedOrigin = env.ALLOWED_ORIGIN;
@@ -43,7 +57,7 @@ export default {
       headers: {
         'Access-Control-Allow-Origin': allowedOrigin,
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Headers': 'Content-Type, X-AI-Access-Password',
         'Access-Control-Max-Age': '86400',
         'Vary': 'Origin'
       }
@@ -53,6 +67,10 @@ export default {
     const clientKey = `${request.headers.get('CF-Connecting-IP') || 'unknown'}:ask`;
     const limit = await env.AI_RATE_LIMITER.limit({ key: clientKey });
     if (!limit.success) return json({ error: '查詢次數過多，請一分鐘後再試。' }, 429, allowedOrigin);
+
+    if (!env.AI_ACCESS_PASSWORD) return json({ error: 'AI 使用密碼尚未設定。' }, 503, allowedOrigin);
+    const suppliedPassword = request.headers.get('X-AI-Access-Password') || '';
+    if (!(await secureEqual(suppliedPassword, env.AI_ACCESS_PASSWORD))) return json({ error: 'AI 使用密碼錯誤。' }, 401, allowedOrigin);
 
     let body;
     try { body = await request.json(); } catch { return json({ error: '問題格式錯誤。' }, 400, allowedOrigin); }
