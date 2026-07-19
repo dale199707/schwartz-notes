@@ -9,7 +9,9 @@
     'chapter-37-inguinal-hernias.md'
   ];
 
-  const clean = value => value.trim().replace(/\\([<>*])/g, '$1');
+  const clean = value => value.trim()
+    .replace(/\\([<>*])/g, '$1')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1');
   const section = (text, heading) => {
     const match = text.match(new RegExp(`^## ${heading}\\r?$`, 'm'));
     if (!match || match.index === undefined) return '';
@@ -41,14 +43,25 @@
     const heading = text.match(/^# Chapter\s+(\d+):\s*(.+)\r?$/m);
     if (!heading) return null;
     const id = Number(heading[1]);
+    const isVerified = id >= 1 && id <= 54;
+    const reviewLabel = isVerified
+      ? 'Claude 初稿 · Codex 驗證版'
+      : 'Claude 初稿 · 待 Codex 驗證';
+    const validation = section(text, 'Codex 驗證補強（2026）');
     return [id, {
-      title: `Chapter ${String(id).padStart(2, '0')} · Claude 初稿 · Codex 驗證版`,
-      zh: clean(heading[2]), part: 'Claude 初稿 · Codex 驗證版',
-      bullets: bullets(section(text, '核心整理')),
+      title: `Chapter ${String(id).padStart(2, '0')} · ${reviewLabel}`,
+      zh: clean(heading[2]), part: reviewLabel,
+      bullets: [
+        ...bullets(section(text, '核心整理')),
+        ...bullets(validation)
+      ],
       pearls: bullets(section(text, 'Clinical pearl')),
       tables: tables(section(text, '快速比較表')),
       updates: bullets(section(text, '後續證據更新')),
-      references: references(section(text, 'References'))
+      references: [
+        ...references(section(text, 'References')),
+        ...references(validation)
+      ]
     }];
   };
 

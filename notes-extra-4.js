@@ -1,5 +1,6 @@
 (function () {
   const files = [
+    'chapter-01-leadership-in-surgery.md',
     'chapter-02-systemic-response-to-injury.md',
     'chapter-03-fluid-and-electrolyte-management.md',
     'chapter-04-hemostasis-surgical-bleeding-transfusion.md',
@@ -13,6 +14,7 @@
     'chapter-12-quality-and-patient-safety.md',
     'chapter-13-physiologic-monitoring.md',
     'chapter-14-minimally-invasive-surgery-robotics.md',
+    'chapter-15-molecular-biology-precision-surgery.md',
     'chapter-16-skin-and-subcutaneous-tissue.md',
     'chapter-17-the-breast.md',
     'chapter-18-head-and-neck.md',
@@ -35,7 +37,23 @@
     'chapter-35-abdominal-wall-ventral-hernia.md',
     'chapter-36-soft-tissue-sarcoma.md',
     'chapter-37-inguinal-hernias.md',
-    'chapter-38-thyroid-parathyroid-adrenal.md'
+    'chapter-38-thyroid-parathyroid-adrenal.md',
+    'chapter-39-pediatric-surgery.md',
+    'chapter-40-urology.md',
+    'chapter-41-gynecology.md',
+    'chapter-42-neurosurgery.md',
+    'chapter-43-orthopedic-surgery.md',
+    'chapter-44-surgery-of-the-hand-and-wrist.md',
+    'chapter-45-plastic-and-reconstructive-surgery.md',
+    'chapter-46-anesthesia-for-surgical-patients.md',
+    'chapter-47-surgical-considerations-in-older-adults.md',
+    'chapter-48-ethics-palliative-care-end-of-life.md',
+    'chapter-49-global-surgery.md',
+    'chapter-50-perioperative-care-enhanced-recovery.md',
+    'chapter-51-evidence-based-surgery.md',
+    'chapter-52-ambulatory-surgery.md',
+    'chapter-53-skills-and-simulation.md',
+    'chapter-54-web-based-education-social-media.md'
   ];
   const previous = window.CLAUDE_NOTES_PENDING;
   const current = window.loadMarkdownNotes(files);

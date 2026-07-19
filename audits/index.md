@@ -6,6 +6,7 @@
 
 | Chapter | Topic | Status | Pre-revision | Post-revision | Audit report |
 |---:|---|---|---:|---:|---|
+| 1 | Leadership in Surgery | passed | 6/10 | 10/10 | [Report](chapter-01-audit.md) |
 | 2 | Systemic Response to Injury | passed | 5/10 | 10/10 | [Report](chapter-02-audit.md) |
 | 3 | Fluid and Electrolyte Management | passed | 6/10 | 10/10 | [Report](chapter-03-audit.md) |
 | 4 | Hemostasis, Bleeding, and Transfusion | passed | 6/10 | 10/10 | [Report](chapter-04-audit.md) |
@@ -19,6 +20,7 @@
 | 12 | Quality and Patient Safety | passed | 7/10 | 10/10 | [Report](chapter-12-audit.md) |
 | 13 | Physiologic Monitoring | passed | 6/10 | 10/10 | [Report](chapter-13-audit.md) |
 | 14 | Minimally Invasive Surgery and Robotics | passed | 7/10 | 10/10 | [Report](chapter-14-audit.md) |
+| 15 | Molecular Biology and Precision Surgery | passed | 4/10 | 10/10 | [Report](chapter-15-audit.md) |
 | 16 | Skin and Subcutaneous Tissue | passed | 8/10 | 10/10 | [Report](chapter-16-audit.md) |
 | 17 | Breast | passed | 6/10 | 10/10 | [Report](chapter-17-audit.md) |
 | 18 | Head and Neck | passed | 7/10 | 10/10 | [Report](chapter-18-audit.md) |
@@ -42,3 +44,19 @@
 | 36 | Soft Tissue Sarcoma | passed | 6/10 | 10/10 | [Report](chapter-36-audit.md) |
 | 37 | Inguinal Hernias | passed | 6/10 | 10/10 | [Report](chapter-37-audit.md) |
 | 38 | Thyroid, Parathyroid, and Adrenal | passed | 5/10 | 10/10 | [Report](chapter-38-audit.md) |
+| 39 | Pediatric Surgery | passed | 5/10 | 10/10 | [Report](chapter-39-audit.md) |
+| 40 | Urology | passed | 4/10 | 10/10 | [Report](chapter-40-audit.md) |
+| 41 | Gynecology | passed | 4/10 | 10/10 | [Report](chapter-41-audit.md) |
+| 42 | Neurosurgery | passed | 4/10 | 10/10 | [Report](chapter-42-audit.md) |
+| 43 | Orthopedic Surgery | passed | 5/10 | 10/10 | [Report](chapter-43-audit.md) |
+| 44 | Surgery of the Hand and Wrist | passed | 5/10 | 10/10 | [Report](chapter-44-audit.md) |
+| 45 | Plastic and Reconstructive Surgery | passed | 5/10 | 10/10 | [Report](chapter-45-audit.md) |
+| 46 | Anesthesia for Surgical Patients | passed | 4/10 | 10/10 | [Report](chapter-46-audit.md) |
+| 47 | Surgical Considerations in Older Adults | passed | 5/10 | 10/10 | [Report](chapter-47-audit.md) |
+| 48 | Ethics, Palliative Care, and End of Life | passed | 5/10 | 10/10 | [Report](chapter-48-audit.md) |
+| 49 | Global Surgery | passed | 6/10 | 10/10 | [Report](chapter-49-audit.md) |
+| 50 | Perioperative Care and Enhanced Recovery | passed | 5/10 | 10/10 | [Report](chapter-50-audit.md) |
+| 51 | Evidence-Based Surgery | passed | 5/10 | 10/10 | [Report](chapter-51-audit.md) |
+| 52 | Ambulatory Surgery | passed | 5/10 | 10/10 | [Report](chapter-52-audit.md) |
+| 53 | Skills and Simulation | passed | 6/10 | 10/10 | [Report](chapter-53-audit.md) |
+| 54 | Web-Based Education and Social Media | passed | 4/10 | 10/10 | [Report](chapter-54-audit.md) |
