@@ -2,6 +2,8 @@
 
 個人學習用的靜態網站，將《Schwartz’s Principles of Surgery, 11th Edition》整理成繁體中文重點筆記，並保留英文醫學術語。
 
+若要在新的 Chat 接續本專案或新增第二本書，請先閱讀 [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md)。
+
 ## 使用方式
 
 直接以瀏覽器開啟 `index.html`。網站不需安裝套件或啟動伺服器。
@@ -20,7 +22,7 @@
 
 全書 54 章 Markdown 已全部到齊並加入網站，且全數完成 Codex 十題 evidence audit。
 
-Claude 交付的 Markdown 原稿保留於專案根目錄；網站使用 `notes.js` 與後續資料檔載入章節。所有章節均已達本專案的 10/10 audit 門檻，網站標示為「Codex 驗證版」；逐題依據可由 `audits/` 查閱。
+Claude 交付的 Markdown 原稿保留於專案根目錄；網站使用 `notes.js` 與後續資料檔載入章節。所有章節均已達本專案的 10/10 audit 門檻；網站已移除製作流程與模型名稱標籤，逐題依據可由 `audits/` 查閱。
 
 醫學內容另以 `validate-medical-chapter` skill 進行十題 evidence audit；逐章狀態與修訂前後分數記錄於 `audits/index.md`。格式完整不等同內容已驗證，只有 10/10 題皆獲獨立來源支持才標記通過。
 
