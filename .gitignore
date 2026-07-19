@@ -3,3 +3,9 @@
 
 # macOS
 .DS_Store
+
+# Local secrets
+.env.local
+worker/.dev.vars*
+worker/.env*
+worker/.wrangler/
