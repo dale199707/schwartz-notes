@@ -9,7 +9,7 @@ const json = (body, status, origin) => new Response(JSON.stringify(body), {
   }
 });
 
-const instructions = `你是外科醫學學習網站的 evidence assistant。以繁體中文回答，但 anatomy、disease、drug、procedure、guideline 與其他醫學專有名詞保留英文。
+const instructions = `你是醫學原文書筆記庫的 evidence assistant。以繁體中文回答，但 anatomy、disease、drug、procedure、guideline 與其他醫學專有名詞保留英文。
 
 規則：
 1. 涉及 diagnosis、treatment、dose、threshold、contraindication 或 prognosis 時，必須使用 web search 查核最新資料。
@@ -79,9 +79,10 @@ export default {
     const question = String(body?.question || '').trim();
     if (question.length < 3 || question.length > 1800) return json({ error: '問題長度需介於 3–1800 字。' }, 400, allowedOrigin);
 
+    const book = body?.book || {};
     const chapter = body?.chapter || {};
     const core = Array.isArray(chapter.core) ? chapter.core.slice(0, 12).map(String) : [];
-    const context = `目前閱讀章節：Chapter ${Number(chapter.id) || '?'} — ${String(chapter.title || '未指定')}\n章節核心整理：\n${core.map((item, index) => `${index + 1}. ${item}`).join('\n')}\n\n使用者問題：${question}`;
+    const context = `目前閱讀書籍：${String(book.title || '未指定')}，${String(book.edition || 'edition 未指定')}${book.publicationYear ? `（${String(book.publicationYear)}）` : ''}\n目前閱讀章節：Chapter ${Number(chapter.id) || '?'} — ${String(chapter.title || '未指定')}\n請明確區分目前書籍內容與後續 guideline／研究更新。\n章節核心整理：\n${core.map((item, index) => `${index + 1}. ${item}`).join('\n')}\n\n使用者問題：${question}`;
 
     const response = await fetch('https://api.openai.com/v1/responses', {
       method: 'POST',

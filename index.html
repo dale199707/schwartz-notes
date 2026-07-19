@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d3b3e">
-  <title>Schwartz 外科原文書筆記</title>
+  <title>醫學原文書筆記庫</title>
   <style>
     :root { --ink:#162c2e; --muted:#637879; --paper:#f5f3ed; --card:#fffdf8; --line:#dbe2db; --teal:#0d5b5e; --amber:#b36b08; --red:#a23e37; }
     * { box-sizing:border-box; } body { margin:0; color:var(--ink); background:var(--paper); font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif; line-height:1.65; }
     header { color:#fff; background:linear-gradient(130deg,#092f31,#17686b); padding:44px max(24px,calc((100% - 1600px)/2)); }
     .eyebrow { margin:0 0 6px; color:#b8e4dc; font-size:.8rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; } h1 { margin:0; font-size:clamp(1.7rem,4vw,2.6rem); line-height:1.25; } .subtitle { max-width:700px; margin:10px 0 0; color:#d9ebe8; }
-    main { max-width:1800px; margin:0 auto; padding:26px 20px 64px; } .controls { display:flex; gap:16px; align-items:center; margin-bottom:20px; flex-wrap:wrap; } input,textarea { border:1px solid var(--line); border-radius:10px; padding:12px 14px; font:inherit; background:#fff; } input { flex:0 1 980px; min-width:260px; } button { border:1px solid var(--teal); border-radius:10px; padding:8px 10px; color:var(--teal); background:transparent; font:inherit; cursor:pointer; } button.active, button:hover { color:var(--ink); background:#e8f1ed; } .stats { color:var(--muted); font-size:.9rem; white-space:nowrap; }
+    main { max-width:1800px; margin:0 auto; padding:26px 20px 64px; } .controls { display:flex; gap:16px; align-items:center; margin-bottom:20px; flex-wrap:wrap; } input,textarea,select { border:1px solid var(--line); border-radius:10px; padding:12px 14px; font:inherit; background:#fff; } input { flex:0 1 980px; min-width:260px; } select { min-width:min(100%,320px); color:var(--ink); } button { border:1px solid var(--teal); border-radius:10px; padding:8px 10px; color:var(--teal); background:transparent; font:inherit; cursor:pointer; } button.active, button:hover { color:var(--ink); background:#e8f1ed; } .stats { color:var(--muted); font-size:.9rem; white-space:nowrap; }
     .layout { display:grid; grid-template-columns:220px minmax(0,1fr) 320px; gap:18px; align-items:start; transition:grid-template-columns .2s ease; } .layout.ai-collapsed { grid-template-columns:220px minmax(0,1fr) max-content; } .chapter-list { position:sticky; top:14px; align-self:start; max-height:calc(100vh - 28px); overflow:auto; padding:3px 4px 3px 0; } .chapter { position:relative; width:100%; display:block; margin:0 0 3px; padding:9px 38px 9px 8px; border:1px solid transparent; border-radius:8px; text-align:left; background:transparent; font-size:.92rem; line-height:1.42; } .chapter:hover { color:var(--ink); background:#e8f1ed; } .chapter.active { border-color:#9cc5bd; color:var(--ink); background:#e0efea; } .chapter small { display:block; margin-bottom:2px; color:var(--muted); font-size:.74rem; letter-spacing:.02em; } .importance-count { position:absolute; top:50%; right:8px; min-width:23px; height:23px; border-radius:99px; padding:1px 6px; color:#7a4900; background:#ffe5a7; font-size:.72rem; font-weight:800; line-height:21px; text-align:center; transform:translateY(-50%); }
     article { min-width:0; padding:clamp(24px,4vw,44px); border:1px solid var(--line); border-radius:16px; background:var(--card); box-shadow:0 8px 28px rgba(20,48,44,.06); } h2 { margin:0; font-size:clamp(1.4rem,3vw,2rem); line-height:1.35; } .eng { margin:6px 0 30px; color:var(--muted); font-style:italic; } h3 { margin:38px 0 15px; padding-bottom:8px; border-bottom:1px solid var(--line); font-size:1.1rem; } mark { border-radius:3px; padding:0 2px; color:inherit; background:#ffe49a; } ul { padding-left:1.25em; } li+li { margin-top:10px; } .personal-note { margin:28px 0 8px; padding:16px 18px; border:1px solid #bfd7e2; border-radius:11px; background:#f3f8fb; } .personal-note-head { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px; } .personal-note h3 { margin:0; padding:0; border:0; color:#244e61; } .personal-note-status { color:var(--muted); font-size:.76rem; white-space:nowrap; } .personal-note textarea { width:100%; min-height:120px; resize:vertical; line-height:1.7; } .personal-note-hint { margin:8px 0 0; color:var(--muted); font-size:.72rem; } .point-list { display:grid; gap:12px; margin:0; padding:0; list-style:none; } .point-list li { position:relative; padding:14px 52px 14px 43px; border:1px solid #e0e8e2; border-radius:10px; background:#fff; line-height:1.82; transition:border-color .15s,background .15s; } .point-list li::before { position:absolute; top:18px; left:17px; width:10px; height:10px; border-radius:50%; background:#4c958d; content:""; } .point-list li.important { border-color:#e8bd62; background:#fffaf0; } .importance-toggle { position:absolute; top:10px; right:10px; width:34px; height:34px; border:0; border-radius:99px; padding:0; color:#9c6a16; background:#fff6df; font-size:1.25rem; line-height:34px; } .importance-toggle:hover,.importance-toggle.active { color:#8a5300; background:#ffe6a8; } .section-list { line-height:1.85; } .note { margin:26px 0; border-left:4px solid var(--amber); border-radius:0 9px 9px 0; padding:17px 20px; background:#fff7e8; line-height:1.8; } .warning { border-left-color:var(--red); background:#fff1ef; } .note strong { display:block; margin-bottom:5px; } table { width:100%; margin:18px 0 28px; border-collapse:separate; border-spacing:0; overflow:hidden; border:1px solid var(--line); border-radius:10px; font-size:.94rem; line-height:1.65; } th,td { padding:13px 14px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; } tr:last-child td { border-bottom:0; } th { color:#174d4e; background:#ecf4ef; } .diagram { margin:32px 0; padding:20px; border:1px solid #cfe2db; border-radius:12px; background:#f3f9f6; } .diagram h3 { margin:0 0 12px; padding:0; border:0; color:#174d4e; } .diagram svg { display:block; width:100%; height:auto; } .diagram text { fill:#173c3d; font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif; font-size:13px; } .diagram .small { font-size:11px; fill:#526b6c; } .anatomy-figure { margin:30px 0; overflow:hidden; border:1px solid #cfe2db; border-radius:12px; background:#fff; } .anatomy-figure h3 { margin:0; padding:14px 18px; border:0; color:#174d4e; background:#f3f9f6; } .anatomy-figure a.image-link { display:block; padding:16px; text-align:center; background:#fff; } .anatomy-figure img { display:block; width:auto; max-width:100%; max-height:720px; margin:auto; object-fit:contain; } .anatomy-figure figcaption { padding:14px 18px 16px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; line-height:1.65; } .anatomy-figure figcaption strong { display:block; color:var(--ink); font-size:.92rem; } .anatomy-figure figcaption a { color:var(--teal); } .empty { color:var(--muted); text-align:center; padding:48px 0; }
     .ai-panel { position:sticky; top:14px; max-height:calc(100vh - 28px); overflow:auto; border:1px solid #bdd8d0; border-radius:14px; background:#f8fcfa; box-shadow:0 8px 28px rgba(20,48,44,.08); } .ai-header { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:15px 16px; color:#fff; background:#0d5b5e; } .ai-header strong { font-size:1rem; } .ai-header small { display:block; color:#cce9e3; font-weight:400; } .ai-collapse { flex:0 0 auto; border-color:#acd3cd; padding:4px 8px; color:#fff; } .ai-collapse:hover { color:#fff; background:#174d4e; } .ai-body { padding:16px; } .ai-context { margin:0 0 10px; color:var(--muted); font-size:.78rem; } .ai-password-row { display:flex; align-items:stretch; gap:7px; } .ai-form .ai-password-row input { width:auto; min-width:0; margin:0; flex:1; } .ai-verify { flex:0 0 auto; padding-inline:12px; } .ai-password-meta { display:flex; justify-content:space-between; gap:8px; margin:5px 0 12px; } .ai-password-hint { color:var(--muted); font-size:.68rem; line-height:1.45; } .ai-password-status { color:var(--muted); font-size:.7rem; font-weight:700; white-space:nowrap; } .ai-password-status.verified { color:#137253; } .ai-form textarea { width:100%; min-height:104px; resize:vertical; line-height:1.55; } .ai-form textarea:disabled,.ai-form input:read-only { color:#839091; background:#edf1ef; cursor:not-allowed; } .ai-actions { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:10px; } .ai-submit { color:#fff; background:var(--teal); } .ai-submit:disabled { cursor:not-allowed; opacity:.45; } .ai-answer { margin-top:16px; padding-top:15px; border-top:1px solid var(--line); font-size:.88rem; line-height:1.72; white-space:pre-wrap; overflow-wrap:anywhere; } .ai-answer:empty { display:none; } .ai-answer a,.ai-sources a { color:var(--teal); text-decoration:underline; text-underline-offset:2px; } .ai-sources { margin:12px 0 0; padding:0 0 0 18px; font-size:.78rem; line-height:1.5; } .ai-sources li+li { margin-top:6px; } .ai-disclaimer { margin:14px 0 0; color:var(--muted); font-size:.7rem; line-height:1.5; } .ai-panel.collapsed { width:max-content; overflow:hidden; } .ai-panel.collapsed .ai-body,.ai-panel.collapsed .ai-header small { display:none; } footer { max-width:1160px; margin:auto; padding:0 24px 32px; color:var(--muted); font-size:.8rem; }
@@ -19,9 +19,9 @@
   </style>
 </head>
 <body>
-  <header><p class="eyebrow">Personal study notes</p><h1>Schwartz 外科原文書筆記</h1><p class="subtitle">以繁體中文重整《Schwartz’s Principles of Surgery, 11th Edition》；醫學術語、器官與藥物名稱保留英文。</p></header>
+  <header><p class="eyebrow">Medical notes library</p><h1 id="siteTitle">醫學原文書筆記庫</h1><p class="subtitle" id="siteSubtitle">選擇書籍後閱讀章節重點；醫學術語、器官與藥物名稱保留英文。</p></header>
   <main>
-    <div class="controls"><input id="search" type="search" placeholder="搜尋章節、器官或關鍵字，例如 shock、pancreas、trauma"><span class="stats" id="stats"></span></div>
+    <div class="controls"><select id="bookSelect" aria-label="選擇書籍"></select><input id="search" type="search" placeholder="搜尋目前書籍的章節、內文或自己的筆記"><span class="stats" id="stats"></span></div>
     <div class="layout">
       <nav class="chapter-list" id="chapters" aria-label="章節目錄"></nav>
       <article id="content"></article>
@@ -44,16 +44,18 @@
       </aside>
     </div>
   </main>
-  <footer>本網站為個人學習用的重點筆記，不取代臨床判斷、現行 guideline 或原始文獻。原始參考：Schwartz’s Principles of Surgery, 11th ed. (2019)。</footer>
+  <footer id="siteFooter">本網站為個人學習用的重點筆記，不取代臨床判斷、現行 guideline 或原始文獻。</footer>
+  <script src="books.js"></script>
   <script src="notes.js"></script>
   <script src="notes-extra.js"></script>
   <script src="notes-extra-2.js"></script>
   <script src="notes-extra-3.js"></script>
   <script src="notes-extra-4.js"></script>
+  <script src="books/icu-book-5e/chapters.js"></script>
   <script src="ai-config.js"></script>
   <script type="module">
-    await window.CLAUDE_NOTES_PENDING;
-    const ready = { ...(window.CLAUDE_NOTES || {}),
+    await Promise.all([window.CLAUDE_NOTES_PENDING,window.ICU_NOTES_PENDING]);
+    const schwartzReady = { ...(window.CLAUDE_NOTES || {}),
       4:{title:'Hemostasis, Surgical Bleeding, and Transfusion',zh:'止血、手術出血與輸血',part:'Basic Considerations',bullets:['手術出血的處置先依循 resuscitation：辨識出血來源、評估 physiology，並同步建立 source control。','Massive hemorrhage 時避免單純大量 crystalloid；應及早啟動以 blood component 為核心的 balanced resuscitation。','Coagulopathy 常由 hypothermia、acidemia、hypocalcemia 與 dilution 交互惡化；處置必須同時逆轉這些因素。','Transfusion 是治療，不是單純校正數值；每次給血都要連結到臨床出血、氧合與灌流目標。'],tip:'處理進行性出血時，請同時追蹤 core temperature、ionized calcium、acid-base status 與凝血功能；只看 hemoglobin 會低估問題。',rows:[['狀況','優先思考','實務提示'],['Uncontrolled bleeding','source control','手術、packing、angioembolization 或暫時性控制依情境選擇。'],['Trauma coagulopathy','damage-control resuscitation','及早與 blood bank 溝通，縮短 component delivery 時間。'],['大量輸血','代謝併發症','留意 citrate-related hypocalcemia 與 hypothermia。']]},
       5:{title:'Shock',zh:'Shock',part:'Basic Considerations',bullets:['Shock 是 tissue perfusion 與 cellular oxygen utilization 失衡的臨床症候群；正常血壓不能排除早期 shock。','先區分 hemorrhagic、cardiogenic、distributive 與 obstructive shock，再針對可逆原因處置。','持續 reassessment 比單點數值重要：mental status、skin perfusion、urine output、lactate trend 與 bedside ultrasound 應整合判讀。','Resuscitation 的終點是恢復 adequate perfusion，而非無限制補液；過量 fluid 會造成 edema、pulmonary complications 與 abdominal compartment syndrome。'],tip:'Shock 的首要問題是「病人為何灌流不足？」；先找出并處理原因，vasopressor 與 fluid 才有正確位置。',rows:[['類型','關鍵病理生理','初始方向'],['Hemorrhagic','intravascular volume loss','止血 + blood product resuscitation'],['Cardiogenic','pump failure','評估 ischemia / mechanical cause，謹慎補液'],['Distributive','vasodilation / maldistribution','處理感染或過敏原因，必要時 vasopressor'],['Obstructive','阻礙 filling 或 outflow','解除 tension pneumothorax、tamponade、massive PE 等原因']]},
       6:{title:'Surgical Infections',zh:'外科感染',part:'Basic Considerations',bullets:['Surgical infection 的核心是 source control：drainage、debridement、移除 infected device 或解除 obstruction，抗生素不能取代它。','Antimicrobial therapy 應依感染來源、host risk、severity 與 local resistance pattern 選擇，取得 culture 後再 de-escalate。','Necrotizing soft-tissue infection 是時間敏感的 surgical emergency；不應因影像或實驗室檢查而延遲 exploration。','預防 Surgical Site Infection (SSI) 需整合正確 prophylaxis timing、normothermia、glycemic control 與無菌技術。'],tip:'面對 sepsis，抗生素很重要；但若 abscess 尚未 drainage、壞死組織未清除，病人通常不會真正改善。',rows:[['臨床情境','主要處置','抗生素角色'],['Abscess','incision / percutaneous drainage','依位置與全身反應決定是否需要'],['Necrotizing infection','立即 surgical exploration 與 serial debridement','廣效 empiric therapy，後續依 culture 調整'],['Infected prosthesis / line','評估移除或交換','針對 organism 與 device biofilm 考量療程'],['SSI prevention','bundle approach','prophylaxis 應在切皮前達適當濃度']]},
@@ -63,8 +65,11 @@
       33:{title:'Pancreas',zh:'胰臟',part:'Abdomen',bullets:['Pancreatic disease 的處置需先區分 inflammatory、cystic 與 neoplastic process，並用 clinical context 解讀影像。','疑似 pancreatic cancer 的可切除性應在 pancreas-protocol imaging 與 multidisciplinary review 下判定。','Pancreatic surgery 的風險包含 pancreatic fistula、delayed gastric emptying、bleeding 與 infection；術前營養與生理最佳化很重要。','Acute pancreatitis 的早期處置重點是 severity assessment、適當 fluid resuscitation、analgesia 與找出 etiology；介入時機依感染壞死或併發症而定。'],tip:'胰臟疾病常需跨科決策。先建立正確的診斷與 resectability 地圖，再決定要手術、endoscopic intervention、systemic therapy 或觀察。',rows:[['臨床問題','決策焦點','提醒'],['Pancreatic mass','diagnosis、stage、resectability','避免未經規劃的 biopsy 影響後續路徑'],['Pancreatic cyst','malignant potential','整合 cyst feature、duct involvement 與病人風險'],['Acute pancreatitis','severity 與 etiology','不是每個病人都需要早期 intervention'],['Post-pancreatectomy','fistula / bleeding surveillance','依 procedure 與 risk profile 建立術後計畫']]}
     , ...(window.CLAUDE_NOTES || {}) };
     const titles = ['Leadership in Surgery','Systemic Response to Injury and Metabolic Support','Fluid and Electrolyte Management of the Surgical Patient','Hemostasis, Surgical Bleeding, and Transfusion','Shock','Surgical Infections','Trauma','Burns','Wound Healing','Oncology','Transplantation','Quality, Patient Safety, Assessments of Care, and Complications','Physiologic Monitoring of the Surgical Patient','Minimally Invasive Surgery, Robotics, NOTES, and Single-Incision Laparoscopic Surgery','Molecular Biology, The Atomic Theory of Disease, and Precision Surgery','The Skin and Subcutaneous Tissue','The Breast','Disorders of the Head and Neck','Chest Wall, Lung, Mediastinum, and Pleura','Congenital Heart Disease','Acquired Heart Disease','Thoracic Aneurysms and Aortic Dissection','Arterial Disease','Venous and Lymphatic Disease','Esophagus and Diaphragmatic Hernia','Stomach','The Surgical Management of Obesity','Small Intestine','Colon, Rectum, and Anus','The Appendix','Liver','Gallbladder and the Extrahepatic Biliary System','Pancreas','The Spleen','Abdominal Wall, Omentum, Mesentery, and Retroperitoneum','Soft Tissue Sarcoma','Inguinal Hernias','Thyroid, Parathyroid, and Adrenal','Pediatric Surgery','Urology','Gynecology','Neurosurgery','Orthopedic Surgery','Surgery of the Hand and Wrist','Plastic and Reconstructive Surgery','Anesthesia and Pain Management','Surgical Considerations in Older Adults','Ethics, Palliative Care, and Care at the End of Life','Global Surgery','Optimizing Perioperative Care: Enhanced Recovery and Chinese Medicine','Understanding, Evaluating, and Using Evidence for Surgical Practice','Ambulatory Surgery','Skills and Simulation','Web-Based Education and Implications of Social Media'];
-    const chapters = titles.map((title,i)=>({id:i+1,title,zh:ready[i+1]?.zh||'待整理',part:ready[i+1]?.part||(i<16?'Basic Considerations':i<25?'Thorax and Vascular':i<38?'Abdomen':'Specialty and Practice')}));
-    let selected=5; const list=document.querySelector('#chapters'), content=document.querySelector('#content'), search=document.querySelector('#search');
+    const schwartzChapters=titles.map((title,i)=>({id:i+1,title,zh:schwartzReady[i+1]?.zh||'待整理',part:schwartzReady[i+1]?.part||(i<16?'Basic Considerations':i<25?'Thorax and Vascular':i<38?'Abdomen':'Specialty and Practice')}));
+    const books=Array.isArray(window.MEDICAL_BOOKS)?window.MEDICAL_BOOKS:[];
+    let currentBook=books.find(book=>book.id==='schwartz-11e')||books[0];
+    let ready=schwartzReady,chapters=schwartzChapters,selected=5,important={},personalNotes={};
+    const list=document.querySelector('#chapters'),content=document.querySelector('#content'),search=document.querySelector('#search'),bookSelect=document.querySelector('#bookSelect');
     function escape(s){return String(s).replace(/\*\*/g,'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
     function highlight(value,query){
       const text=String(value),needle=query.trim().toLocaleLowerCase();
@@ -73,20 +78,20 @@
       while(index>=0){html+=escape(text.slice(cursor,index));html+=`<mark>${escape(text.slice(index,index+needle.length))}</mark>`;cursor=index+needle.length;index=lower.indexOf(needle,cursor);}
       return html+escape(text.slice(cursor));
     }
-    const importanceStorageKey='schwartz-important-v1';
-    let important={};
-    try { important=JSON.parse(localStorage.getItem(importanceStorageKey)||'{}')||{}; } catch { important={}; }
+    const storageKey=kind=>`medical-notes-${currentBook.id}-${kind}-v1`;
+    const readStorage=kind=>{try{return JSON.parse(localStorage.getItem(storageKey(kind))||'{}')||{};}catch{return {};}};
+    function migrateSchwartzStorage(){
+      if(currentBook.id!=='schwartz-11e')return;
+      [['important','schwartz-important-v1'],['personal-notes','schwartz-personal-notes-v1']].forEach(([kind,legacy])=>{if(localStorage.getItem(storageKey(kind))===null&&localStorage.getItem(legacy)!==null)localStorage.setItem(storageKey(kind),localStorage.getItem(legacy));});
+    }
     const importantItems=id=>Array.isArray(important[id])?important[id]:[];
     const isImportant=(id,index)=>importantItems(id).includes(index);
     function toggleImportant(id,index){
       const values=new Set(importantItems(id));
       values.has(index)?values.delete(index):values.add(index);
       important[id]=[...values].sort((a,b)=>a-b);
-      localStorage.setItem(importanceStorageKey,JSON.stringify(important));
+      localStorage.setItem(storageKey('important'),JSON.stringify(important));
     }
-    const personalNotesStorageKey='schwartz-personal-notes-v1';
-    let personalNotes={};
-    try { personalNotes=JSON.parse(localStorage.getItem(personalNotesStorageKey)||'{}')||{}; } catch { personalNotes={}; }
     const searchText=c=>`${c.title} ${c.zh} ${JSON.stringify(ready[c.id]||{})} ${personalNotes[c.id]||''}`.toLocaleLowerCase();
     const anatomyFigures = {
       18:{src:'assets/anatomy/neck-vessels-nerves.jpg',title:'Neck vessels and nerves',alt:'Anterior and lateral view of the arteries and nerves of the neck',description:'Anterior/lateral view；適合對照 carotid system、vagus nerve、hypoglossal nerve、phrenic nerve 與 subclavian vessels。',credit:'Johannes Sobotta, 1914 · Public Domain',source:'https://anatomytool.org/content/sobotta-1914-fig539-arteries-and-nerves-neck-english-labels'},
@@ -96,11 +101,13 @@
       37:{src:'assets/anatomy/inguinal-triangle.jpg',title:'Inguinal triangle and posterior inguinal anatomy',alt:'Internal view of the right inguinal region with the inguinal triangle highlighted',description:'Internal view of right inguinal region；綠色區域為 Hesselbach triangle，可對照 direct inguinal hernia。',credit:"Gray's Anatomy / Mikael Häggström · Public Domain",source:'https://commons.wikimedia.org/wiki/File:Inguinal_triangle.png'}
     };
     function anatomyHtml(id){
+      if(currentBook.id!=='schwartz-11e')return '';
       const figure=anatomyFigures[id];
       if(!figure) return '';
       return `<figure class="anatomy-figure"><h3>解剖圖解</h3><a class="image-link" href="${escape(figure.src)}" target="_blank" rel="noopener"><img src="${escape(figure.src)}" alt="${escape(figure.alt)}" loading="lazy" decoding="async"></a><figcaption><strong>${escape(figure.title)}</strong>${escape(figure.description)}<br>來源：<a href="${escape(figure.source)}" target="_blank" rel="noopener">${escape(figure.credit)}</a></figcaption></figure>`;
     }
     function diagramHtml(id){
+      if(currentBook.id!=='schwartz-11e')return '';
       if(id===2) return `<section class="diagram"><h3>示意圖：傷害後的代謝反應</h3><svg viewBox="0 0 720 185" role="img" aria-label="Ebb phase 與 Flow phase 的時間軸"><line x1="70" y1="92" x2="675" y2="92" stroke="#638d88" stroke-width="3"/><path d="M85 92 L105 80 L105 104 Z" fill="#638d88"/><rect x="120" y="48" width="190" height="88" rx="10" fill="#cbe9e1"/><rect x="340" y="48" width="290" height="88" rx="10" fill="#ffebc3"/><text x="181" y="78">Ebb phase</text><text class="small" x="143" y="104">數小時：低灌流、低代謝</text><text x="438" y="78">Flow phase</text><text class="small" x="370" y="104">數日至數週：高代謝、分解代謝</text><text class="small" x="70" y="164">受傷</text><text class="small" x="607" y="164">恢復／重建</text></svg></section>`;
       if(id===8) return `<section class="diagram"><h3>示意圖：Burn depth 與皮膚層次</h3><svg viewBox="0 0 720 220" role="img" aria-label="燒傷深度對應皮膚層次"><rect x="100" y="34" width="500" height="32" fill="#f3b0a1"/><rect x="100" y="66" width="500" height="62" fill="#f7d9a0"/><rect x="100" y="128" width="500" height="55" fill="#efc7a6"/><text x="112" y="55">Epidermis</text><text x="112" y="101">Dermis</text><text x="112" y="160">Subcutaneous tissue</text><path d="M645 34 v32 h-18" fill="none" stroke="#b04a43" stroke-width="3"/><text x="510" y="27">Superficial</text><path d="M670 34 v94 h-18" fill="none" stroke="#b36b08" stroke-width="3"/><text x="505" y="116">Partial thickness</text><path d="M695 34 v149 h-18" fill="none" stroke="#80503d" stroke-width="3"/><text x="492" y="204">Full thickness</text><text class="small" x="100" y="211">深度評估需結合外觀、capillary refill 與 sensation；傷口可隨時間轉變。</text></svg></section>`;
       if(id===22) return `<section class="diagram"><h3>示意圖：Stanford aortic dissection 分型</h3><svg viewBox="0 0 720 245" role="img" aria-label="Stanford A 與 Stanford B 主動脈剝離分型"><path d="M165 195 V70 C165 34 270 34 270 82 V112 C270 144 365 144 365 88 V60" fill="none" stroke="#a93638" stroke-width="28" stroke-linecap="round"/><path d="M445 195 V70 C445 34 550 34 550 82 V112 C550 144 645 144 645 88 V60" fill="none" stroke="#a93638" stroke-width="28" stroke-linecap="round"/><path d="M165 182 V75 C165 55 270 55 270 89" fill="none" stroke="#f5d35e" stroke-width="10" stroke-linecap="round"/><path d="M550 182 V118 C550 145 645 145 645 90" fill="none" stroke="#f5d35e" stroke-width="10" stroke-linecap="round"/><text x="128" y="225">Stanford A：ascending aorta 受累</text><text x="457" y="225">Stanford B：僅 descending aorta</text><text class="small" x="120" y="18">黃色線：dissection 範圍示意；A 型通常為緊急手術，B 型依是否 complicated 決定介入。</text></svg></section>`;
@@ -110,10 +117,11 @@
       const query=search.value.trim(),q=query.toLocaleLowerCase();
       const visible=chapters.filter(c=>searchText(c).includes(q));
       if(q&&visible.length&&!visible.some(c=>c.id===selected))selected=visible[0].id;
-      document.querySelector('#stats').textContent=q?`找到 ${visible.length} / ${chapters.length} 章`:`${Object.keys(ready).length} / ${chapters.length} 章`;
+      document.querySelector('#stats').textContent=q?`找到 ${visible.length} / ${chapters.length} 章`:`${Object.keys(ready).length} / ${currentBook.chapterCount||chapters.length} 章`;
       list.innerHTML=visible.map(c=>{const count=importantItems(c.id).length;return `<button class="chapter ${c.id===selected?'active':''}" data-id="${c.id}"><small>Chapter ${c.id}</small>${highlight(c.title,query)}${count?`<span class="importance-count" title="${count} 個重要項目">★ ${count}</span>`:''}</button>`;}).join('')||'<p class="empty">找不到符合的章節或內容</p>';
       list.querySelectorAll('button').forEach(b=>b.onclick=()=>{selected=+b.dataset.id;draw();});
       const c=chapters.find(x=>x.id===selected);
+      if(!c){content.innerHTML=`<p class="eyebrow" style="color:#0d5b5e">${escape(currentBook.edition)}</p><h2>${escape(currentBook.title)}</h2><div class="empty">這本書已納入書庫規劃，章節目錄與筆記將在完成獨立 evidence audit 後逐步上線；Schwartz 正式版不受影響。</div>`;document.querySelector('#aiContext').textContent=`目前背景：${currentBook.title} · 尚無上線章節`;return;}
       const d=ready[selected];
       const pearls=d?.pearls||[d?.tip];
       const tables=d?.tables||[d?.rows];
@@ -121,13 +129,27 @@
       const updates=d?.updates||[];
       const references=d?.references||[];
       const personalNoteHtml=`<section class="personal-note"><div class="personal-note-head"><h3>自己的筆記</h3><span class="personal-note-status" id="personalNoteStatus">自動儲存</span></div><textarea id="personalNote" maxlength="12000" placeholder="輸入這一章的補充、疑問、考點或臨床經驗…"></textarea><p class="personal-note-hint">只儲存在目前瀏覽器，不會上傳到 GitHub、Cloudflare 或 AI。</p></section>`;
-      content.innerHTML=d?`<p class="eyebrow" style="color:#0d5b5e">Chapter ${c.id}</p><h2>${highlight(d.zh,query)}</h2>${personalNoteHtml}<h3>核心整理</h3><ul class="point-list">${d.bullets.map((x,index)=>{const active=isImportant(c.id,index);return `<li class="${active?'important':''}"><button class="importance-toggle ${active?'active':''}" type="button" data-important="${index}" aria-pressed="${active}" aria-label="${active?'取消重要標記':'標記為重要'}" title="${active?'取消重要':'標記重要'}">${active?'★':'☆'}</button>${highlight(x,query)}</li>`;}).join('')}</ul>${anatomyHtml(c.id)}<aside class="note"><strong>Clinical pearl</strong><ul class="section-list">${pearls.filter(Boolean).map(x=>`<li>${highlight(x,query)}</li>`).join('')}</ul></aside>${diagramHtml(c.id)}<h3>快速比較</h3>${tableHtml}${updates.length?`<h3>後續證據更新</h3><ul class="section-list">${updates.map(x=>`<li>${highlight(x,query)}</li>`).join('')}</ul>`:''}${references.length?`<h3>References</h3><ul class="section-list">${references.map(r=>`<li><a href="${escape(r.url)}" target="_blank" rel="noopener">${highlight(r.label,query)}</a></li>`).join('')}</ul>`:''}<aside class="note warning"><strong>更新提醒</strong>本章以 2019 年教材為基礎；新增證據已附來源，但臨床決策仍應以最新 guideline、院內流程與個別病人狀況為準。</aside>`:`<p class="eyebrow" style="color:#0d5b5e">Chapter ${c.id}</p><h2>${highlight(c.title,query)}</h2>${personalNoteHtml}<div class="empty">此章尚待整理。</div>`;
+      content.innerHTML=d?`<p class="eyebrow" style="color:#0d5b5e">${escape(c.part)} · Chapter ${c.id}</p><h2>${highlight(d.zh,query)}</h2>${personalNoteHtml}<h3>核心整理</h3><ul class="point-list">${d.bullets.map((x,index)=>{const active=isImportant(c.id,index);return `<li class="${active?'important':''}"><button class="importance-toggle ${active?'active':''}" type="button" data-important="${index}" aria-pressed="${active}" aria-label="${active?'取消重要標記':'標記為重要'}" title="${active?'取消重要':'標記重要'}">${active?'★':'☆'}</button>${highlight(x,query)}</li>`;}).join('')}</ul>${anatomyHtml(c.id)}<aside class="note"><strong>Clinical pearl</strong><ul class="section-list">${pearls.filter(Boolean).map(x=>`<li>${highlight(x,query)}</li>`).join('')}</ul></aside>${diagramHtml(c.id)}<h3>快速比較</h3>${tableHtml}${updates.length?`<h3>後續證據更新</h3><ul class="section-list">${updates.map(x=>`<li>${highlight(x,query)}</li>`).join('')}</ul>`:''}${references.length?`<h3>References</h3><ul class="section-list">${references.map(r=>`<li><a href="${escape(r.url)}" target="_blank" rel="noopener">${highlight(r.label,query)}</a></li>`).join('')}</ul>`:''}<aside class="note warning"><strong>更新提醒</strong>本章以 ${escape(currentBook.publicationYear||'原版')} 年教材為基礎；新增證據已附來源，但臨床決策仍應以最新 guideline、院內流程與個別病人狀況為準。</aside>`:`<p class="eyebrow" style="color:#0d5b5e">${escape(c.part)} · Chapter ${c.id}</p><h2>${highlight(c.title,query)}</h2>${personalNoteHtml}<div class="empty">此章尚待 Claude 整理；完成後需另行進行十題 evidence audit。</div>`;
       content.querySelectorAll('[data-important]').forEach(button=>button.onclick=()=>{toggleImportant(c.id,+button.dataset.important);draw();});
       const personalNote=document.querySelector('#personalNote'),personalNoteStatus=document.querySelector('#personalNoteStatus');
       personalNote.value=personalNotes[c.id]||'';
-      personalNote.oninput=()=>{personalNotes[c.id]=personalNote.value;try{localStorage.setItem(personalNotesStorageKey,JSON.stringify(personalNotes));personalNoteStatus.textContent='已儲存';}catch{personalNoteStatus.textContent='儲存失敗';}};
-      document.querySelector('#aiContext').textContent=`目前背景：Chapter ${c.id} · ${c.title}`;
+      personalNote.oninput=()=>{personalNotes[c.id]=personalNote.value;try{localStorage.setItem(storageKey('personal-notes'),JSON.stringify(personalNotes));personalNoteStatus.textContent='已儲存';}catch{personalNoteStatus.textContent='儲存失敗';}};
+      document.querySelector('#aiContext').textContent=`目前背景：${currentBook.title} · ${currentBook.edition} · Chapter ${c.id} · ${c.title}`;
     }
+    function loadBook(bookId){
+      currentBook=books.find(book=>book.id===bookId)||books[0];
+      ready=currentBook.id==='schwartz-11e'?schwartzReady:(window.ICU_BOOK_NOTES||{});
+      chapters=currentBook.id==='schwartz-11e'?schwartzChapters:(window.ICU_BOOK_CHAPTERS||[]);
+      selected=currentBook.id==='schwartz-11e'?5:(chapters[0]?.id||null);
+      migrateSchwartzStorage();important=readStorage('important');personalNotes=readStorage('personal-notes');search.value='';
+      document.title=`${currentBook.shortTitle}｜醫學原文書筆記庫`;
+      document.querySelector('#siteTitle').textContent=currentBook.shortTitle;
+      document.querySelector('#siteSubtitle').textContent=`《${currentBook.title}, ${currentBook.edition}》；${currentBook.languagePolicy}。`;
+      document.querySelector('#siteFooter').textContent=`本網站為個人學習用的重點筆記，不取代臨床判斷、現行 guideline 或原始文獻。原始參考：${currentBook.title}, ${currentBook.edition}${currentBook.publicationYear?` (${currentBook.publicationYear})`:''}。`;
+      draw();
+    }
+    bookSelect.innerHTML=books.map(book=>`<option value="${escape(book.id)}">${escape(book.shortTitle)} · ${escape(book.edition)}${book.status==='complete'?'':'（整理中）'}</option>`).join('');
+    bookSelect.value=currentBook.id;bookSelect.onchange=()=>loadBook(bookSelect.value);
     const layout=document.querySelector('.layout'),aiPanel=document.querySelector('#aiPanel'),aiCollapse=document.querySelector('#aiCollapse'),aiForm=document.querySelector('#aiForm'),aiPassword=document.querySelector('#aiPassword'),aiVerify=document.querySelector('#aiVerify'),aiPasswordStatus=document.querySelector('#aiPasswordStatus'),aiQuestion=document.querySelector('#aiQuestion'),aiSubmit=document.querySelector('#aiSubmit'),aiStatus=document.querySelector('#aiStatus'),aiAnswer=document.querySelector('#aiAnswer'),aiSources=document.querySelector('#aiSources');
     const aiPasswordStorageKey='schwartz-ai-access-v1';
     let aiAccessVerified=false;
@@ -165,9 +187,10 @@
       const accessPassword=aiPassword.value;
       if(!aiAccessVerified||!accessPassword){setAiAccess(false,'請先驗證密碼');aiAnswer.textContent='一般筆記可直接閱讀；AI 查詢需要先通過密碼驗證。';aiPassword.focus();return;}
       const d=ready[selected],c=chapters.find(x=>x.id===selected);
+      if(!c){aiStatus.textContent='目前書籍尚無上線章節';return;}
       aiSubmit.disabled=true;aiStatus.textContent='搜尋與核對資料中…';aiAnswer.textContent='';aiSources.innerHTML='';
       try{
-        const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','X-AI-Access-Password':accessPassword},body:JSON.stringify({question:aiQuestion.value.trim(),chapter:{id:c.id,title:c.title,core:(d?.bullets||[]).slice(0,12)}})});
+        const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json','X-AI-Access-Password':accessPassword},body:JSON.stringify({question:aiQuestion.value.trim(),book:{id:currentBook.id,title:currentBook.title,edition:currentBook.edition,publicationYear:currentBook.publicationYear},chapter:{id:c.id,title:c.title,core:(d?.bullets||[]).slice(0,12)}})});
         const result=await response.json().catch(()=>({}));
         if(response.status===401){try{sessionStorage.removeItem(aiPasswordStorageKey);}catch{}aiPassword.value='';setAiAccess(false,'密碼已失效');aiPassword.focus();throw new Error('AI 使用密碼錯誤。');}
         if(!response.ok)throw new Error(result.error||`查詢失敗 (${response.status})`);
@@ -179,7 +202,7 @@
       }catch(error){aiStatus.textContent='查詢失敗';aiAnswer.textContent=error.message||'目前無法連線 AI 服務，請稍後再試。';}
       finally{aiSubmit.disabled=!aiAccessVerified;}
     };
-    search.oninput=draw; draw();
+    search.oninput=draw;loadBook(currentBook.id);
   </script>
 </body>
 </html>
