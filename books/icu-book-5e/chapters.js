@@ -1,4 +1,5 @@
 (function () {
+  window.MEDICAL_BOOK_DATA = window.MEDICAL_BOOK_DATA || {};
   const sections = [
     ['I', 'Vascular Access', [[1, 'Vascular Access Primer', 'vascular-access-primer'], [2, 'Central Venous Access', 'central-venous-access'], [3, 'The Indwelling Vascular Catheter', 'indwelling-vascular-catheter']]],
     ['II', 'Common Practices', [[4, 'Alimentary Prophylaxis', 'alimentary-prophylaxis'], [5, 'Venous Thromboprophylaxis', 'venous-thromboprophylaxis'], [6, 'Analgesia and Sedation in the ICU', 'analgesia-sedation-icu']]],
@@ -70,13 +71,20 @@
     }];
   };
 
-  window.ICU_NOTES_PENDING = Promise.all(chapterFiles.map(file => fetch(file).then(response => {
+  const bookData = window.MEDICAL_BOOK_DATA['icu-book-5e'] = {
+    chapters: window.ICU_BOOK_CHAPTERS,
+    notes: {},
+    figures: {}
+  };
+  window.ICU_NOTES_PENDING = bookData.pending = Promise.all(chapterFiles.map(file => fetch(file).then(response => {
     if (!response.ok) throw new Error(`無法載入 ${file}`);
     return response.text();
   }))).then(texts => {
     window.ICU_BOOK_NOTES = Object.fromEntries(texts.map(parse).filter(Boolean));
+    bookData.notes = window.ICU_BOOK_NOTES;
   }).catch(error => {
     window.ICU_BOOK_NOTES = {};
+    bookData.notes = {};
     console.error('ICU Book 章節載入失敗：', error);
   });
 }());

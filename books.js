@@ -20,5 +20,16 @@ window.MEDICAL_BOOKS = [
     chapterCount: 53,
     status: 'complete',
     source: 'icu-book'
+  },
+  {
+    id: 'zollinger-10e',
+    title: "Zollinger's Atlas of Surgical Operations",
+    shortTitle: 'Zollinger 手術圖譜',
+    edition: '10th Edition',
+    publicationYear: 2016,
+    languagePolicy: '繁體中文整理，醫學專有名詞保留英文',
+    chapterCount: 150,
+    status: 'drafting',
+    source: 'zollinger'
   }
 ];

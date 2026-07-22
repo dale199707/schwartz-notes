@@ -1,7 +1,7 @@
 # Medical Notes Library 專案完整交接
 
 - 最後更新：2026-07-22
-- 交接版本：v2（Schwartz＋ICU Book 完成後）
+- 交接版本：v4（Zollinger Chapter 1–5 驗證與首批部署）
 - 本機 repo：`/Users/tinrepin/Desktop/medical`
 - GitHub repo：`dale199707/schwartz-notes`
 - 正式網站：<https://dale199707.github.io/schwartz-notes/>
@@ -55,11 +55,11 @@ Claude 原稿預計放置位置：
 
 2026-07-22 的已部署基準：
 
-- 正式 commit：`45d7632`（`Add default landing and persistent highlights`）。
-- GitHub Pages build `29892319211` 已成功部署此 commit。
+- 正式 commit 與 GitHub Pages run 以 `main` 最新成功部署為準；本次交付將 Zollinger Chapter 1–5 併入正式網站。
 - `main` 與 `origin/main` 當時同步。
 - Schwartz 54 / 54 章完成，54 / 54 章通過 evidence audit。
 - ICU Book 53 / 53 章完成，53 / 53 章通過 evidence audit。
+- Zollinger Chapter 1–5 已完成，5 / 150 章通過 evidence audit；Chapter 5 有一張原創上腹動脈血流關係 SVG。
 - ICU Book 的書籍狀態已是 `complete`，網站選單不再顯示「整理中」。
 - 網站預設開啟 Schwartz Chapter 1。
 - 右側「詢問 AI」在首次載入時預設收合。
@@ -68,7 +68,9 @@ Claude 原稿預計放置位置：
 
 接手時仍須重新以 Git 與正式網站確認，不可只相信本段日期。
 
-## 4. 目前兩本書
+Zollinger 第三本書骨架與第一批內容先在 `codex/zollinger-10e-library` 完成；本次交付已取得使用者明確授權，可在驗證後合併並部署 `main`。
+
+## 4. 目前書籍
 
 ### 4.1 Schwartz’s Principles of Surgery, 11th Edition
 
@@ -98,6 +100,28 @@ Schwartz 是較早建立的 legacy 資料結構。新增新書時不得順便搬
 
 ICU Book 是下一本書應優先參考的資料夾模型。網站永遠讀取 `chapters/`，不直接讀取 `claude/`。
 
+### 4.3 Zollinger’s Atlas of Surgical Operations, 10th Edition
+
+- 書籍 ID：`zollinger-10e`
+- 教材年份：2016
+- 作者：E. Christopher Ellison、Robert M. Zollinger, Jr.
+- 章數：150（14 sections）
+- 本機教材：`Zollinger/Zollinger's Atlas of Surgical Operations 10th ed.pdf`（由 `*.pdf` 規則忽略，不得提交）
+- 本機原書圖版：`Zollinger/Zollinger_Images/`（由 `.gitignore` 排除，只供私人定位與理解，不得提交）
+- Metadata：`books/zollinger-10e/book.json`
+- Claude 原稿：`books/zollinger-10e/claude/`
+- 網站正式 Markdown：`books/zollinger-10e/chapters/`
+- 網站 loader／parser：`books/zollinger-10e/chapters.js`
+- 合法圖片 manifest：`books/zollinger-10e/figures.js`
+- 圖片授權紀錄：`books/zollinger-10e/figures/README.md`
+- Audit：`books/zollinger-10e/audits/`
+- Claude 規格：`books/zollinger-10e/CLAUDE_INSTRUCTIONS.md`
+- 狀態：網站骨架完成，Chapter 1–5 為 `ready` 且 5 / 150 `passed`；其餘 145 章待整理。
+
+Zollinger 的原書手術圖可由工具從 PDF 轉成頁面 PNG 或抽出內嵌 JPEG；本機 `Zollinger_Images/` 已包含按 chapter 分類的裁切圖版與 `_INDEX.csv`，僅可供私人定位與理解。McGraw-Hill 版權頁禁止未經授權重製或散布，因此不得直接提交或放上 GitHub Pages；正式網站只使用 Public Domain、相容 Creative Commons、已取得授權或未仿製教材構圖的原創圖解。
+
+Chapter 1–4 在本機 `Zollinger_Images/` 沒有對應圖版，因此未加入無關圖片。Chapter 5 的原書圖版只供核對；正式網站改用 `books/zollinger-10e/figures/chapter-005-upper-abdominal-arterial-map.svg`，其節點式構圖為本專案原創，授權紀錄見 `books/zollinger-10e/figures/README.md`。
+
 ## 5. 網站與服務架構
 
 此專案是無框架的 GitHub Pages 靜態網站，沒有 npm build step。
@@ -113,14 +137,14 @@ ICU Book 是下一本書應優先參考的資料夾模型。網站永遠讀取 `
 - `worker/`：Cloudflare Worker。
 - `assets/anatomy/`：合法授權 anatomy 圖片與授權紀錄。
 
-### 5.1 新增第三本書前的關鍵技術事實
+### 5.1 多書 loader 的關鍵技術事實
 
-目前書籍 selector 可列出多本書，但 `index.html` 的內容載入邏輯仍明確區分：
+Zollinger 功能分支已將第三本書載入邏輯泛化為 `window.MEDICAL_BOOK_DATA[bookId]` registry，並保留 Schwartz legacy adapter。合併後的載入方式為：
 
 1. `schwartz-11e` 使用 `schwartzReady`／`schwartzChapters`。
-2. 其他書目前直接使用 `window.ICU_BOOK_NOTES`／`window.ICU_BOOK_CHAPTERS`。
+2. ICU 與 Zollinger 依 `bookId` 使用各自的 registry data、pending loader 與 figures manifest。
 
-因此第三本書不能只在 `books.js` 加一列，否則會錯誤讀取 ICU 內容。新書第一階段必須把載入器小幅泛化成依 `bookId` 取用資料，例如建立 book-data registry；同時保留 Schwartz legacy adapter。不要用更多巢狀條件硬塞第三本書，也不要為此大幅重寫整個 `index.html`。
+因此未來第四本書仍不能只在 `books.js` 加一列；必須依既有 registry model 加入獨立 chapter metadata、notes、pending loader 與合法圖片 manifest。同時保留 Schwartz legacy adapter，不要為此大幅重寫整個 `index.html`。
 
 泛化後至少應能依 `bookId` 取得：
 
@@ -411,14 +435,12 @@ Endpoints：
 
 ## 18. 下一個任務
 
-目前兩本書已完成。下一個合理任務是新增第三本書，順序應為：
+Schwartz 與 ICU Book 已完成；Zollinger Chapter 1–5 已完成驗證與首批部署。下一個合理任務是：
 
-1. 使用者提供新書資料與本機檔案位置。
-2. 新 Chat 讀完本交接檔並確認 Git 狀態。
-3. 建立新的 `codex/<book-id>-library` branch。
-4. 先完成第三本書網站骨架及通用 loader。
-5. 使用者確認骨架後，Claude 開始把 Markdown 放進該書 `claude/`。
-6. Codex 依批次驗證、同步、audit、commit 與 push。
-7. 全書完成後，使用者再次明確同意才部署 `main`。
+1. 請 Claude 依 `books/zollinger-10e/CLAUDE_INSTRUCTIONS.md` 整理下一批（建議 Chapter 6–10），原稿仍放 `books/zollinger-10e/claude/`。
+2. Codex 逐章做格式整理、來源與臨床主張查核、十題 evidence audit，再同步到 `chapters/`。
+3. 先查看 `Zollinger/Zollinger_Images/` 的對應章節作私人理解；公開圖解只用合法授權或重新設計的原創內容。
+4. 每批更新 `readyChapterIds`、`audits/index.md`、README 與必要的合法圖片 manifest。
+5. 依使用者指示 commit／push 功能分支；部署 `main` 前仍須取得明確同意。
 
-開始第三本書時，先保護兩本既有正式版本；不要重新做已完成的 Schwartz 或 ICU 工作。
+處理 Zollinger 時必須保護 Schwartz 與 ICU Book 正式版本，不得重新做或大幅改寫既有兩本書。

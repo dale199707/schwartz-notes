@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Upper abdominal arterial supply concept map</title>
+  <desc id="desc">A schematic flow map connecting the aorta to the celiac trunk and superior mesenteric artery, then to the stomach, liver, gallbladder, spleen, pancreas and duodenum.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5fbf8"/>
+      <stop offset="1" stop-color="#e8f3ef"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#173c3d" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10Z" fill="#b9473d"/>
+    </marker>
+    <style>
+      .title{font:700 30px -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;fill:#173c3d}
+      .sub{font:500 16px -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;fill:#526b6c}
+      .label{font:700 17px -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;fill:#173c3d}
+      .small{font:500 13px -apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;fill:#526b6c}
+      .artery{fill:none;stroke:#b9473d;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}
+      .collateral{fill:none;stroke:#d98b42;stroke-width:5;stroke-dasharray:10 8;stroke-linecap:round;marker-end:url(#arrow)}
+      .node{fill:#fff;stroke:#bed8d0;stroke-width:2;filter:url(#shadow)}
+      .organ{fill:#fffaf0;stroke:#e7c782;stroke-width:2;filter:url(#shadow)}
+      .arteryNode{fill:#fff4f1;stroke:#d6877f;stroke-width:2;filter:url(#shadow)}
+    </style>
+  </defs>
+  <rect width="1200" height="820" rx="28" fill="url(#bg)"/>
+  <text x="60" y="64" class="title">上腹臟器動脈血供：概念關係圖</text>
+  <text x="60" y="94" class="sub">節點表示典型起源與吻合；不代表實際比例、深度或術中視野</text>
+
+  <rect x="60" y="326" width="150" height="88" rx="18" class="arteryNode"/>
+  <text x="135" y="362" text-anchor="middle" class="label">Abdominal aorta</text>
+  <text x="135" y="389" text-anchor="middle" class="small">主要 arterial inflow</text>
+
+  <rect x="300" y="180" width="170" height="82" rx="18" class="arteryNode"/>
+  <text x="385" y="214" text-anchor="middle" class="label">Celiac trunk</text>
+  <text x="385" y="240" text-anchor="middle" class="small">典型三分支</text>
+  <rect x="300" y="514" width="170" height="82" rx="18" class="arteryNode"/>
+  <text x="385" y="548" text-anchor="middle" class="label">SMA</text>
+  <text x="385" y="574" text-anchor="middle" class="small">Superior mesenteric artery</text>
+
+  <path d="M210 352 C252 330 262 240 300 226" class="artery"/>
+  <path d="M210 388 C252 410 262 535 300 550" class="artery"/>
+
+  <rect x="560" y="126" width="174" height="76" rx="17" class="node"/>
+  <text x="647" y="158" text-anchor="middle" class="label">Left gastric</text>
+  <text x="647" y="183" text-anchor="middle" class="small">lesser curvature</text>
+  <rect x="560" y="244" width="174" height="76" rx="17" class="node"/>
+  <text x="647" y="276" text-anchor="middle" class="label">Splenic artery</text>
+  <text x="647" y="301" text-anchor="middle" class="small">pancreatic branches</text>
+  <rect x="560" y="362" width="174" height="76" rx="17" class="node"/>
+  <text x="647" y="394" text-anchor="middle" class="label">Common hepatic</text>
+  <text x="647" y="419" text-anchor="middle" class="small">GDA + proper hepatic</text>
+  <rect x="560" y="520" width="174" height="76" rx="17" class="node"/>
+  <text x="647" y="552" text-anchor="middle" class="label">IPDA</text>
+  <text x="647" y="577" text-anchor="middle" class="small">pancreaticoduodenal branch</text>
+
+  <path d="M470 205 C500 186 526 169 560 164" class="artery"/>
+  <path d="M470 218 C508 229 526 269 560 282" class="artery"/>
+  <path d="M470 232 C508 280 526 378 560 400" class="artery"/>
+  <path d="M470 556 L560 558" class="artery"/>
+
+  <rect x="850" y="82" width="250" height="94" rx="20" class="organ"/>
+  <text x="975" y="119" text-anchor="middle" class="label">Stomach</text>
+  <text x="975" y="145" text-anchor="middle" class="small">gastric + gastroepiploic arcades</text>
+  <rect x="850" y="218" width="250" height="94" rx="20" class="organ"/>
+  <text x="975" y="255" text-anchor="middle" class="label">Spleen / gastric fundus</text>
+  <text x="975" y="281" text-anchor="middle" class="small">short gastric + left gastroepiploic</text>
+  <rect x="850" y="354" width="250" height="94" rx="20" class="organ"/>
+  <text x="975" y="391" text-anchor="middle" class="label">Liver / gallbladder</text>
+  <text x="975" y="417" text-anchor="middle" class="small">RHA/LHA; cystic usually from RHA</text>
+  <rect x="850" y="506" width="250" height="108" rx="20" class="organ"/>
+  <text x="975" y="546" text-anchor="middle" class="label">Pancreatic head / duodenum</text>
+  <text x="975" y="572" text-anchor="middle" class="small">superior + inferior PD arcades</text>
+  <text x="975" y="594" text-anchor="middle" class="small">celiac ↔ SMA collateral</text>
+
+  <path d="M734 154 C790 142 810 130 850 128" class="artery"/>
+  <path d="M734 274 C788 267 806 263 850 264" class="artery"/>
+  <path d="M734 384 C790 372 814 389 850 400" class="artery"/>
+  <path d="M734 416 C786 454 808 523 850 545" class="artery"/>
+  <path d="M734 558 L850 558" class="artery"/>
+  <path d="M735 296 C790 314 807 180 850 154" class="collateral"/>
+  <path d="M734 432 C780 468 788 512 850 526" class="collateral"/>
+
+  <rect x="60" y="692" width="1040" height="76" rx="16" fill="#173c3d" opacity="0.94"/>
+  <circle cx="92" cy="722" r="6" fill="#b9473d"/>
+  <text x="110" y="728" class="small" fill="#fff" style="fill:#fff">實線：主要典型 inflow</text>
+  <circle cx="352" cy="722" r="6" fill="#d98b42"/>
+  <text x="370" y="728" class="small" fill="#fff" style="fill:#fff">虛線：重要吻合／collateral</text>
+  <text x="92" y="751" class="small" fill="#fff" style="fill:#dbeae5">手術前仍須以個別 arterial-phase imaging 與術中辨識確認變異。</text>
+</svg>
