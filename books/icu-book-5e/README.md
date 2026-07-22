@@ -2,14 +2,14 @@
 
 來源：Paul L. Marino, *The ICU Book*, 5th Edition, Wolters Kluwer, 2025。
 
-目前狀態：網站骨架完成，25 / 53 章內容完成（ready），25 / 53 章通過 evidence audit。
+目前狀態：53 / 53 章內容完成（ready），53 / 53 章通過 evidence audit。
 
 ## 目錄
 
 - `book.json`：書籍 metadata 與總章數。
 - `chapters.js`：網站章節目錄、Markdown loader 與 parser。
 - `claude/`：Claude 新交付的原始 Markdown；Codex 檢查前不由網站直接載入。
-- `chapters/`：網站實際載入的 53 份 Markdown（未完成者為占位稿，通過格式檢查者為 `ready`）。
+- `chapters/`：網站實際載入的 53 份 Markdown，目前全數為 `ready`。
 - `audits/index.md`：逐章 draft 與 evidence audit 進度。
 - `CLAUDE_INSTRUCTIONS.md`：交給 Claude 的內容格式與限制。
 

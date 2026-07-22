@@ -1,6 +1,6 @@
 # 醫學原文書筆記庫
 
-個人學習用的多書靜態網站，將醫學原文書整理成繁體中文重點筆記，並保留英文醫學術語。第一冊《Schwartz’s Principles of Surgery, 11th Edition》為正式穩定版本；第二冊《The ICU Book, 5th Edition》（2025）已建立完整 53 章骨架，目前 25 / 53 章可預覽、25 / 53 章通過 evidence audit。
+個人學習用的多書靜態網站，將醫學原文書整理成繁體中文重點筆記，並保留英文醫學術語。第一冊《Schwartz’s Principles of Surgery, 11th Edition》為正式穩定版本；第二冊《The ICU Book, 5th Edition》（2025）全 53 章皆可預覽，並全數通過 evidence audit。
 
 若要在新的 Chat 接續本專案或新增第二本書，請先閱讀 [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md)。
 
@@ -15,7 +15,7 @@
 - `books.js`：瀏覽器使用的書籍清單與狀態。
 - `books/<bookId>/book.json`：每本書可獨立維護的 metadata。
 - 現有 `notes.js`、`notes-extra*.js`、`chapter-*.md` 與 `audits/`：保留為 Schwartz 正式資料來源，migration 期間不搬動。
-- ICU Book 的 53 個占位稿位於 `books/icu-book-5e/chapters/`；Claude 依 `books/icu-book-5e/CLAUDE_INSTRUCTIONS.md` 完稿並存入 `books/icu-book-5e/claude/`，再由 Codex 檢查、同步到 `chapters/` 並標記 `ready`。
+- ICU Book 的 53 章正式稿位於 `books/icu-book-5e/chapters/`；Claude 原稿保留於 `books/icu-book-5e/claude/`，Codex 完成查核、修訂與 evidence audit 後同步為網站版本。
 - 新書須建立自己的 chapters 與 audits；`ready` 表示可預覽，不等同驗證通過，只有完成十題 evidence audit 才可在 audit index 標為 `passed`。
 - AI request 會一併帶入 `bookId`、書名、edition、出版年份與章節背景。
 

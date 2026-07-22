@@ -240,13 +240,13 @@ index.html
 - 新增 `books.js` 與 `books/<bookId>/book.json` 管理書目。
 - 書籍選單、搜尋、完成度、重要標記、個人筆記與 AI context 已加入 `bookId` 範圍。
 - 舊版 Schwartz localStorage 會複製到新鍵，但不刪除舊資料。
-- `The ICU Book, 5th Edition`（2025）已依原書目錄建立 16 sections、53 章占位稿、Markdown loader、Claude 規格與獨立 audit index。
+- `The ICU Book, 5th Edition`（2025）已依原書目錄建立 16 sections、53 章正式稿、Markdown loader、Claude 規格與獨立 audit index。
 - ICU 章首 `status: draft` 時只顯示待整理；Claude 完稿並改為 `status: ready` 後會自動載入網站，但仍須另行完成十題 evidence audit 才能標為 `passed`。
-- ICU Chapter 1–25 已為 `ready`、通過結構檢查與逐章十題 evidence audit；目前內容進度 25 / 53，evidence audit 進度 25 / 53。
+- ICU Chapter 1–53 已全數為 `ready`、通過結構檢查與逐章十題 evidence audit；目前內容進度 53 / 53，evidence audit 進度 53 / 53。
 - ICU 參考連結 parser 已支援 URL 內未跳脫或跳脫的圓括號；左側章節目錄可由標題列按鈕點擊收合與展開。
 - ICU 的 Claude 原稿固定放在 `books/icu-book-5e/claude/`；網站只讀取 `chapters/`。Codex 應先保存原稿，再做格式檢查與同步，不可讓 Claude 直接修改 audit 狀態。
 
-下一步由 Claude 依 `books/icu-book-5e/CLAUDE_INSTRUCTIONS.md` 逐章整理，並遵守：
+若後續修訂或新增其他書籍，Claude 仍依 `books/icu-book-5e/CLAUDE_INSTRUCTIONS.md` 的分工原則交付原稿，並遵守：
 
 - 只把指定的 ICU chapter Markdown 寫入 `books/icu-book-5e/claude/`，不改 `chapters/`、`audits/` 或 Schwartz 檔案。
 - 不逐段翻譯或大量轉錄原文，不使用教材圖片。
