@@ -26,7 +26,7 @@
   }));
 
   const clean = value => value.trim()
-    .replace(/\\([<>*])/g, '$1')
+    .replace(/\\([<>*()])/g, '$1')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1');
   const section = (text, heading) => {
     const match = text.match(new RegExp(`^## ${heading}\\r?$`, 'm'));
@@ -51,8 +51,8 @@
     return output;
   };
   const references = text => text.split(/\r?\n/).flatMap(line => {
-    const match = line.match(/\[([^\]]+)\]\(([^)]+)\)/);
-    return match ? [{ label: match[1], url: match[2] }] : [];
+    const match = line.trim().match(/^-\s+\[([^\]]+)\]\((https?:\/\/.*)\)\s*$/);
+    return match ? [{ label: clean(match[1]), url: match[2].replace(/\\([()])/g, '$1') }] : [];
   });
   const parse = text => {
     if (!/^<!--\s*status:\s*ready\s*-->$/m.test(text)) return null;

@@ -1,6 +1,6 @@
 # Medical Notes 專案完整交接
 
-最後更新：2026-07-19  
+最後更新：2026-07-20
 目前正式分支：`main`  
 目前專案狀態：Schwartz 11th Edition 已完成；`codex/multi-book-library` 已建立 ICU Book 53 章內容骨架
 
@@ -242,7 +242,8 @@ index.html
 - 舊版 Schwartz localStorage 會複製到新鍵，但不刪除舊資料。
 - `The ICU Book, 5th Edition`（2025）已依原書目錄建立 16 sections、53 章占位稿、Markdown loader、Claude 規格與獨立 audit index。
 - ICU 章首 `status: draft` 時只顯示待整理；Claude 完稿並改為 `status: ready` 後會自動載入網站，但仍須另行完成十題 evidence audit 才能標為 `passed`。
-- ICU Chapter 1–10 已為 `ready`、通過結構檢查與逐章十題 evidence audit；目前內容進度 10 / 53，evidence audit 進度 10 / 53。
+- ICU Chapter 1–20 已為 `ready`、通過結構檢查與逐章十題 evidence audit；目前內容進度 20 / 53，evidence audit 進度 20 / 53。
+- ICU 參考連結 parser 已支援 URL 內未跳脫或跳脫的圓括號；左側章節目錄可由標題列按鈕點擊收合與展開。
 - ICU 的 Claude 原稿固定放在 `books/icu-book-5e/claude/`；網站只讀取 `chapters/`。Codex 應先保存原稿，再做格式檢查與同步，不可讓 Claude 直接修改 audit 狀態。
 
 下一步由 Claude 依 `books/icu-book-5e/CLAUDE_INSTRUCTIONS.md` 逐章整理，並遵守：

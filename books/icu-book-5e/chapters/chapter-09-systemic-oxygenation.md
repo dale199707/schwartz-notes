@@ -93,7 +93,7 @@
 - [Protocol and statistical analysis plan for the mega randomised registry trial comparing conservative versus liberal oxygenation targets in adults receiving unplanned invasive mechanical ventilation in the ICU (Mega-ROX; Crit Care Resusc)](https://pmc.ncbi.nlm.nih.gov/articles/PMC10692627/)  
 - [Mega-ROX Sepsis — protocol and statistical analysis plan (Crit Care Resusc, 2023\)](https://pubmed.ncbi.nlm.nih.gov/37876605/)  
 - [Mega-ROX HIE — protocol and statistical analysis plan (Crit Care Resusc, 2024\)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11282325/)  
-- [Mega-ROX — trial information (ANZICS Clinical Trials Group)](https://www.anzics.org/current-active-endorsed-research/mega-rox/)  
+- [Mega-ROX — current trial information (Canadian Critical Care Trials Group)](https://www.ccctg.ca/trials-and-studies/trial-or-study/~2955-Mega-ROX-The-Mega-Randomized-Registry-Trial-Comparing-Conservative-vs-Liberal-OXygenation-Targets-?filter_519=-1)
 - [Liberal versus conservative oxygen therapy in critically ill patients: a meta-analysis of 13 trials (Ann Intensive Care, 2024\)](https://annalsofintensivecare.springeropen.com/articles/10.1186/s13613-024-01300-7)  
 - [Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock (2026)](https://sccm.org/clinical-resources/guidelines/guidelines/surviving-sepsis-campaign-international-guidelines-for-management-of-sepsis-and-septic-shock-2026)  
 - [Trials on oxygen targets in critically ill patients: do they change our knowledge and practice? (PMC)](https://ncbi.nlm.nih.gov/pmc/articles/PMC10010244)  

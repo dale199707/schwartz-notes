@@ -1,6 +1,6 @@
 # ICU Book 5th Edition Evidence Audit
 
-目前進度：10 / 53 章通過。
+目前進度：20 / 53 章通過。
 
 | Chapter | Title | Draft status | Audit score | Audit status |
 |---:|---|---|---:|---|
@@ -14,16 +14,16 @@
 | 8 | The Pulmonary Artery Catheter | ready | [10/10](chapter-08-audit.md) | passed |
 | 9 | Systemic Oxygenation | ready | [10/10](chapter-09-audit.md) | passed |
 | 10 | Intravenous Fluids | ready | [10/10](chapter-10-audit.md) | passed |
-| 11 | Fluid Management | draft | - | pending |
-| 12 | Anemia and Red Blood Cell Transfusions | draft | - | pending |
-| 13 | Platelets and Plasma | draft | - | pending |
-| 14 | Approaches to Clinical Shock | draft | - | pending |
-| 15 | Hemorrhagic Shock | draft | - | pending |
-| 16 | Cardiogenic Shock | draft | - | pending |
-| 17 | Inflammatory Shock Syndromes | draft | - | pending |
-| 18 | Acute Heart Failure(s) | draft | - | pending |
-| 19 | Tachyarrhythmias | draft | - | pending |
-| 20 | Acute Coronary Syndromes | draft | - | pending |
+| 11 | Fluid Management | ready | [10/10](chapter-11-audit.md) | passed |
+| 12 | Anemia and Red Blood Cell Transfusions | ready | [10/10](chapter-12-audit.md) | passed |
+| 13 | Platelets and Plasma | ready | [10/10](chapter-13-audit.md) | passed |
+| 14 | Approaches to Clinical Shock | ready | [10/10](chapter-14-audit.md) | passed |
+| 15 | Hemorrhagic Shock | ready | [10/10](chapter-15-audit.md) | passed |
+| 16 | Cardiogenic Shock | ready | [10/10](chapter-16-audit.md) | passed |
+| 17 | Inflammatory Shock Syndromes | ready | [10/10](chapter-17-audit.md) | passed |
+| 18 | Acute Heart Failure(s) | ready | [10/10](chapter-18-audit.md) | passed |
+| 19 | Tachyarrhythmias | ready | [10/10](chapter-19-audit.md) | passed |
+| 20 | Acute Coronary Syndromes | ready | [10/10](chapter-20-audit.md) | passed |
 | 21 | Cardiac Arrest | draft | - | pending |
 | 22 | Acute Pulmonary Embolism | draft | - | pending |
 | 23 | Asthma and COPD in the ICU | draft | - | pending |
