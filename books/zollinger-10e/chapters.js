@@ -196,7 +196,7 @@
   })));
 
   // Codex 將正式稿同步至 chapters/ 時，才把相應章號加入此清單。
-  const readyChapterIds = [1, 2, 3, 4, 5];
+  const readyChapterIds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
   const clean = value => value.trim()
     .replace(/\\([<>*()])/g, '$1')
     .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '$1');

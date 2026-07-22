@@ -1,6 +1,6 @@
 # Zollinger's Atlas of Surgical Operations 10th Edition Evidence Audit
 
-目前進度：5 / 150 章通過。
+目前進度：20 / 150 章通過。
 
 | Chapter | Title | Draft status | Audit score | Audit status |
 |---:|---|---|---:|---|
@@ -9,21 +9,21 @@
 | 3 | Preoperative Preparation and Postoperative Care | ready | 10/10 | passed |
 | 4 | Ambulatory Surgery | ready | 10/10 | passed |
 | 5 | Arterial Blood Supply to the Upper Abdominal Viscera | ready | 10/10 | passed |
-| 6 | Venous and Lymphatic Supply to the Upper Abdominal Viscera | draft | — | pending |
-| 7 | Anatomy of the Large Intestine | draft | — | pending |
-| 8 | Anatomy of the Abdominal Aorta and Inferior Vena Cava | draft | — | pending |
-| 9 | Thoracic and Pulmonary Anatomy | draft | — | pending |
-| 10 | Laparotomy | draft | — | pending |
-| 11 | Hasson Open Technique for Laparoscopic Access | draft | — | pending |
-| 12 | Veress Needle Technique | draft | — | pending |
-| 13 | Diagnostic Laparoscopy | draft | — | pending |
-| 14 | Chronic Ambulatory Peritoneal Dialysis Catheter Insertion | draft | — | pending |
-| 15 | Thoracotomy Incision | draft | — | pending |
-| 16 | Thoracoscopy | draft | — | pending |
-| 17 | Gastrostomy | draft | — | pending |
-| 18 | Percutaneous Endoscopic Gastrostomy | draft | — | pending |
-| 19 | Closure of Perforation—Subphrenic Abscess | draft | — | pending |
-| 20 | Gastrojejunostomy | draft | — | pending |
+| 6 | Venous and Lymphatic Supply to the Upper Abdominal Viscera | ready | 10/10 | passed |
+| 7 | Anatomy of the Large Intestine | ready | 10/10 | passed |
+| 8 | Anatomy of the Abdominal Aorta and Inferior Vena Cava | ready | 10/10 | passed |
+| 9 | Thoracic and Pulmonary Anatomy | ready | 10/10 | passed |
+| 10 | Laparotomy | ready | 10/10 | passed |
+| 11 | Hasson Open Technique for Laparoscopic Access | ready | 10/10 | passed |
+| 12 | Veress Needle Technique | ready | 10/10 | passed |
+| 13 | Diagnostic Laparoscopy | ready | 10/10 | passed |
+| 14 | Chronic Ambulatory Peritoneal Dialysis Catheter Insertion | ready | 10/10 | passed |
+| 15 | Thoracotomy Incision | ready | 10/10 | passed |
+| 16 | Thoracoscopy | ready | 10/10 | passed |
+| 17 | Gastrostomy | ready | 10/10 | passed |
+| 18 | Percutaneous Endoscopic Gastrostomy | ready | 10/10 | passed |
+| 19 | Closure of Perforation—Subphrenic Abscess | ready | 10/10 | passed |
+| 20 | Gastrojejunostomy | ready | 10/10 | passed |
 | 21 | Pyloroplasty—Gastroduodenostomy | draft | — | pending |
 | 22 | Vagotomy | draft | — | pending |
 | 23 | Vagotomy, Subdiaphragmatic Approach | draft | — | pending |

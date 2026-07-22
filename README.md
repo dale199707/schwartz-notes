@@ -1,6 +1,6 @@
 # 醫學原文書筆記庫
 
-個人學習用的多書靜態網站，將醫學原文書整理成繁體中文重點筆記，並保留英文醫學術語。第一冊《Schwartz’s Principles of Surgery, 11th Edition》與第二冊《The ICU Book, 5th Edition》為正式完成版本；第三冊《Zollinger’s Atlas of Surgical Operations, 10th Edition》（2016）已完成 150 章網站骨架，Chapter 1–5 已完成整理與驗證。
+個人學習用的多書靜態網站，將醫學原文書整理成繁體中文重點筆記，並保留英文醫學術語。第一冊《Schwartz’s Principles of Surgery, 11th Edition》與第二冊《The ICU Book, 5th Edition》為正式完成版本；第三冊《Zollinger’s Atlas of Surgical Operations, 10th Edition》（2016）已完成 150 章網站骨架，Chapter 1–20 已完成整理與驗證。
 
 若要在新的 Chat 接續本專案或新增其他書籍，請先完整閱讀 [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md)。
 
@@ -34,9 +34,9 @@
 
 ## 內容進度
 
-Schwartz 54 章與 ICU Book 53 章均已加入網站並完成 Codex 十題 evidence audit。Zollinger 150 章中 Chapter 1–5 已標記為 `ready` 並完成 10/10 audit，其餘章節仍為目錄與占位狀態。
+Schwartz 54 章與 ICU Book 53 章均已加入網站並完成 Codex 十題 evidence audit。Zollinger 150 章中 Chapter 1–20 已標記為 `ready` 並完成 10/10 audit，其餘章節仍為目錄與占位狀態。
 
-Schwartz 的 Claude 原稿保留於專案根目錄，網站使用 `notes.js` 與後續資料檔載入；ICU 與 Zollinger 則使用各自的 `claude/`、`chapters/` 與 `audits/`。Schwartz 與 ICU 既有章節，以及 Zollinger Chapter 1–5，均已達本專案的 10/10 audit 門檻；Zollinger 其餘章節尚待逐批整理與驗證。
+Schwartz 的 Claude 原稿保留於專案根目錄，網站使用 `notes.js` 與後續資料檔載入；ICU 與 Zollinger 則使用各自的 `claude/`、`chapters/` 與 `audits/`。Schwartz 與 ICU 既有章節，以及 Zollinger Chapter 1–20，均已達本專案的 10/10 audit 門檻；Zollinger 其餘章節尚待逐批整理與驗證。
 
 醫學內容另以 `validate-medical-chapter` skill 進行十題 evidence audit；逐章狀態與修訂前後分數記錄於 `audits/index.md`。格式完整不等同內容已驗證，只有 10/10 題皆獲獨立來源支持才標記通過。
 
