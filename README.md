@@ -2,7 +2,7 @@
 
 個人學習用的多書靜態網站，將醫學原文書整理成繁體中文重點筆記，並保留英文醫學術語。第一冊《Schwartz’s Principles of Surgery, 11th Edition》為正式穩定版本；第二冊《The ICU Book, 5th Edition》（2025）全 53 章皆可預覽，並全數通過 evidence audit。
 
-若要在新的 Chat 接續本專案或新增第二本書，請先閱讀 [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md)。
+若要在新的 Chat 接續本專案或新增其他書籍，請先完整閱讀 [`PROJECT_HANDOFF.md`](PROJECT_HANDOFF.md)。
 
 ## 使用方式
 

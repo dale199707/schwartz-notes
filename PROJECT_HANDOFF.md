@@ -1,256 +1,424 @@
-# Medical Notes 專案完整交接
+# Medical Notes Library 專案完整交接
 
-最後更新：2026-07-20
-目前正式分支：`main`  
-目前專案狀態：Schwartz 11th Edition 已完成；`codex/multi-book-library` 已建立 ICU Book 53 章內容骨架
-
-## 1. 新 Chat 必做的第一步
-
-開始任何修改前，請依序完成：
-
-1. 完整閱讀本檔案與根目錄 `README.md`。
-2. 閱讀使用者提供的個人協作說明 `/Users/tinrepin/Downloads/AGENTS.md`（若檔案仍存在）。
-3. 檢查 `/Users/tinrepin/Desktop/medical` 的 Git 狀態，不得覆蓋使用者未提交的變更。
-4. 若工作涉及醫學內容驗證，使用 `validate-medical-chapter` skill，並完整遵循其十題 evidence audit 流程。
-5. 若工作涉及 OpenAI API、Worker 或 secrets，先遵循 OpenAI 憑證安全流程；不得讀出、顯示或提交任何 secret。
-
-建議新 Chat 的第一句：
-
-> 請先完整閱讀 `/Users/tinrepin/Desktop/medical/PROJECT_HANDOFF.md`、專案 `README.md` 與 `/Users/tinrepin/Downloads/AGENTS.md`，確認 Git 狀態後，再把現有網站規劃成多書筆記庫。先保留 Schwartz 正式版本，不要直接大幅改寫 `main`。
-
-## 2. 使用者需求與溝通偏好
-
-- 主要溝通語言：繁體中文。
-- 使用者偏好直接看到成果，不需要過度技術化的說明。
-- 醫學術語、器官、藥物、procedure、disease、guideline 與重要專有名詞保留英文。
-- 內容以條列為主，搭配比較表格、Clinical pearl、更新提醒與必要示意圖。
-- 文字要充實但不可過度密集；使用留白、卡片、分段、表格與視覺層級降低閱讀負擔。
-- 大型修改應先保護現有正式網站，完成驗證後再 commit、push 與部署。
-
-## 3. 專案位置與正式服務
-
+- 最後更新：2026-07-22
+- 交接版本：v2（Schwartz＋ICU Book 完成後）
 - 本機 repo：`/Users/tinrepin/Desktop/medical`
 - GitHub repo：`dale199707/schwartz-notes`
 - 正式網站：<https://dale199707.github.io/schwartz-notes/>
-- GitHub Pages 分支：`main`
-- Cloudflare Worker：`schwartz-medical-ai`
-- Worker base URL：<https://schwartz-medical-ai.dale199707.workers.dev>
-- 公開 AI endpoint 設定：根目錄 `ai-config.js`
+- 正式部署分支：`main`
 
-`ai-config.js` 的 Worker URL 是公開資訊；OpenAI API key 與 AI 使用密碼不是公開資訊。
+## 0. 給新 Chat 的最短指令
 
-## 4. 第一冊目前完成狀態
+新 Chat 開始時，使用者可直接貼上：
 
-書籍：`Schwartz’s Principles of Surgery, 11th Edition`（教材年份 2019）
+> 請先完整閱讀 `/Users/tinrepin/Desktop/medical/PROJECT_HANDOFF.md`、專案 `/Users/tinrepin/Desktop/medical/README.md` 與 `/Users/tinrepin/Downloads/AGENTS.md`，確認 `/Users/tinrepin/Desktop/medical` 的 Git 狀態與目前正式網站版本後，再協助新增下一本書。請保留 Schwartz 與 ICU Book 正式版本，不要直接大幅改寫 `main`；先建立 `codex/` 功能分支與新書網站骨架，再讓 Claude 把原稿放入新書自己的 `claude/`，之後由 Codex 做格式整理、來源查核、十題 evidence audit、網站同步與分批提交。
 
-- 全書 54 章 Markdown 已到齊。
-- 54 章均已完成十題 evidence audit，狀態記錄於 `audits/index.md`。
-- 每章 audit 細節保存在 `audits/chapter-XX-audit.md`。
-- 網站不再顯示「Claude 初稿」或「Codex 驗證版」等製作流程標籤。
-- 原始 Markdown 仍保存在 repo 根目錄，命名為 `chapter-XX-slug.md`。
-- 網站實際載入資料分散於 `notes.js`、`notes-extra.js` 至 `notes-extra-4.js`。
-- 第一冊目前視為穩定版本；建立第二冊時不得破壞既有 54 章、audit 紀錄或網址功能。
+若新書資料已知，可在後面補上：
 
-重要限制：10/10 audit 是本專案的內容門檻，不代表可取代臨床判斷。所有臨床處置仍需以最新 guideline、院內規範與病人情境為準。
+```text
+新書名稱：
+Edition：
+出版年份：
+作者／編者：
+原始教材或章節目錄位置：
+Claude 原稿預計放置位置：
+總章數：
+希望每批處理章數：
+```
 
-## 5. 醫學內容編輯規則
+新 Chat 讀完本檔後，若上述資料已齊全，不需重問；直接檢查檔案、提出最小變更範圍並建立新書骨架。若缺少會影響目錄或資料模型的資訊，才向使用者確認。
 
-每章固定包含：
+## 1. 新 Chat 接手前必做
 
-1. 核心整理：8–15 個能獨立閱讀的重點。
-2. Clinical pearl：2–4 個 decision point、red flag 或常見陷阱。
-3. 快速比較表：至少 4 列、3 欄，重點是比較而非重複條列。
-4. 後續證據更新：標明相對於教材出版年份的重要改變。
-5. References：可點擊的正式來源與年份。
+在修改任何檔案前，依序完成：
 
-內容原則：
+1. 完整閱讀本檔、根目錄 `README.md` 與 `/Users/tinrepin/Downloads/AGENTS.md`。
+2. 執行唯讀 Git 檢查，確認目前 branch、`main`／`origin/main` 關係與未提交變更。
+3. 不得覆蓋、刪除或順手整理不屬於本次工作的使用者變更。
+4. 從最新且乾淨的 `main` 建立 `codex/<book-id>-library` 功能分支；未經使用者同意不得直接部署 `main`。
+5. 先確認新書的 title、edition、publication year、chapter count、正式目錄及檔案位置。
+6. 若任務涉及醫學內容驗證，必須使用 `validate-medical-chapter` skill，完整執行十題 evidence audit。
+7. 若任務涉及 OpenAI、Cloudflare Worker 或 secrets，不得讀出、顯示、寫入或提交任何 secret。
 
-- 不逐段翻譯，不大量轉錄原文。
-- 不杜撰來源、數據、作者或 recommendation class。
-- 涉及 diagnosis、treatment、dose、threshold、contraindication、prognosis 或 follow-up 時，必須查核最新資料。
-- 優先使用正式學會 guideline、政府資料、systematic review、major peer-reviewed trial 或原始 pivotal trial。
-- 每個會改變臨床處置的重點需附來源連結與年份，並寫明適用族群和限制。
-- 明確區分教材觀點、後續 evidence、高確定性共識與仍有爭議的結論。
-- 不可因通過格式檢查就宣稱內容已驗證；只有完成十題 evidence audit 才可標記通過。
+## 2. 使用者偏好與協作方式
 
-## 6. 十題 evidence audit 規則
+- 主要溝通語言：繁體中文，採台灣用語。
+- 使用者是外科住院醫師；說明應直接、清楚，不需過度技術化。
+- anatomy、disease、drug、procedure、guideline、trial 與重要專有名詞保留英文。
+- 內容偏好條列、比較表、Clinical pearl、red flag、decision point 與適度留白。
+- 不逐段翻譯，不大量轉錄教材，不為了改而改。
+- Claude 主要負責撰寫原始章節；Codex 負責網站架構、格式整合、事實與來源驗證、evidence audit、Git 與部署。
+- 大型變更先在功能分支完成；使用者確認後才合併 `main` 與部署正式網站。
+- 每次只 stage 明確指定的檔案，禁止 `git add -A`。
 
-- 使用 `validate-medical-chapter` skill。
-- 每章提出 10 個彼此獨立、可被反證、能檢驗正確性或完整性的問題。
-- 每題都需有獨立可靠來源支持。
-- 若任何一題無法完整回答，需補充或修正文稿，再重新評分。
-- 只有 10/10 `SUPPORTED` 且來源沒有失效、撤稿或明顯過時，才可標記 `passed`。
-- 修訂前後分數與逐題依據需保存於該書自己的 audit 目錄。
+## 3. 目前正式狀態
 
-第二冊不可沿用 Schwartz 的 audit 結果；必須獨立驗證。
+2026-07-22 的已部署基準：
 
-## 7. 現有網站功能
+- 正式 commit：`45d7632`（`Add default landing and persistent highlights`）。
+- GitHub Pages build `29892319211` 已成功部署此 commit。
+- `main` 與 `origin/main` 當時同步。
+- Schwartz 54 / 54 章完成，54 / 54 章通過 evidence audit。
+- ICU Book 53 / 53 章完成，53 / 53 章通過 evidence audit。
+- ICU Book 的書籍狀態已是 `complete`，網站選單不再顯示「整理中」。
+- 網站預設開啟 Schwartz Chapter 1。
+- 右側「詢問 AI」在首次載入時預設收合。
+- 左側章節目錄可點擊收合／展開。
+- 「核心整理」與「Clinical pearl」可選取文字並套用黃、綠、藍螢光標記；點擊既有標記可改色或清除。
 
-主要程式位於根目錄 `index.html`，目前是無框架的靜態網站。
+接手時仍須重新以 Git 與正式網站確認，不可只相信本段日期。
 
-- 繁體中文介面與英文醫學名詞。
-- 章節側欄與目前章節高亮。
-- 可搜尋標題及所有章節內容。
-- 核心重點可用星號標記為重要，側欄顯示該章重要項目數量。
-- 每章有自己的個人筆記欄位。
-- 個人筆記與重要標記只存在使用者瀏覽器，不會上傳。
-- AI 欄位可浮動、收合；收合後主要內容欄會自動擴張。
-- AI 密碼先經 `/verify` 驗證；成功後才解鎖問題欄和查詢按鈕。
-- AI 回答使用 web search，顯示可點擊來源。
-- 部分章節有自製 SVG 示意圖或具合法授權的 anatomy 圖片。
+## 4. 目前兩本書
 
-瀏覽器儲存鍵：
+### 4.1 Schwartz’s Principles of Surgery, 11th Edition
 
-- 重要標記：`schwartz-important-v1`（`localStorage`）
-- 個人筆記：`schwartz-personal-notes-v1`（`localStorage`）
-- AI 密碼暫存：`schwartz-ai-access-v1`（`sessionStorage`）
+- 書籍 ID：`schwartz-11e`
+- 教材年份：2019
+- 章數：54
+- Metadata：`books/schwartz-11e/book.json`
+- 原始 Markdown：根目錄 `chapter-*.md`
+- 網站資料：`notes.js`、`notes-extra.js` 至 `notes-extra-4.js`
+- Audit：根目錄 `audits/index.md` 與 `audits/chapter-XX-audit.md`
+- 狀態：正式穩定版本，54 / 54 `passed`
 
-擴充多書架構時，這些 key 必須加入 `bookId`，避免不同書籍的章節編號互相覆蓋。
+Schwartz 是較早建立的 legacy 資料結構。新增新書時不得順便搬移、重新命名或批次改寫 Schwartz；除非使用者另外授權 migration。
 
-## 8. 圖片與版權規則
+### 4.2 The ICU Book, 5th Edition
 
-- 不得直接擷取或上傳原文教材的受版權保護圖片。
-- 優先使用 Public Domain、CC BY、CC BY-SA 或其他允許使用的來源。
-- 新增圖片前，必須到原始來源頁確認授權。
-- Caption 必須保留作者、授權名稱與來源連結。
-- 現有圖片授權紀錄位於 `assets/anatomy/README.md`。
-- 若找不到適當授權圖片，可優先製作原創 SVG 示意圖，不可仿製教材插圖。
+- 書籍 ID：`icu-book-5e`
+- 教材年份：2025
+- 章數：53
+- Metadata：`books/icu-book-5e/book.json`
+- Claude 原稿：`books/icu-book-5e/claude/`
+- 網站正式 Markdown：`books/icu-book-5e/chapters/`
+- 網站 loader／parser：`books/icu-book-5e/chapters.js`
+- Audit：`books/icu-book-5e/audits/`
+- Claude 規格：`books/icu-book-5e/CLAUDE_INSTRUCTIONS.md`
+- 狀態：正式完成，53 / 53 `passed`
 
-## 9. AI 與 Worker 架構
+ICU Book 是下一本書應優先參考的資料夾模型。網站永遠讀取 `chapters/`，不直接讀取 `claude/`。
 
-Worker 程式位於 `worker/`：
+## 5. 網站與服務架構
 
-- `worker/src/index.js`：CORS、密碼驗證、rate limit 與 OpenAI Responses API 呼叫。
-- `worker/wrangler.toml`：Worker 名稱、正式 origin、model 與 rate limiter。
-- `worker/README.md`：部署摘要。
+此專案是無框架的 GitHub Pages 靜態網站，沒有 npm build step。
 
-目前 endpoint：
+主要檔案：
 
-- `POST /verify`：只驗證 AI 使用密碼，不呼叫 OpenAI。
-- `POST /ask`：再次驗證密碼後才呼叫 OpenAI。
-
-目前安全設定：
-
-- `ALLOWED_ORIGIN`：`https://dale199707.github.io`
-- `OPENAI_MODEL`：`gpt-5.6-sol`
-- Rate limit：同一來源每 60 秒 6 次 AI access request。
-- 必要 Worker secrets：`OPENAI_API_KEY`、`AI_ACCESS_PASSWORD`
-
-絕對禁止：
-
-- 不可把任何 secret 寫入 `index.html`、`ai-config.js`、`wrangler.toml`、README、commit、issue 或對話摘要。
-- 不可用會顯示內容的方式讀取 `.env.local`、`.dev.vars` 或 Cloudflare secrets。
-- 不可把 OpenAI API key 放在 GitHub Pages 前端。
-
-需要更換 AI 使用密碼時，只更新 Cloudflare secret，不需修改網站程式碼。需要部署 Worker 時，從 `worker/` 執行 Wrangler deploy，且不可用缺少必要 secret 的檔案覆蓋現有 secrets。
-
-## 10. 主要檔案地圖
-
-- `index.html`：網站 UI、樣式、搜尋、章節渲染、重要標記、個人筆記、AI UI。
-- `notes.js`、`notes-extra*.js`：網站章節資料。
-- `chapter-*.md`：Claude／人工整理後的章節來源稿。
-- `audits/`：逐章十題 evidence audit。
-- `assets/anatomy/`：可合法使用的 anatomy 圖片與授權紀錄。
-- `ai-config.js`：公開 Worker endpoint。
+- `index.html`：UI、樣式、書籍切換、搜尋、章節渲染、個人筆記、重要標記、螢光筆與 AI UI。
+- `books.js`：網站書籍清單與每本書的公開 metadata。
+- `books/<book-id>/book.json`：單本書 metadata。
+- `notes*.js`：Schwartz 網站資料。
+- `books/icu-book-5e/chapters.js`：ICU 章節目錄、Markdown fetch、parser 與 notes registry。
+- `ai-config.js`：公開的 Worker endpoint。
 - `worker/`：Cloudflare Worker。
-- `.gitignore`：排除 PDF、macOS 檔案與 secrets。
+- `assets/anatomy/`：合法授權 anatomy 圖片與授權紀錄。
 
-此專案目前沒有 build step 或套件安裝需求，GitHub Pages 直接提供靜態檔案。
+### 5.1 新增第三本書前的關鍵技術事實
 
-## 11. 第二本書的建議實作方向
+目前書籍 selector 可列出多本書，但 `index.html` 的內容載入邏輯仍明確區分：
 
-建議沿用同一個 repo 與同一個網站，逐步改造成「醫學原文書筆記庫」。不要為每本書複製一套 `index.html` 與 Worker。
+1. `schwartz-11e` 使用 `schwartzReady`／`schwartzChapters`。
+2. 其他書目前直接使用 `window.ICU_BOOK_NOTES`／`window.ICU_BOOK_CHAPTERS`。
 
-開始前：
+因此第三本書不能只在 `books.js` 加一列，否則會錯誤讀取 ICU 內容。新書第一階段必須把載入器小幅泛化成依 `bookId` 取用資料，例如建立 book-data registry；同時保留 Schwartz legacy adapter。不要用更多巢狀條件硬塞第三本書，也不要為此大幅重寫整個 `index.html`。
 
-1. 從最新 `main` 建立 `codex/multi-book-library` branch。
-2. 保留目前 Schwartz 正式版本可隨時運作。
-3. 先確認第二本書的名稱、edition、出版年份、章節目錄與原始檔位置。
-4. 先設計資料模型與 migration，再搬動現有資料；不可先刪除或批次改寫 54 章。
+泛化後至少應能依 `bookId` 取得：
 
-建議目標結構：
+- chapter metadata array
+- chapter notes object
+- pending loader Promise
+- optional parser／source path
+
+完成後必須回歸測試 Schwartz 與 ICU，確認內容、搜尋、章節數與瀏覽器保存資料均未互相污染。
+
+## 6. 新書標準資料夾
+
+新書 ID 使用小寫英數與連字號，建議格式為 `<short-title>-<edition>`，例如 `sabiston-22e`。
 
 ```text
 books/
-  schwartz-11e/
+  <book-id>/
     book.json
+    README.md
+    CLAUDE_INSTRUCTIONS.md
+    chapters.js
+    claude/
+      chapter-01-slug.md
     chapters/
+      chapter-01-slug.md
     audits/
-  second-book-id/
-    book.json
-    chapters/
-    audits/
-assets/
-worker/
-index.html
+      index.md
+      chapter-01-audit.md
 ```
 
-`book.json` 至少應包含：
+`book.json` 至少包含：
 
-- `id`
-- `title`
-- `edition`
-- `publicationYear`
-- `languagePolicy`
-- `chapterCount`
-- `status`
+```json
+{
+  "id": "<book-id>",
+  "title": "Full English Title",
+  "edition": "Nth Edition",
+  "publicationYear": 2026,
+  "languagePolicy": "繁體中文整理，醫學專有名詞保留英文",
+  "chapterCount": 0,
+  "status": "drafting"
+}
+```
 
-多書網站必要功能：
+`books.js` 另需加入 `shortTitle`、`source` 及相同的章數／狀態。只有所有章節與 audit 均完成後才將 book status 改為 `complete`。
 
-- 首頁或上方 selector 可切換書籍。
-- 章節目錄、搜尋、完成度與重要標記依目前書籍篩選。
-- `localStorage` key 使用 `bookId + chapterId`。
-- AI request context 必須包含書名、edition、章節名稱與章節重點。
-- AI 回答需分清「目前書籍內容」與「最新 guideline／研究」。
-- 各書 audit、References、圖片授權與完成進度互相獨立。
-- 未完成的第二冊不得讓第一冊顯示成未完成或失去既有功能。
+### 6.1 新書骨架完成條件
 
-## 12. 每次修改後的驗證清單
+內容尚未交給 Claude 前，網站骨架至少要做到：
+
+1. 新書可從 selector 切換。
+2. 書名、edition、出版年份與章節數正確。
+3. 左側顯示正式章節目錄與 section／part。
+4. 未完成章節顯示清楚的待整理內容，不讀取別本書資料。
+5. 搜尋、章節收合、AI context 與瀏覽器儲存均帶正確 `bookId`。
+6. Schwartz 預設 Chapter 1、AI 預設收合等現有行為不變。
+7. Schwartz 54 章與 ICU 53 章仍可正常讀取。
+
+若使用者只要求「先架網站，之後再讓 Claude 寫內容」，做到本節即可先交付，不要自行生成整本內容。
+
+## 7. Claude 與 Codex 的固定分工
+
+### 7.1 Claude 負責
+
+- 只把指定章節的原始 Markdown 寫入新書自己的 `claude/`。
+- 檔名必須與正式 `chapters/` 對應檔名一致。
+- 依 `CLAUDE_INSTRUCTIONS.md` 寫核心整理、Clinical pearl、快速比較、後續證據更新與 References。
+- 不修改 `chapters/`、`audits/`、`chapters.js`、`books.js`、`index.html` 或其他書籍。
+- 不自行宣稱 evidence audit 通過。
+
+### 7.2 Codex 負責
+
+1. 保留 Claude 原稿，不把 `claude/` 當成正式網站來源。
+2. 檢查檔名、章號、標題、固定 section、條列數、表格與 References 格式。
+3. 查核診斷、治療、dose、threshold、contraindication、prognosis、follow-up 與 guideline currency。
+4. 檢查每個外部連結是否實際對應所述來源；404、錯頁或不相關 landing page 必須更換。
+5. 修訂後在正式章首加入 `<!-- status: ready -->`，同步至 `chapters/`。
+6. 使用 `validate-medical-chapter` skill 完成十題 evidence audit。
+7. 在該書 `audits/` 保存逐題依據，更新 `audits/index.md`。
+8. 確認 loader 能解析 Markdown，網站章數與 ready 數量正確。
+9. 依使用者指定批次 commit／push；未經同意不部署 `main`。
+
+Claude 原稿與 Codex 正式稿內容可能相近，這是正常的。差異不在於一定要大幅改寫，而在於正式稿已通過格式整理、臨床主張查核、連結核對與 evidence audit。
+
+## 8. 章節 Markdown 固定格式
+
+每章使用：
+
+```markdown
+<!-- status: ready -->
+# Chapter XX: English Chapter Title
+
+## 核心整理
+
+- 8–15 個可獨立閱讀的重點。
+
+## Clinical pearl
+
+- 2–4 個 decision point、red flag 或常見陷阱。
+
+## 快速比較表
+
+| 比較面向 | A | B |
+|---|---|---|
+| ... | ... | ... |
+
+## 後續證據更新
+
+- 相對教材出版年份、會改變臨床決策的更新；若沒有明確更新，直接寫明。
+
+## References
+
+- [組織／作者，年份，標題](https://...)
+```
+
+內容原則：
+
+- 以繁體中文重新組織，不逐段翻譯或大量轉錄原文。
+- anatomy、disease、drug、procedure、guideline 與重要名詞保留英文。
+- 每個會改變臨床處置的主張需有可點擊來源、年份、適用族群與限制。
+- 教材觀點與後續 evidence 必須區分。
+- 不杜撰數據、作者、trial、recommendation class 或 URL。
+- 爭議性結論不可寫成普遍標準治療。
+
+## 9. 十題 evidence audit
+
+醫學章節正式上線前，必須使用 `validate-medical-chapter` skill：
+
+1. 每章提出 10 個彼此獨立、可被反證的問題。
+2. 問題需涵蓋正確性、完整性、臨床 recommendation、數值／dose／threshold、比較表、Clinical pearl 與 evidence currency。
+3. 每題需有可靠且直接支持的來源。
+4. 任一題不完整即修訂文稿並重新評分。
+5. 只有 10 / 10 `SUPPORTED` 且來源無失效、撤稿或明顯過時，才標記 `passed`。
+6. Audit 報告必須保存在該書自己的 `audits/chapter-XX-audit.md`。
+7. `audits/index.md` 需記錄 chapter、title、draft status、score、audit status 與報告連結。
+
+`ready` 只代表網站可載入，不代表醫學內容已驗證；`passed` 才代表完成本專案的十題 audit 門檻。10 / 10 仍不取代臨床判斷、最新 guideline 或院內規範。
+
+## 10. References 與連結規則
+
+- 優先官方 guideline、政府／專業學會、PubMed、DOI、systematic review 或 pivotal trial。
+- 不只檢查 HTTP 狀態；還要確認頁面標題、年份與內容確實支持章節主張。
+- 期刊網站改版造成 404 時，優先改用同一文獻的 PubMed、DOI 或正式學會頁。
+- 避免連到搜尋結果頁、新聞摘要、無法辨識的轉址或不相關首頁。
+- 若來源需要登入才能看全文，但 citation metadata 正確，可保留 DOI／PubMed；能提供公開正式版本時優先使用。
+- 不得引用已撤稿文章支撐 recommendation。
+- 每批章節完成後應另做一次全批次 link audit。
+
+## 11. 網站現有功能與瀏覽器資料
+
+現有功能：
+
+- 多書 selector。
+- 章節搜尋與完成章數。
+- 可收合的左側章節目錄。
+- 每個核心重點可標記星號，側欄顯示該章重要項目數。
+- 每章個人筆記，自動儲存在目前瀏覽器。
+- 核心整理／Clinical pearl 的黃、綠、藍螢光標記。
+- 右側 AI 面板可收合，使用密碼驗證後才解鎖查詢。
+- AI request 會帶入 book title、edition、publication year、chapter 與 core notes。
+
+目前 localStorage key 由 `index.html` 的 `storageKey(kind)` 產生：
+
+- `medical-notes-<bookId>-important-v1`
+- `medical-notes-<bookId>-personal-notes-v1`
+- `medical-notes-<bookId>-highlights-v1`
+
+Schwartz 舊版 `schwartz-important-v1` 與 `schwartz-personal-notes-v1` 會複製到新 key，不刪除舊資料。AI 密碼暫存使用 `sessionStorage` 的 legacy key `schwartz-ai-access-v1`。
+
+任何新書都必須沿用 `bookId` 隔離，不得讓相同 chapter number 互相覆蓋。
+
+## 12. AI 與 Cloudflare Worker
+
+- Worker 名稱：`schwartz-medical-ai`
+- Base URL：<https://schwartz-medical-ai.dale199707.workers.dev>
+- 前端設定：`ai-config.js`
+- Worker 程式：`worker/src/index.js`
+- 設定：`worker/wrangler.toml`
+
+Endpoints：
+
+- `POST /verify`：只驗證 AI 使用密碼，不呼叫 OpenAI。
+- `POST /ask`：再次驗證密碼後呼叫 OpenAI Responses API，回傳回答與 citations。
+
+必要 secrets：
+
+- `OPENAI_API_KEY`
+- `AI_ACCESS_PASSWORD`
+
+絕對禁止把 secret 放入 `index.html`、`ai-config.js`、`wrangler.toml`、README、handoff、commit、issue 或對話輸出。不得用會顯示內容的方式讀取 `.env.local`、`.dev.vars` 或 Cloudflare secrets。
+
+一般新增書籍只需擴充 AI context，不應重新部署 Worker；除非 request／response schema 或 security policy 改變。
+
+## 13. 圖片與版權
+
+- 不得複製、截圖或上傳教材內受版權保護的圖片。
+- 優先使用 Public Domain、CC BY、CC BY-SA 等允許使用的來源。
+- 新增圖片前必須確認原始來源授權。
+- Caption 保留作者、授權與來源連結。
+- 現有授權紀錄：`assets/anatomy/README.md`。
+- 找不到合法圖片時，優先製作原創 SVG 概念圖，不仿製教材插圖。
+
+## 14. 新書完整工作流程
+
+### Phase A：收件與規劃
+
+1. 確認書名、edition、publication year、作者、chapter count 與正式目錄。
+2. 確認教材／章節目錄及 Claude 原稿的本機位置。
+3. 決定 `<book-id>`、檔名 slug 與每批章數。
+4. 從最新乾淨 `main` 建立 `codex/<book-id>-library`。
+5. 只提出與新書相關的最小架構變更；不得把 Schwartz migration 混入同一批。
+
+### Phase B：先架網站
+
+1. 建立新書資料夾、metadata、README、Claude 規格、chapter placeholders 與 audit index。
+2. 在 `books.js` 登錄新書。
+3. 泛化 book-data loader，使第三本書依自己的 `bookId` 載入。
+4. 將新書 script／pending loader 接入頁面。
+5. 驗證 selector、章節目錄、placeholder、搜尋、AI context 與 localStorage isolation。
+6. 回歸測試 Schwartz／ICU。
+
+### Phase C：Claude 交稿
+
+1. Claude 只寫入 `books/<book-id>/claude/`。
+2. 可分批 5 章交付，或依使用者指定。
+3. 原稿到齊後先核對實際檔名與目錄，不猜測位置。
+
+### Phase D：Codex 驗證與同步
+
+1. 逐章做結構檢查與 medical claims audit。
+2. 檢查並修復 References。
+3. 執行十題 evidence audit。
+4. 同步正式稿至 `chapters/`，更新 audit index。
+5. 驗證網站實際載入數量與內容。
+6. 每批完成後依使用者指示 commit／push。
+
+### Phase E：正式部署
+
+1. 確認功能分支乾淨且 tests 通過。
+2. 同步最新 `main`，避免覆蓋遠端更新。
+3. 使用者明確同意後才 fast-forward／merge 到 `main`。
+4. Push `main` 觸發 GitHub Pages。
+5. 等待 `pages build and deployment` 成功。
+6. 以 cache-busting query 讀取正式頁面，確認 commit 的新標記已上線。
+
+## 15. 每次修改後的驗證清單
 
 最低要求：
 
 1. `git diff --check` 通過。
-2. JavaScript syntax check 通過。
-3. 搜尋標題與內文皆正常。
-4. 重要標記數量與章節切換正常。
-5. 個人筆記不會跨書或跨章覆蓋。
-6. AI 欄位收合後，主要內容欄會擴張。
-7. 錯誤 AI 密碼回覆 401；正確密碼可通過 `/verify`。
-8. `/verify` 不可觸發 OpenAI 呼叫。
-9. `/ask` 回答包含可點擊來源；僅在必要時進行一次付費 live test。
-10. tracked files 不含 API key、AI 密碼或其他 secret。
-11. GitHub Pages 完成同步後，再確認正式網站包含新版標記或功能。
+2. `book.json` 與其他 JSON 可解析。
+3. `index.html` module JavaScript syntax check 通過。
+4. 章節檔數、目錄章數、loader 章數與 `chapterCount` 一致。
+5. 每份 ready Markdown 都有固定六個 heading 與 `<!-- status: ready -->`。
+6. References parser 能處理 URL 內的圓括號與跳脫字元。
+7. 新書內容不會錯讀 ICU 或 Schwartz。
+8. 搜尋、章節切換、重要標記、個人筆記與螢光筆正常。
+9. localStorage 不跨書或跨章覆蓋。
+10. AI context 顯示正確書名、edition 與 chapter。
+11. AI 面板收合後版面正常；desktop 與 mobile 都需檢查。
+12. Schwartz 54 / 54 與 ICU 53 / 53 仍可載入。
+13. tracked files 不含 PDF、`.DS_Store`、API key、AI 密碼或其他 secret。
+14. Push 後確認遠端 branch SHA；部署後確認 GitHub Pages build 與正式 HTML。
 
-若改動牽涉版面，需同時檢查 desktop 與 mobile 寬度。
+因 ICU 與未來新書會在瀏覽器以 `fetch()` 載入 Markdown，本機完整測試宜使用 local static server；單純 `file://` 可能被瀏覽器阻擋。正式網站則由 GitHub Pages 提供。
 
-## 13. Git 與部署原則
+## 16. Git 規則
 
-- 不使用 destructive reset 或直接刪除現有章節。
-- 只 stage 本次工作涉及的檔案。
-- commit message 應清楚描述使用者可見的成果。
-- Worker 與前端若同時修改：先部署 Worker 相容版本，再推送前端，避免前端先呼叫尚不存在的 endpoint。
-- Push 後需等待 GitHub Pages 同步，再檢查正式網址。
-- Secrets 的變更不需 commit；程式碼、文件與公開設定才進 Git。
+- 不使用 destructive reset、強制 push 或直接刪除既有章節。
+- 不使用 `git add -A`；只 stage 本次涉及的明確檔案。
+- commit message 清楚描述使用者可見成果或章節範圍。
+- 依 `/Users/tinrepin/Downloads/AGENTS.md`：commit 後，在 push 前同步遠端並處理必要 rebase。
+- 未經使用者明確同意，不合併 `main`、不部署正式網站。
+- 文件或網站發布後，需回報 branch、commit、push、部署狀態與正式網址。
 
-## 14. 目前下一步
+## 17. 不可踩的坑
 
-第一冊暫時不再新增內容。多書相容層已在 `codex/multi-book-library` 建立：
+1. 不要把 `claude/` 直接當網站來源。
+2. 不要因內容看起來完整就跳過十題 audit。
+3. 不要只在 `books.js` 加第三本書而忘記目前 loader 仍指向 ICU。
+4. 不要讓第三本書 chapter 1 覆蓋其他書 chapter 1 的 localStorage。
+5. 不要把 `ready` 寫成 `passed`；兩者含義不同。
+6. 不要大幅重構 Schwartz legacy 資料，除非使用者另行授權。
+7. 不要把教材 PDF、教材圖片、`.DS_Store` 或 secrets 加入 Git。
+8. 不要用 HTTP 200 取代內容核對；錯誤 landing page 仍是失效 reference。
+9. 不要在未確認正式目錄時自行猜 chapter title 或總章數。
+10. 不要在功能分支尚未驗證時直接 push `main`。
 
-- Schwartz 仍由原本 `notes*.js`、`chapter-*.md` 與 `audits/` 提供內容，54 章未搬動。
-- 新增 `books.js` 與 `books/<bookId>/book.json` 管理書目。
-- 書籍選單、搜尋、完成度、重要標記、個人筆記與 AI context 已加入 `bookId` 範圍。
-- 舊版 Schwartz localStorage 會複製到新鍵，但不刪除舊資料。
-- `The ICU Book, 5th Edition`（2025）已依原書目錄建立 16 sections、53 章正式稿、Markdown loader、Claude 規格與獨立 audit index。
-- ICU 章首 `status: draft` 時只顯示待整理；Claude 完稿並改為 `status: ready` 後會自動載入網站，但仍須另行完成十題 evidence audit 才能標為 `passed`。
-- ICU Chapter 1–53 已全數為 `ready`、通過結構檢查與逐章十題 evidence audit；目前內容進度 53 / 53，evidence audit 進度 53 / 53。
-- ICU 參考連結 parser 已支援 URL 內未跳脫或跳脫的圓括號；左側章節目錄可由標題列按鈕點擊收合與展開。
-- ICU 的 Claude 原稿固定放在 `books/icu-book-5e/claude/`；網站只讀取 `chapters/`。Codex 應先保存原稿，再做格式檢查與同步，不可讓 Claude 直接修改 audit 狀態。
+## 18. 下一個任務
 
-若後續修訂或新增其他書籍，Claude 仍依 `books/icu-book-5e/CLAUDE_INSTRUCTIONS.md` 的分工原則交付原稿，並遵守：
+目前兩本書已完成。下一個合理任務是新增第三本書，順序應為：
 
-- 只把指定的 ICU chapter Markdown 寫入 `books/icu-book-5e/claude/`，不改 `chapters/`、`audits/` 或 Schwartz 檔案。
-- 不逐段翻譯或大量轉錄原文，不使用教材圖片。
-- 每章完成時改為 `ready`，不可自行標記 `passed`。
-- 後續由 Codex 使用 `validate-medical-chapter` skill 完成每章十題 evidence audit。
+1. 使用者提供新書資料與本機檔案位置。
+2. 新 Chat 讀完本交接檔並確認 Git 狀態。
+3. 建立新的 `codex/<book-id>-library` branch。
+4. 先完成第三本書網站骨架及通用 loader。
+5. 使用者確認骨架後，Claude 開始把 Markdown 放進該書 `claude/`。
+6. Codex 依批次驗證、同步、audit、commit 與 push。
+7. 全書完成後，使用者再次明確同意才部署 `main`。
 
-確認後先提出 migration 計畫與 branch 範圍，再開始實作。
+開始第三本書時，先保護兩本既有正式版本；不要重新做已完成的 Schwartz 或 ICU 工作。
