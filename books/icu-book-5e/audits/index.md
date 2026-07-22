@@ -1,6 +1,6 @@
 # ICU Book 5th Edition Evidence Audit
 
-目前進度：20 / 53 章通過。
+目前進度：25 / 53 章通過。
 
 | Chapter | Title | Draft status | Audit score | Audit status |
 |---:|---|---|---:|---|
@@ -24,11 +24,11 @@
 | 18 | Acute Heart Failure(s) | ready | [10/10](chapter-18-audit.md) | passed |
 | 19 | Tachyarrhythmias | ready | [10/10](chapter-19-audit.md) | passed |
 | 20 | Acute Coronary Syndromes | ready | [10/10](chapter-20-audit.md) | passed |
-| 21 | Cardiac Arrest | draft | - | pending |
-| 22 | Acute Pulmonary Embolism | draft | - | pending |
-| 23 | Asthma and COPD in the ICU | draft | - | pending |
-| 24 | Acute Respiratory Distress Syndrome | draft | - | pending |
-| 25 | Oxygen Inhalation | draft | - | pending |
+| 21 | Cardiac Arrest | ready | [10/10](chapter-21-audit.md) | passed |
+| 22 | Acute Pulmonary Embolism | ready | [10/10](chapter-22-audit.md) | passed |
+| 23 | Asthma and COPD in the ICU | ready | [10/10](chapter-23-audit.md) | passed |
+| 24 | Acute Respiratory Distress Syndrome | ready | [10/10](chapter-24-audit.md) | passed |
+| 25 | Oxygen Inhalation | ready | [10/10](chapter-25-audit.md) | passed |
 | 26 | Noninvasive Ventilation | draft | - | pending |
 | 27 | Conventional Mechanical Ventilation | draft | - | pending |
 | 28 | The Ventilator-Dependent Patient | draft | - | pending |

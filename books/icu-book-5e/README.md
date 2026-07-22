@@ -2,7 +2,7 @@
 
 來源：Paul L. Marino, *The ICU Book*, 5th Edition, Wolters Kluwer, 2025。
 
-目前狀態：網站骨架完成，20 / 53 章內容完成（ready），20 / 53 章通過 evidence audit。
+目前狀態：網站骨架完成，25 / 53 章內容完成（ready），25 / 53 章通過 evidence audit。
 
 ## 目錄
 
