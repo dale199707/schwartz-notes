@@ -18,7 +18,7 @@ window.MEDICAL_BOOKS = [
     publicationYear: 2025,
     languagePolicy: '繁體中文整理，醫學專有名詞保留英文',
     chapterCount: 53,
-    status: 'drafting',
+    status: 'complete',
     source: 'icu-book'
   }
 ];

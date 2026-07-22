@@ -12,7 +12,7 @@
     .eyebrow { margin:0 0 6px; color:#b8e4dc; font-size:.8rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; } h1 { margin:0; font-size:clamp(1.7rem,4vw,2.6rem); line-height:1.25; } .subtitle { max-width:700px; margin:10px 0 0; color:#d9ebe8; }
     main { max-width:1800px; margin:0 auto; padding:26px 20px 64px; } .controls { display:flex; gap:16px; align-items:center; margin-bottom:20px; flex-wrap:wrap; } input,textarea,select { border:1px solid var(--line); border-radius:10px; padding:12px 14px; font:inherit; background:#fff; } input { flex:0 1 980px; min-width:260px; } select { min-width:min(100%,320px); color:var(--ink); } button { border:1px solid var(--teal); border-radius:10px; padding:8px 10px; color:var(--teal); background:transparent; font:inherit; cursor:pointer; } button.active, button:hover { color:var(--ink); background:#e8f1ed; } .stats { color:var(--muted); font-size:.9rem; white-space:nowrap; }
     .layout { display:grid; grid-template-columns:220px minmax(0,1fr) 320px; gap:18px; align-items:start; transition:grid-template-columns .2s ease; } .layout.ai-collapsed { grid-template-columns:220px minmax(0,1fr) max-content; } .layout.chapters-collapsed { grid-template-columns:max-content minmax(0,1fr) 320px; } .layout.chapters-collapsed.ai-collapsed { grid-template-columns:max-content minmax(0,1fr) max-content; } .chapter-panel { position:sticky; top:14px; align-self:start; max-height:calc(100vh - 28px); min-width:0; overflow:hidden; } .chapter-panel-head { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:0 4px 8px 0; } .chapter-panel-label { color:var(--muted); font-size:.78rem; font-weight:800; letter-spacing:.08em; } .chapter-collapse { flex:0 0 auto; padding:4px 8px; line-height:1.2; } .chapter-list { max-height:calc(100vh - 66px); overflow:auto; padding:3px 4px 3px 0; } .chapter-panel.collapsed { width:max-content; } .chapter-panel.collapsed .chapter-list,.chapter-panel.collapsed .chapter-panel-label { display:none; } .chapter-panel.collapsed .chapter-panel-head { margin:0; } .chapter { position:relative; width:100%; display:block; margin:0 0 3px; padding:9px 38px 9px 8px; border:1px solid transparent; border-radius:8px; text-align:left; background:transparent; font-size:.92rem; line-height:1.42; } .chapter:hover { color:var(--ink); background:#e8f1ed; } .chapter.active { border-color:#9cc5bd; color:var(--ink); background:#e0efea; } .chapter small { display:block; margin-bottom:2px; color:var(--muted); font-size:.74rem; letter-spacing:.02em; } .importance-count { position:absolute; top:50%; right:8px; min-width:23px; height:23px; border-radius:99px; padding:1px 6px; color:#7a4900; background:#ffe5a7; font-size:.72rem; font-weight:800; line-height:21px; text-align:center; transform:translateY(-50%); }
-    article { min-width:0; padding:clamp(24px,4vw,44px); border:1px solid var(--line); border-radius:16px; background:var(--card); box-shadow:0 8px 28px rgba(20,48,44,.06); } h2 { margin:0; font-size:clamp(1.4rem,3vw,2rem); line-height:1.35; } .eng { margin:6px 0 30px; color:var(--muted); font-style:italic; } h3 { margin:38px 0 15px; padding-bottom:8px; border-bottom:1px solid var(--line); font-size:1.1rem; } mark { border-radius:3px; padding:0 2px; color:inherit; background:#ffe49a; } ul { padding-left:1.25em; } li+li { margin-top:10px; } .personal-note { margin:28px 0 8px; padding:16px 18px; border:1px solid #bfd7e2; border-radius:11px; background:#f3f8fb; } .personal-note-head { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px; } .personal-note h3 { margin:0; padding:0; border:0; color:#244e61; } .personal-note-status { color:var(--muted); font-size:.76rem; white-space:nowrap; } .personal-note textarea { width:100%; min-height:120px; resize:vertical; line-height:1.7; } .personal-note-hint { margin:8px 0 0; color:var(--muted); font-size:.72rem; } .point-list { display:grid; gap:12px; margin:0; padding:0; list-style:none; } .point-list li { position:relative; padding:14px 52px 14px 43px; border:1px solid #e0e8e2; border-radius:10px; background:#fff; line-height:1.82; transition:border-color .15s,background .15s; } .point-list li::before { position:absolute; top:18px; left:17px; width:10px; height:10px; border-radius:50%; background:#4c958d; content:""; } .point-list li.important { border-color:#e8bd62; background:#fffaf0; } .importance-toggle { position:absolute; top:10px; right:10px; width:34px; height:34px; border:0; border-radius:99px; padding:0; color:#9c6a16; background:#fff6df; font-size:1.25rem; line-height:34px; } .importance-toggle:hover,.importance-toggle.active { color:#8a5300; background:#ffe6a8; } .section-list { line-height:1.85; } .note { margin:26px 0; border-left:4px solid var(--amber); border-radius:0 9px 9px 0; padding:17px 20px; background:#fff7e8; line-height:1.8; } .warning { border-left-color:var(--red); background:#fff1ef; } .note strong { display:block; margin-bottom:5px; } table { width:100%; margin:18px 0 28px; border-collapse:separate; border-spacing:0; overflow:hidden; border:1px solid var(--line); border-radius:10px; font-size:.94rem; line-height:1.65; } th,td { padding:13px 14px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; } tr:last-child td { border-bottom:0; } th { color:#174d4e; background:#ecf4ef; } .diagram { margin:32px 0; padding:20px; border:1px solid #cfe2db; border-radius:12px; background:#f3f9f6; } .diagram h3 { margin:0 0 12px; padding:0; border:0; color:#174d4e; } .diagram svg { display:block; width:100%; height:auto; } .diagram text { fill:#173c3d; font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif; font-size:13px; } .diagram .small { font-size:11px; fill:#526b6c; } .anatomy-figure { margin:30px 0; overflow:hidden; border:1px solid #cfe2db; border-radius:12px; background:#fff; } .anatomy-figure h3 { margin:0; padding:14px 18px; border:0; color:#174d4e; background:#f3f9f6; } .anatomy-figure a.image-link { display:block; padding:16px; text-align:center; background:#fff; } .anatomy-figure img { display:block; width:auto; max-width:100%; max-height:720px; margin:auto; object-fit:contain; } .anatomy-figure figcaption { padding:14px 18px 16px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; line-height:1.65; } .anatomy-figure figcaption strong { display:block; color:var(--ink); font-size:.92rem; } .anatomy-figure figcaption a { color:var(--teal); } .empty { color:var(--muted); text-align:center; padding:48px 0; }
+    article { min-width:0; padding:clamp(24px,4vw,44px); border:1px solid var(--line); border-radius:16px; background:var(--card); box-shadow:0 8px 28px rgba(20,48,44,.06); } h2 { margin:0; font-size:clamp(1.4rem,3vw,2rem); line-height:1.35; } .eng { margin:6px 0 30px; color:var(--muted); font-style:italic; } h3 { margin:38px 0 15px; padding-bottom:8px; border-bottom:1px solid var(--line); font-size:1.1rem; } .search-hit { border-radius:3px; padding:0 2px; color:inherit; background:#ffe49a; } ul { padding-left:1.25em; } li+li { margin-top:10px; } .personal-note { margin:28px 0 8px; padding:16px 18px; border:1px solid #bfd7e2; border-radius:11px; background:#f3f8fb; } .personal-note-head { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px; } .personal-note h3 { margin:0; padding:0; border:0; color:#244e61; } .personal-note-status { color:var(--muted); font-size:.76rem; white-space:nowrap; } .personal-note textarea { width:100%; min-height:120px; resize:vertical; line-height:1.7; } .personal-note-hint { margin:8px 0 0; color:var(--muted); font-size:.72rem; } .highlighter-hint { margin:-8px 0 14px; color:var(--muted); font-size:.75rem; } .highlightable-text { cursor:text; } .user-highlight { border-radius:3px; padding:1px 0; color:inherit; cursor:pointer; box-decoration-break:clone; -webkit-box-decoration-break:clone; } .user-highlight-yellow { background:#ffe17d; } .user-highlight-green { background:#a9e6bd; } .user-highlight-blue { background:#abd7f5; } .highlight-toolbar { position:fixed; z-index:60; display:flex; align-items:center; gap:7px; padding:8px 10px; border:1px solid #bed1ca; border-radius:12px; background:#173c3d; box-shadow:0 10px 30px rgba(8,35,36,.24); color:#fff; transform-origin:center bottom; } .highlight-toolbar[hidden] { display:none; } .highlight-toolbar-label { margin-right:2px; font-size:.72rem; font-weight:800; white-space:nowrap; } .highlight-swatch,.highlight-clear { width:30px; height:30px; border:2px solid rgba(255,255,255,.78); border-radius:8px; padding:0; } .highlight-swatch:hover,.highlight-swatch:focus-visible { border-color:#fff; transform:translateY(-1px); } .highlight-swatch[data-highlight-color="yellow"] { background:#ffe17d; } .highlight-swatch[data-highlight-color="green"] { background:#75cf93; } .highlight-swatch[data-highlight-color="blue"] { background:#7dbde8; } .highlight-clear { color:#fff; background:#365b5c; font-size:1rem; line-height:1; } .highlight-clear:hover,.highlight-clear:focus-visible { color:#fff; background:#9b433d; } .point-list { display:grid; gap:12px; margin:0; padding:0; list-style:none; } .point-list li { position:relative; padding:14px 52px 14px 43px; border:1px solid #e0e8e2; border-radius:10px; background:#fff; line-height:1.82; transition:border-color .15s,background .15s; } .point-list li::before { position:absolute; top:18px; left:17px; width:10px; height:10px; border-radius:50%; background:#4c958d; content:""; } .point-list li.important { border-color:#e8bd62; background:#fffaf0; } .importance-toggle { position:absolute; top:10px; right:10px; width:34px; height:34px; border:0; border-radius:99px; padding:0; color:#9c6a16; background:#fff6df; font-size:1.25rem; line-height:34px; } .importance-toggle:hover,.importance-toggle.active { color:#8a5300; background:#ffe6a8; } .section-list { line-height:1.85; } .note { margin:26px 0; border-left:4px solid var(--amber); border-radius:0 9px 9px 0; padding:17px 20px; background:#fff7e8; line-height:1.8; } .warning { border-left-color:var(--red); background:#fff1ef; } .note strong { display:block; margin-bottom:5px; } table { width:100%; margin:18px 0 28px; border-collapse:separate; border-spacing:0; overflow:hidden; border:1px solid var(--line); border-radius:10px; font-size:.94rem; line-height:1.65; } th,td { padding:13px 14px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; } tr:last-child td { border-bottom:0; } th { color:#174d4e; background:#ecf4ef; } .diagram { margin:32px 0; padding:20px; border:1px solid #cfe2db; border-radius:12px; background:#f3f9f6; } .diagram h3 { margin:0 0 12px; padding:0; border:0; color:#174d4e; } .diagram svg { display:block; width:100%; height:auto; } .diagram text { fill:#173c3d; font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif; font-size:13px; } .diagram .small { font-size:11px; fill:#526b6c; } .anatomy-figure { margin:30px 0; overflow:hidden; border:1px solid #cfe2db; border-radius:12px; background:#fff; } .anatomy-figure h3 { margin:0; padding:14px 18px; border:0; color:#174d4e; background:#f3f9f6; } .anatomy-figure a.image-link { display:block; padding:16px; text-align:center; background:#fff; } .anatomy-figure img { display:block; width:auto; max-width:100%; max-height:720px; margin:auto; object-fit:contain; } .anatomy-figure figcaption { padding:14px 18px 16px; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; line-height:1.65; } .anatomy-figure figcaption strong { display:block; color:var(--ink); font-size:.92rem; } .anatomy-figure figcaption a { color:var(--teal); } .empty { color:var(--muted); text-align:center; padding:48px 0; }
     .ai-panel { position:sticky; top:14px; max-height:calc(100vh - 28px); overflow:auto; border:1px solid #bdd8d0; border-radius:14px; background:#f8fcfa; box-shadow:0 8px 28px rgba(20,48,44,.08); } .ai-header { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:15px 16px; color:#fff; background:#0d5b5e; } .ai-header strong { font-size:1rem; } .ai-header small { display:block; color:#cce9e3; font-weight:400; } .ai-collapse { flex:0 0 auto; border-color:#acd3cd; padding:4px 8px; color:#fff; } .ai-collapse:hover { color:#fff; background:#174d4e; } .ai-body { padding:16px; } .ai-context { margin:0 0 10px; color:var(--muted); font-size:.78rem; } .ai-password-row { display:flex; align-items:stretch; gap:7px; } .ai-form .ai-password-row input { width:auto; min-width:0; margin:0; flex:1; } .ai-verify { flex:0 0 auto; padding-inline:12px; } .ai-password-meta { display:flex; justify-content:space-between; gap:8px; margin:5px 0 12px; } .ai-password-hint { color:var(--muted); font-size:.68rem; line-height:1.45; } .ai-password-status { color:var(--muted); font-size:.7rem; font-weight:700; white-space:nowrap; } .ai-password-status.verified { color:#137253; } .ai-form textarea { width:100%; min-height:104px; resize:vertical; line-height:1.55; } .ai-form textarea:disabled,.ai-form input:read-only { color:#839091; background:#edf1ef; cursor:not-allowed; } .ai-actions { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:10px; } .ai-submit { color:#fff; background:var(--teal); } .ai-submit:disabled { cursor:not-allowed; opacity:.45; } .ai-answer { margin-top:16px; padding-top:15px; border-top:1px solid var(--line); font-size:.88rem; line-height:1.72; white-space:pre-wrap; overflow-wrap:anywhere; } .ai-answer:empty { display:none; } .ai-answer a,.ai-sources a { color:var(--teal); text-decoration:underline; text-underline-offset:2px; } .ai-sources { margin:12px 0 0; padding:0 0 0 18px; font-size:.78rem; line-height:1.5; } .ai-sources li+li { margin-top:6px; } .ai-disclaimer { margin:14px 0 0; color:var(--muted); font-size:.7rem; line-height:1.5; } .ai-panel.collapsed { width:max-content; overflow:hidden; } .ai-panel.collapsed .ai-body,.ai-panel.collapsed .ai-header small { display:none; } footer { max-width:1160px; margin:auto; padding:0 24px 32px; color:var(--muted); font-size:.8rem; }
     @media(max-width:1350px) { .layout,.layout.ai-collapsed { grid-template-columns:210px minmax(0,1fr); } .layout.chapters-collapsed,.layout.chapters-collapsed.ai-collapsed { grid-template-columns:max-content minmax(0,1fr); } .ai-panel { position:fixed; right:14px; bottom:14px; top:auto; z-index:20; width:min(340px,calc(100vw - 28px)); max-height:72vh; } }
     @media(max-width:800px) { main { padding-inline:14px; } .layout,.layout.ai-collapsed,.layout.chapters-collapsed,.layout.chapters-collapsed.ai-collapsed { grid-template-columns:1fr; } .chapter-panel { position:static; max-height:none; } .chapter-panel.collapsed { justify-self:start; } .chapter-list { max-height:280px; } article { padding:22px 18px; } .ai-panel { left:14px; width:auto; } }
@@ -22,14 +22,14 @@
   <header><p class="eyebrow">Medical notes library</p><h1 id="siteTitle">醫學原文書筆記庫</h1><p class="subtitle" id="siteSubtitle">選擇書籍後閱讀章節重點；醫學術語、器官與藥物名稱保留英文。</p></header>
   <main>
     <div class="controls"><select id="bookSelect" aria-label="選擇書籍"></select><input id="search" type="search" placeholder="搜尋目前書籍的章節、內文或自己的筆記"><span class="stats" id="stats"></span></div>
-    <div class="layout">
+    <div class="layout ai-collapsed">
       <aside class="chapter-panel" id="chapterPanel" aria-label="章節目錄">
         <div class="chapter-panel-head"><span class="chapter-panel-label">章節目錄</span><button class="chapter-collapse" id="chapterCollapse" type="button" aria-expanded="true" aria-controls="chapters" title="收合章節目錄">−</button></div>
         <nav class="chapter-list" id="chapters"></nav>
       </aside>
       <article id="content"></article>
-      <aside class="ai-panel" id="aiPanel" aria-label="詢問 AI">
-        <div class="ai-header"><div><strong>詢問 AI</strong><small>Web search · 附來源</small></div><button class="ai-collapse" id="aiCollapse" type="button" aria-expanded="true" title="收合 AI 欄位">−</button></div>
+      <aside class="ai-panel collapsed" id="aiPanel" aria-label="詢問 AI">
+        <div class="ai-header"><div><strong>詢問 AI</strong><small>Web search · 附來源</small></div><button class="ai-collapse" id="aiCollapse" type="button" aria-expanded="false" title="展開 AI 欄位">+</button></div>
         <div class="ai-body">
           <p class="ai-context" id="aiContext">目前章節會自動加入問題背景。</p>
           <form class="ai-form" id="aiForm">
@@ -46,6 +46,7 @@
         </div>
       </aside>
     </div>
+    <div class="highlight-toolbar" id="highlightToolbar" role="toolbar" aria-label="文字螢光筆" hidden><span class="highlight-toolbar-label">螢光筆</span><button class="highlight-swatch" type="button" data-highlight-color="yellow" aria-label="標記為黃色"></button><button class="highlight-swatch" type="button" data-highlight-color="green" aria-label="標記為綠色"></button><button class="highlight-swatch" type="button" data-highlight-color="blue" aria-label="標記為藍色"></button><button class="highlight-clear" type="button" data-highlight-clear aria-label="清除所選螢光標記" title="清除標記">×</button></div>
   </main>
   <footer id="siteFooter">本網站為個人學習用的重點筆記，不取代臨床判斷、現行 guideline 或原始文獻。</footer>
   <script src="books.js"></script>
@@ -71,15 +72,31 @@
     const schwartzChapters=titles.map((title,i)=>({id:i+1,title,zh:schwartzReady[i+1]?.zh||'待整理',part:schwartzReady[i+1]?.part||(i<16?'Basic Considerations':i<25?'Thorax and Vascular':i<38?'Abdomen':'Specialty and Practice')}));
     const books=Array.isArray(window.MEDICAL_BOOKS)?window.MEDICAL_BOOKS:[];
     let currentBook=books.find(book=>book.id==='schwartz-11e')||books[0];
-    let ready=schwartzReady,chapters=schwartzChapters,selected=5,important={},personalNotes={};
+    let ready=schwartzReady,chapters=schwartzChapters,selected=1,important={},personalNotes={},textHighlights={};
     const list=document.querySelector('#chapters'),content=document.querySelector('#content'),search=document.querySelector('#search'),bookSelect=document.querySelector('#bookSelect');
-    function escape(s){return String(s).replace(/\*\*/g,'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+    const plainText=s=>String(s).replace(/\*\*/g,'');
+    function escape(s){return plainText(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
     function highlight(value,query){
-      const text=String(value),needle=query.trim().toLocaleLowerCase();
+      const text=plainText(value),needle=query.trim().toLocaleLowerCase();
       if(!needle)return escape(text);
       const lower=text.toLocaleLowerCase();let cursor=0,index=lower.indexOf(needle),html='';
-      while(index>=0){html+=escape(text.slice(cursor,index));html+=`<mark>${escape(text.slice(index,index+needle.length))}</mark>`;cursor=index+needle.length;index=lower.indexOf(needle,cursor);}
+      while(index>=0){html+=escape(text.slice(cursor,index));html+=`<span class="search-hit">${escape(text.slice(index,index+needle.length))}</span>`;cursor=index+needle.length;index=lower.indexOf(needle,cursor);}
       return html+escape(text.slice(cursor));
+    }
+    const highlightColors=new Set(['yellow','green','blue']);
+    function normalizedHighlightRanges(value,textLength){
+      return (Array.isArray(value)?value:[]).map(item=>({start:Number(item.start),end:Number(item.end),color:String(item.color)})).filter(item=>Number.isInteger(item.start)&&Number.isInteger(item.end)&&item.start>=0&&item.end<=textLength&&item.end>item.start&&highlightColors.has(item.color)).sort((a,b)=>a.start-b.start||a.end-b.end);
+    }
+    function mergedHighlightRanges(ranges){
+      return ranges.reduce((result,item)=>{const previous=result.at(-1);if(previous&&previous.color===item.color&&item.start<=previous.end)previous.end=Math.max(previous.end,item.end);else result.push({...item});return result;},[]);
+    }
+    function decoratedText(value,query,target){
+      const text=plainText(value),ranges=normalizedHighlightRanges(textHighlights[selected]?.[target],text.length),needle=query.trim().toLocaleLowerCase(),searchRanges=[];
+      if(needle){const lower=text.toLocaleLowerCase();let index=lower.indexOf(needle);while(index>=0){searchRanges.push({start:index,end:index+needle.length});index=lower.indexOf(needle,index+needle.length);}}
+      const boundaries=new Set([0,text.length]);ranges.forEach(item=>{boundaries.add(item.start);boundaries.add(item.end);});searchRanges.forEach(item=>{boundaries.add(item.start);boundaries.add(item.end);});
+      const points=[...boundaries].sort((a,b)=>a-b);let html='';
+      for(let i=0;i<points.length-1;i+=1){const start=points[i],end=points[i+1];if(end<=start)continue;const stored=ranges.find(item=>item.start<=start&&item.end>=end),matched=searchRanges.some(item=>item.start<=start&&item.end>=end);let piece=escape(text.slice(start,end));if(matched)piece=`<span class="search-hit">${piece}</span>`;if(stored)piece=`<mark class="user-highlight user-highlight-${stored.color}" data-highlight-target="${escape(target)}" data-highlight-start="${stored.start}" data-highlight-end="${stored.end}">${piece}</mark>`;html+=piece;}
+      return html;
     }
     const storageKey=kind=>`medical-notes-${currentBook.id}-${kind}-v1`;
     const readStorage=kind=>{try{return JSON.parse(localStorage.getItem(storageKey(kind))||'{}')||{};}catch{return {};}};
@@ -117,6 +134,7 @@
       return '';
     }
     function draw(){
+      hideHighlightToolbar();
       const query=search.value.trim(),q=query.toLocaleLowerCase();
       const visible=chapters.filter(c=>searchText(c).includes(q));
       if(q&&visible.length&&!visible.some(c=>c.id===selected))selected=visible[0].id;
@@ -131,8 +149,9 @@
       const tableHtml=tables.filter(Boolean).map(rows=>`<table><thead><tr>${rows[0].map(x=>`<th>${highlight(x,query)}</th>`).join('')}</tr></thead><tbody>${rows.slice(1).map(r=>`<tr>${r.map(x=>`<td>${highlight(x,query)}</td>`).join('')}</tr>`).join('')}</tbody></table>`).join('');
       const updates=d?.updates||[];
       const references=d?.references||[];
+      const visiblePearls=pearls.filter(Boolean);
       const personalNoteHtml=`<section class="personal-note"><div class="personal-note-head"><h3>自己的筆記</h3><span class="personal-note-status" id="personalNoteStatus">自動儲存</span></div><textarea id="personalNote" maxlength="12000" placeholder="輸入這一章的補充、疑問、考點或臨床經驗…"></textarea><p class="personal-note-hint">只儲存在目前瀏覽器，不會上傳到 GitHub、Cloudflare 或 AI。</p></section>`;
-      content.innerHTML=d?`<p class="eyebrow" style="color:#0d5b5e">${escape(c.part)} · Chapter ${c.id}</p><h2>${highlight(d.zh,query)}</h2>${personalNoteHtml}<h3>核心整理</h3><ul class="point-list">${d.bullets.map((x,index)=>{const active=isImportant(c.id,index);return `<li class="${active?'important':''}"><button class="importance-toggle ${active?'active':''}" type="button" data-important="${index}" aria-pressed="${active}" aria-label="${active?'取消重要標記':'標記為重要'}" title="${active?'取消重要':'標記重要'}">${active?'★':'☆'}</button>${highlight(x,query)}</li>`;}).join('')}</ul>${anatomyHtml(c.id)}<aside class="note"><strong>Clinical pearl</strong><ul class="section-list">${pearls.filter(Boolean).map(x=>`<li>${highlight(x,query)}</li>`).join('')}</ul></aside>${diagramHtml(c.id)}<h3>快速比較</h3>${tableHtml}${updates.length?`<h3>後續證據更新</h3><ul class="section-list">${updates.map(x=>`<li>${highlight(x,query)}</li>`).join('')}</ul>`:''}${references.length?`<h3>References</h3><ul class="section-list">${references.map(r=>`<li><a href="${escape(r.url)}" target="_blank" rel="noopener">${highlight(r.label,query)}</a></li>`).join('')}</ul>`:''}<aside class="note warning"><strong>更新提醒</strong>本章以 ${escape(currentBook.publicationYear||'原版')} 年教材為基礎；新增證據已附來源，但臨床決策仍應以最新 guideline、院內流程與個別病人狀況為準。</aside>`:`<p class="eyebrow" style="color:#0d5b5e">${escape(c.part)} · Chapter ${c.id}</p><h2>${highlight(c.title,query)}</h2>${personalNoteHtml}<div class="empty">此章尚待 Claude 整理；完成後需另行進行十題 evidence audit。</div>`;
+      content.innerHTML=d?`<p class="eyebrow" style="color:#0d5b5e">${escape(c.part)} · Chapter ${c.id}</p><h2>${highlight(d.zh,query)}</h2>${personalNoteHtml}<h3>核心整理</h3><p class="highlighter-hint">選取「核心整理」或「Clinical pearl」文字即可加入黃／綠／藍螢光標記；點擊既有標記可變色或清除。標記只儲存在目前瀏覽器。</p><ul class="point-list">${d.bullets.map((x,index)=>{const active=isImportant(c.id,index),target=`core:${index}`;return `<li class="${active?'important':''}"><button class="importance-toggle ${active?'active':''}" type="button" data-important="${index}" aria-pressed="${active}" aria-label="${active?'取消重要標記':'標記為重要'}" title="${active?'取消重要':'標記重要'}">${active?'★':'☆'}</button><span class="highlightable-text" data-highlight-target="${target}">${decoratedText(x,query,target)}</span></li>`;}).join('')}</ul>${anatomyHtml(c.id)}<aside class="note"><strong>Clinical pearl</strong><ul class="section-list">${visiblePearls.map((x,index)=>{const target=`pearl:${index}`;return `<li><span class="highlightable-text" data-highlight-target="${target}">${decoratedText(x,query,target)}</span></li>`;}).join('')}</ul></aside>${diagramHtml(c.id)}<h3>快速比較</h3>${tableHtml}${updates.length?`<h3>後續證據更新</h3><ul class="section-list">${updates.map(x=>`<li>${highlight(x,query)}</li>`).join('')}</ul>`:''}${references.length?`<h3>References</h3><ul class="section-list">${references.map(r=>`<li><a href="${escape(r.url)}" target="_blank" rel="noopener">${highlight(r.label,query)}</a></li>`).join('')}</ul>`:''}<aside class="note warning"><strong>更新提醒</strong>本章以 ${escape(currentBook.publicationYear||'原版')} 年教材為基礎；新增證據已附來源，但臨床決策仍應以最新 guideline、院內流程與個別病人狀況為準。</aside>`:`<p class="eyebrow" style="color:#0d5b5e">${escape(c.part)} · Chapter ${c.id}</p><h2>${highlight(c.title,query)}</h2>${personalNoteHtml}<div class="empty">此章尚待 Claude 整理；完成後需另行進行十題 evidence audit。</div>`;
       content.querySelectorAll('[data-important]').forEach(button=>button.onclick=()=>{toggleImportant(c.id,+button.dataset.important);draw();});
       const personalNote=document.querySelector('#personalNote'),personalNoteStatus=document.querySelector('#personalNoteStatus');
       personalNote.value=personalNotes[c.id]||'';
@@ -143,17 +162,77 @@
       currentBook=books.find(book=>book.id===bookId)||books[0];
       ready=currentBook.id==='schwartz-11e'?schwartzReady:(window.ICU_BOOK_NOTES||{});
       chapters=currentBook.id==='schwartz-11e'?schwartzChapters:(window.ICU_BOOK_CHAPTERS||[]);
-      selected=currentBook.id==='schwartz-11e'?5:(chapters[0]?.id||null);
-      migrateSchwartzStorage();important=readStorage('important');personalNotes=readStorage('personal-notes');search.value='';
+      selected=currentBook.id==='schwartz-11e'?1:(chapters[0]?.id||null);
+      migrateSchwartzStorage();important=readStorage('important');personalNotes=readStorage('personal-notes');textHighlights=readStorage('highlights');search.value='';
       document.title=`${currentBook.shortTitle}｜醫學原文書筆記庫`;
       document.querySelector('#siteTitle').textContent=currentBook.shortTitle;
       document.querySelector('#siteSubtitle').textContent=`《${currentBook.title}, ${currentBook.edition}》；${currentBook.languagePolicy}。`;
       document.querySelector('#siteFooter').textContent=`本網站為個人學習用的重點筆記，不取代臨床判斷、現行 guideline 或原始文獻。原始參考：${currentBook.title}, ${currentBook.edition}${currentBook.publicationYear?` (${currentBook.publicationYear})`:''}。`;
       draw();
     }
-    bookSelect.innerHTML=books.map(book=>`<option value="${escape(book.id)}">${escape(book.shortTitle)} · ${escape(book.edition)}${book.status==='complete'?'':'（整理中）'}</option>`).join('');
+    bookSelect.innerHTML=books.map(book=>`<option value="${escape(book.id)}">${escape(book.shortTitle)} · ${escape(book.edition)}</option>`).join('');
     bookSelect.value=currentBook.id;bookSelect.onchange=()=>loadBook(bookSelect.value);
-    const layout=document.querySelector('.layout'),chapterPanel=document.querySelector('#chapterPanel'),chapterCollapse=document.querySelector('#chapterCollapse'),aiPanel=document.querySelector('#aiPanel'),aiCollapse=document.querySelector('#aiCollapse'),aiForm=document.querySelector('#aiForm'),aiPassword=document.querySelector('#aiPassword'),aiVerify=document.querySelector('#aiVerify'),aiPasswordStatus=document.querySelector('#aiPasswordStatus'),aiQuestion=document.querySelector('#aiQuestion'),aiSubmit=document.querySelector('#aiSubmit'),aiStatus=document.querySelector('#aiStatus'),aiAnswer=document.querySelector('#aiAnswer'),aiSources=document.querySelector('#aiSources');
+    const layout=document.querySelector('.layout'),chapterPanel=document.querySelector('#chapterPanel'),chapterCollapse=document.querySelector('#chapterCollapse'),aiPanel=document.querySelector('#aiPanel'),aiCollapse=document.querySelector('#aiCollapse'),highlightToolbar=document.querySelector('#highlightToolbar'),aiForm=document.querySelector('#aiForm'),aiPassword=document.querySelector('#aiPassword'),aiVerify=document.querySelector('#aiVerify'),aiPasswordStatus=document.querySelector('#aiPasswordStatus'),aiQuestion=document.querySelector('#aiQuestion'),aiSubmit=document.querySelector('#aiSubmit'),aiStatus=document.querySelector('#aiStatus'),aiAnswer=document.querySelector('#aiAnswer'),aiSources=document.querySelector('#aiSources');
+    let pendingHighlight=null;
+    function hideHighlightToolbar(){highlightToolbar.hidden=true;pendingHighlight=null;}
+    function showHighlightToolbar(rect){
+      highlightToolbar.hidden=false;
+      const width=highlightToolbar.offsetWidth,height=highlightToolbar.offsetHeight,margin=8;
+      const left=Math.min(Math.max(margin,rect.left+(rect.width/2)-(width/2)),Math.max(margin,window.innerWidth-width-margin));
+      const above=rect.top-height-10,top=above>=margin?above:Math.min(rect.bottom+10,window.innerHeight-height-margin);
+      highlightToolbar.style.left=`${left}px`;highlightToolbar.style.top=`${Math.max(margin,top)}px`;
+    }
+    function highlightContainer(node){const element=node?.nodeType===Node.ELEMENT_NODE?node:node?.parentElement;return element?.closest?.('.highlightable-text')||null;}
+    function selectedHighlightRange(){
+      const selection=window.getSelection();
+      if(!selection||selection.rangeCount!==1||selection.isCollapsed||!selection.toString().trim())return null;
+      const range=selection.getRangeAt(0),startContainer=highlightContainer(range.startContainer),endContainer=highlightContainer(range.endContainer);
+      if(!startContainer||startContainer!==endContainer||!content.contains(startContainer))return null;
+      const before=document.createRange(),through=document.createRange();
+      before.selectNodeContents(startContainer);before.setEnd(range.startContainer,range.startOffset);
+      through.selectNodeContents(startContainer);through.setEnd(range.endContainer,range.endOffset);
+      const start=before.toString().length,end=through.toString().length;
+      if(end<=start)return null;
+      return {chapterId:selected,target:startContainer.dataset.highlightTarget,start,end,rect:range.getBoundingClientRect()};
+    }
+    function inspectTextSelection(){
+      const candidate=selectedHighlightRange();
+      if(!candidate){if(!pendingHighlight)highlightToolbar.hidden=true;return;}
+      pendingHighlight=candidate;showHighlightToolbar(candidate.rect);
+    }
+    function highlightTextValue(target){
+      const data=ready[selected]||{},[kind,indexText]=String(target).split(':'),index=Number(indexText);
+      if(kind==='core')return plainText(data.bullets?.[index]||'');
+      if(kind==='pearl')return plainText((data.pearls||[data.tip]).filter(Boolean)[index]||'');
+      return '';
+    }
+    function applyHighlightColor(color){
+      if(!pendingHighlight||pendingHighlight.chapterId!==selected||(color!==null&&!highlightColors.has(color)))return;
+      const {target,start,end}=pendingHighlight,text=highlightTextValue(target);
+      if(!text||start<0||end>text.length||end<=start)return;
+      const chapterHighlights=textHighlights[selected]||(textHighlights[selected]={}),current=normalizedHighlightRanges(chapterHighlights[target],text.length),next=[];
+      current.forEach(item=>{if(item.end<=start||item.start>=end)next.push(item);else{if(item.start<start)next.push({...item,end:start});if(item.end>end)next.push({...item,start:end});}});
+      if(color)next.push({start,end,color});
+      const merged=mergedHighlightRanges(next.sort((a,b)=>a.start-b.start||a.end-b.end));
+      if(merged.length)chapterHighlights[target]=merged;else delete chapterHighlights[target];
+      if(!Object.keys(chapterHighlights).length)delete textHighlights[selected];
+      try{localStorage.setItem(storageKey('highlights'),JSON.stringify(textHighlights));}catch{}
+      window.getSelection()?.removeAllRanges();hideHighlightToolbar();draw();
+    }
+    content.addEventListener('mouseup',()=>requestAnimationFrame(inspectTextSelection));
+    content.addEventListener('keyup',()=>requestAnimationFrame(inspectTextSelection));
+    content.addEventListener('touchend',()=>requestAnimationFrame(inspectTextSelection));
+    content.addEventListener('click',event=>{
+      const mark=event.target.closest?.('.user-highlight'),selection=window.getSelection();
+      if(!mark||(selection&&!selection.isCollapsed))return;
+      pendingHighlight={chapterId:selected,target:mark.dataset.highlightTarget,start:Number(mark.dataset.highlightStart),end:Number(mark.dataset.highlightEnd),rect:mark.getBoundingClientRect()};
+      showHighlightToolbar(pendingHighlight.rect);
+    });
+    highlightToolbar.addEventListener('pointerdown',event=>event.preventDefault());
+    highlightToolbar.querySelectorAll('[data-highlight-color]').forEach(button=>button.addEventListener('click',()=>applyHighlightColor(button.dataset.highlightColor)));
+    highlightToolbar.querySelector('[data-highlight-clear]').addEventListener('click',()=>applyHighlightColor(null));
+    window.addEventListener('resize',hideHighlightToolbar);
+    window.addEventListener('scroll',hideHighlightToolbar,true);
     const aiPasswordStorageKey='schwartz-ai-access-v1';
     let aiAccessVerified=false;
     try{aiPassword.value=sessionStorage.getItem(aiPasswordStorageKey)||'';}catch{}
