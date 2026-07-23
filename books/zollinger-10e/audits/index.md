@@ -1,6 +1,6 @@
 # Zollinger's Atlas of Surgical Operations 10th Edition Evidence Audit
 
-目前進度：20 / 150 章通過。
+目前進度：70 / 150 章通過。
 
 | Chapter | Title | Draft status | Audit score | Audit status |
 |---:|---|---|---:|---|
@@ -24,56 +24,56 @@
 | 18 | Percutaneous Endoscopic Gastrostomy | ready | 10/10 | passed |
 | 19 | Closure of Perforation—Subphrenic Abscess | ready | 10/10 | passed |
 | 20 | Gastrojejunostomy | ready | 10/10 | passed |
-| 21 | Pyloroplasty—Gastroduodenostomy | draft | — | pending |
-| 22 | Vagotomy | draft | — | pending |
-| 23 | Vagotomy, Subdiaphragmatic Approach | draft | — | pending |
-| 24 | Hemigastrectomy, Billroth I Method | draft | — | pending |
-| 25 | Hemigastrectomy, Billroth I Stapled | draft | — | pending |
-| 26 | Gastrectomy, Subtotal | draft | — | pending |
-| 27 | Gastrectomy, Subtotal—Omentectomy | draft | — | pending |
-| 28 | Gastrectomy, Polya Method | draft | — | pending |
-| 29 | Gastrectomy, Hofmeister Method | draft | — | pending |
-| 30 | Hemigastrectomy, Billroth II Stapled | draft | — | pending |
-| 31 | Total Gastrectomy | draft | — | pending |
-| 32 | Total Gastrectomy, Stapled | draft | — | pending |
-| 33 | Roux-en-Y Gastrojejunostomy | draft | — | pending |
-| 34 | Fundoplication | draft | — | pending |
-| 35 | Fundoplication, Laparoscopic | draft | — | pending |
-| 36 | Esophageal Myotomy, Laparoscopic | draft | — | pending |
-| 37 | Roux-en-Y Gastric Bypass, Laparoscopic | draft | — | pending |
-| 38 | Sleeve Gastrectomy, Laparoscopic | draft | — | pending |
-| 39 | The Adjustable Gastric Band, Laparoscopic | draft | — | pending |
-| 40 | Esophagectomy Transhiatal | draft | — | pending |
-| 41 | Esophagectomy, Transthoracic | draft | — | pending |
-| 42 | Pyloromyotomy | draft | — | pending |
-| 43 | Intussusception and Meckel's Diverticulectomy | draft | — | pending |
-| 44 | Resection of Small Intestine | draft | — | pending |
-| 45 | Resection of Small Intestine, Stapled | draft | — | pending |
-| 46 | Enteroenterostomy, Stapled | draft | — | pending |
-| 47 | Enterostomy | draft | — | pending |
-| 48 | Appendectomy | draft | — | pending |
-| 49 | Appendectomy, Laparoscopic | draft | — | pending |
-| 50 | Surgical Anatomy of Large Intestine | draft | — | pending |
-| 51 | Loop Ileostomy | draft | — | pending |
-| 52 | Transverse Colostomy | draft | — | pending |
-| 53 | Closure of Colostomy | draft | — | pending |
-| 54 | Colon Anastomosis, Stapled | draft | — | pending |
-| 55 | Colectomy, Right | draft | — | pending |
-| 56 | Colectomy, Right, Laparoscopic | draft | — | pending |
-| 57 | Colectomy, Left, End-to-End Anastomosis | draft | — | pending |
-| 58 | Colectomy, Left, Laparoscopic | draft | — | pending |
-| 59 | Abdominoperineal Resection | draft | — | pending |
-| 60 | Total Colectomy and Total Proctocolectomy | draft | — | pending |
-| 61 | Anterior Resection of Rectosigmoid: End-to-End Anastomosis | draft | — | pending |
-| 62 | Anterior Resection, Stapled | draft | — | pending |
-| 63 | Anterior Resection of Rectosigmoid: Side-to-End Anastomosis (Baker) | draft | — | pending |
-| 64 | Ileoanal Anastomosis | draft | — | pending |
-| 65 | Rectal Prolapse, Perineal Repair | draft | — | pending |
-| 66 | Rubber Banding and Excision of Hemorrhoids | draft | — | pending |
-| 67 | Perirectal Abscess, Fistula-in-Ano, and Anal Fissure | draft | — | pending |
-| 68 | Excision of Pilonidal Sinus | draft | — | pending |
-| 69 | Cholecystectomy, Laparoscopic | draft | — | pending |
-| 70 | Cholecystectomy, Open Retrograde Technique | draft | — | pending |
+| 21 | Pyloroplasty—Gastroduodenostomy | ready | 10/10 | passed |
+| 22 | Vagotomy | ready | 10/10 | passed |
+| 23 | Vagotomy, Subdiaphragmatic Approach | ready | 10/10 | passed |
+| 24 | Hemigastrectomy, Billroth I Method | ready | 10/10 | passed |
+| 25 | Hemigastrectomy, Billroth I Stapled | ready | 10/10 | passed |
+| 26 | Gastrectomy, Subtotal | ready | 10/10 | passed |
+| 27 | Gastrectomy, Subtotal—Omentectomy | ready | 10/10 | passed |
+| 28 | Gastrectomy, Polya Method | ready | 10/10 | passed |
+| 29 | Gastrectomy, Hofmeister Method | ready | 10/10 | passed |
+| 30 | Hemigastrectomy, Billroth II Stapled | ready | 10/10 | passed |
+| 31 | Total Gastrectomy | ready | 10/10 | passed |
+| 32 | Total Gastrectomy, Stapled | ready | 10/10 | passed |
+| 33 | Roux-en-Y Gastrojejunostomy | ready | 10/10 | passed |
+| 34 | Fundoplication | ready | 10/10 | passed |
+| 35 | Fundoplication, Laparoscopic | ready | 10/10 | passed |
+| 36 | Esophageal Myotomy, Laparoscopic | ready | 10/10 | passed |
+| 37 | Roux-en-Y Gastric Bypass, Laparoscopic | ready | 10/10 | passed |
+| 38 | Sleeve Gastrectomy, Laparoscopic | ready | 10/10 | passed |
+| 39 | The Adjustable Gastric Band, Laparoscopic | ready | 10/10 | passed |
+| 40 | Esophagectomy Transhiatal | ready | 10/10 | passed |
+| 41 | Esophagectomy, Transthoracic | ready | 10/10 | passed |
+| 42 | Pyloromyotomy | ready | 10/10 | passed |
+| 43 | Intussusception and Meckel's Diverticulectomy | ready | 10/10 | passed |
+| 44 | Resection of Small Intestine | ready | 10/10 | passed |
+| 45 | Resection of Small Intestine, Stapled | ready | 10/10 | passed |
+| 46 | Enteroenterostomy, Stapled | ready | 10/10 | passed |
+| 47 | Enterostomy | ready | 10/10 | passed |
+| 48 | Appendectomy | ready | 10/10 | passed |
+| 49 | Appendectomy, Laparoscopic | ready | 10/10 | passed |
+| 50 | Surgical Anatomy of Large Intestine | ready | 10/10 | passed |
+| 51 | Loop Ileostomy | ready | 10/10 | passed |
+| 52 | Transverse Colostomy | ready | 10/10 | passed |
+| 53 | Closure of Colostomy | ready | 10/10 | passed |
+| 54 | Colon Anastomosis, Stapled | ready | 10/10 | passed |
+| 55 | Colectomy, Right | ready | 10/10 | passed |
+| 56 | Colectomy, Right, Laparoscopic | ready | 10/10 | passed |
+| 57 | Colectomy, Left, End-to-End Anastomosis | ready | 10/10 | passed |
+| 58 | Colectomy, Left, Laparoscopic | ready | 10/10 | passed |
+| 59 | Abdominoperineal Resection | ready | 10/10 | passed |
+| 60 | Total Colectomy and Total Proctocolectomy | ready | 10/10 | passed |
+| 61 | Anterior Resection of Rectosigmoid: End-to-End Anastomosis | ready | 10/10 | passed |
+| 62 | Anterior Resection, Stapled | ready | 10/10 | passed |
+| 63 | Anterior Resection of Rectosigmoid: Side-to-End Anastomosis (Baker) | ready | 10/10 | passed |
+| 64 | Ileoanal Anastomosis | ready | 10/10 | passed |
+| 65 | Rectal Prolapse, Perineal Repair | ready | 10/10 | passed |
+| 66 | Rubber Banding and Excision of Hemorrhoids | ready | 10/10 | passed |
+| 67 | Perirectal Abscess, Fistula-in-Ano, and Anal Fissure | ready | 10/10 | passed |
+| 68 | Excision of Pilonidal Sinus | ready | 10/10 | passed |
+| 69 | Cholecystectomy, Laparoscopic | ready | 10/10 | passed |
+| 70 | Cholecystectomy, Open Retrograde Technique | ready | 10/10 | passed |
 | 71 | Common Bile Duct Exploration, Open | draft | — | pending |
 | 72 | Common Bile Duct Exploration, Transduodenal Technique | draft | — | pending |
 | 73 | Choledochoduodenostomy | draft | — | pending |

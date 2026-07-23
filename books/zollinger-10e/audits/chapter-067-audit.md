@@ -1,0 +1,28 @@
+# Chapter 067 evidence audit — Perirectal Abscess, Fistula-in-Ano, and Anal Fissure
+
+- Audit model: `validate-medical-chapter` v1
+- Audit date: 2026-07-23
+- Pre-revision score: **4/10**
+- Post-revision score: **10/10**
+- Current guidance checked: Gaertner 等（ASCRS），2022，Anorectal abscess and fistula guideline；Davids 等（ASCRS），2023，Anal fissure clinical practice guideline
+
+| Q# | Verification question | Source-grounded answer | Chapter finding | Verdict | Required correction | Sources |
+|---:|---|---|---|---|---|---|
+| 1 | Scope／definitions：本章術式的現代角色是否界定清楚？ | 本章涵蓋 abscess、fistula與 fissure三種不同疾病，必須分開診斷與治療。 | 原稿偏重 atlas歷史術式，未充分限定現代角色。 | SUPPORTED | 已改成 disease-與 indication-first定位。 | [Gaertner 等（ASCRS）](https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf); [Davids 等（ASCRS）](https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf) |
+| 2 | Anatomy／technique：關鍵技術與解剖安全點是否正確？ | Abscess充分切開引流；fistula依 sphincter involvement選 fistulotomy/seton/sphincter-sparing；fissure先 medical。 | 原稿有固定步驟，但缺少可泛用的 safety endpoint。 | SUPPORTED | 已改以 anatomy、perfusion、tension與可驗證 endpoint為主。 | [Gaertner 等（ASCRS）](https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf); [Davids 等（ASCRS）](https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf) |
+| 3 | Pathophysiology：是否避免把固定距離／時程當 universal rule？ | Fistulotomy、seton與 sphincter-sparing strategy依 sphincter involvement與 continence risk；cutting seton不是 routine default。 | 原稿多處把 atlas數字寫成常規。 | SUPPORTED | 已標示數字需依 anatomy、病因與 protocol調整。 | [Gaertner 等（ASCRS）](https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf); [Davids 等（ASCRS）](https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf) |
+| 4 | Red flags：是否有可操作的術後惡化警訊？ | Sepsis、rapidly progressive pain、immunosuppression、urinary retention或 spreading cellulitis需急速 source control與 escalation。 | 原稿的 complication escalation不足。 | SUPPORTED | 已加入立即評估與主要 differential。 | [Gaertner 等（ASCRS）](https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf); [Davids 等（ASCRS）](https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf) |
+| 5 | Diagnostic strategy：術前 work-up是否足以避免錯誤適應症？ | Abscess多靠 clinical exam；recurrent/complex fistula、Crohn disease或 occult abscess才選擇性 MRI/US；fissure需排除 atypical secondary causes。 | 原稿多直接進入手術步驟。 | SUPPORTED | 已加入 diagnosis、stage、physiology與 MDT評估。 | [Gaertner 等（ASCRS）](https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf); [Davids 等（ASCRS）](https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf) |
+| 6 | Risk classification：哪些病人較適合本術式？ | Simple low fistula且 continence風險低可 fistulotomy；complex disease需 staged/sphincter-sparing。 | 原稿 patient selection邊界不完整。 | SUPPORTED | 已補適用族群與決策條件。 | [Gaertner 等（ASCRS）](https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf); [Davids 等（ASCRS）](https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf) |
+| 7 | First-line management：是否交代現行 first-line與非手術替代？ | Acute abscess以 prompt incision and drainage為主；antibiotics只給 cellulitis、systemic illness或 immunosuppression。Chronic fissure先 medical therapy。 | 原稿容易把手術當第一線。 | SUPPORTED | 已把 contemporary first-line與 salvage位置寫清楚。 | [Gaertner 等（ASCRS）](https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf); [Davids 等（ASCRS）](https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf) |
+| 8 | Contraindication／bailout：何時不宜照原術式完成？ | Routine antibiotics不適合單純已引流 abscess；cutting seton不作 default。 | 原稿缺少停止、改術式或轉換條件。 | SUPPORTED | 已加入 contraindication-like limits與 bailout。 | [Gaertner 等（ASCRS）](https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf); [Davids 等（ASCRS）](https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf) |
+| 9 | Comparison／pearl：是否公平比較主要替代術式？ | LIS治 chronic fissure最有效但有 continence trade-off；botulinum/topical therapy較保守。 | 原稿比較偏技術描述，缺 outcome trade-off。 | SUPPORTED | 已加入 benefit、burden與共同決策。 | [Gaertner 等（ASCRS）](https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf); [Davids 等（ASCRS）](https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf) |
+| 10 | Post-2019 evidence：2019年後證據是否改變本章重點？ | 採ASCRS 2022 abscess/fistula與2023 fissure更新。 | 原稿引用不足、過時或與主題不完全相符。 | SUPPORTED | 已用 current guideline／systematic review更新並移除不相干來源。 | [Gaertner 等（ASCRS）](https://fascrs.org/getattachment/Healthcare-Providers/Education/Clinical-Practice-Guidelines/2022-AnorectalAbscess_FistulainAno_RectovaginalFistula-CPG.pdf); [Davids 等（ASCRS）](https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf) |
+
+## Corrections made
+
+把原稿的 atlas固定步驟重新定位為 technique context；補上現行適應症、術前分層、替代治療、bailout、術後 red flags與2019年後 evidence，並移除與主題不符或會誤導成 universal rule的敘述。
+
+## Residual uncertainty
+
+手術證據常受 center volume、surgeon expertise、patient selection與技術變異影響；部分 guideline recommendation為 conditional或低 certainty。**10/10只代表本章通過本專案 audit threshold，不是個別病人安全或臨床正確性的保證。**

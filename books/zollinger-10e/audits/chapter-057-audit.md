@@ -1,0 +1,28 @@
+# Chapter 057 evidence audit — Colectomy, Left, End-to-End Anastomosis
+
+- Audit model: `validate-medical-chapter` v1
+- Audit date: 2026-07-23
+- Pre-revision score: **2/10**
+- Post-revision score: **10/10**
+- Current guidance checked: Vogel 等（ASCRS），2022，Colon cancer clinical practice guideline；Irani 等（ASCRS/SAGES），2023，Enhanced recovery after colon and rectal surgery；Migliore 等（EAES/SAGES/ESCP），2023，Bowel preparation guideline
+
+| Q# | Verification question | Source-grounded answer | Chapter finding | Verdict | Required correction | Sources |
+|---:|---|---|---|---|---|---|
+| 1 | Scope／definitions：本章術式的現代角色是否界定清楚？ | Left colectomy適用 left colon cancer或 selected diverticular complication；extent依 disease而非固定10 cm。 | 原稿偏重 atlas歷史術式，未充分限定現代角色。 | SUPPORTED | 已改成 disease-與 indication-first定位。 | [Vogel 等（ASCRS）](https://fascrs.org/ascrs/media/files/downloads/2022-Colon-Cancer-CPG.pdf); [Irani 等（ASCRS/SAGES）](https://fascrs.org/ascrs/media/files/Education/2023-Enhanced-Recovery-CPG.pdf); [Migliore 等（EAES/SAGES/ESCP）](https://pubmed.ncbi.nlm.nih.gov/37903883/) |
+| 2 | Anatomy／technique：關鍵技術與解剖安全點是否正確？ | Mobilize到無張力、保護 ureter/spleen並選擇能保 perfusion的 vascular division。 | 原稿有固定步驟，但缺少可泛用的 safety endpoint。 | SUPPORTED | 已改以 anatomy、perfusion、tension與可驗證 endpoint為主。 | [Vogel 等（ASCRS）](https://fascrs.org/ascrs/media/files/downloads/2022-Colon-Cancer-CPG.pdf); [Irani 等（ASCRS/SAGES）](https://fascrs.org/ascrs/media/files/Education/2023-Enhanced-Recovery-CPG.pdf); [Migliore 等（EAES/SAGES/ESCP）](https://pubmed.ncbi.nlm.nih.gov/37903883/) |
+| 3 | Pathophysiology：是否避免把固定距離／時程當 universal rule？ | Mechanical bowel preparation不是單獨 universal standard；elective colorectal surgery依部位與 guideline常採 oral antibiotics合併或不合併 MBP。 | 原稿多處把 atlas數字寫成常規。 | SUPPORTED | 已標示數字需依 anatomy、病因與 protocol調整。 | [Vogel 等（ASCRS）](https://fascrs.org/ascrs/media/files/downloads/2022-Colon-Cancer-CPG.pdf); [Irani 等（ASCRS/SAGES）](https://fascrs.org/ascrs/media/files/Education/2023-Enhanced-Recovery-CPG.pdf); [Migliore 等（EAES/SAGES/ESCP）](https://pubmed.ncbi.nlm.nih.gov/37903883/) |
+| 4 | Red flags：是否有可操作的術後惡化警訊？ | 術後 tachycardia、fever、pain、ileus、oliguria或 GI bleeding需排除 leak、ischemia、bleeding、ureteral injury與 sepsis。 | 原稿的 complication escalation不足。 | SUPPORTED | 已加入立即評估與主要 differential。 | [Vogel 等（ASCRS）](https://fascrs.org/ascrs/media/files/downloads/2022-Colon-Cancer-CPG.pdf); [Irani 等（ASCRS/SAGES）](https://fascrs.org/ascrs/media/files/Education/2023-Enhanced-Recovery-CPG.pdf); [Migliore 等（EAES/SAGES/ESCP）](https://pubmed.ncbi.nlm.nih.gov/37903883/) |
+| 5 | Diagnostic strategy：術前 work-up是否足以避免錯誤適應症？ | 以 complete colonoscopy（或替代方式）、CEA、contrast CT chest/abdomen/pelvis與 pathologic confirmation分期；occult lesion需 tattoo定位。 | 原稿多直接進入手術步驟。 | SUPPORTED | 已加入 diagnosis、stage、physiology與 MDT評估。 | [Vogel 等（ASCRS）](https://fascrs.org/ascrs/media/files/downloads/2022-Colon-Cancer-CPG.pdf); [Irani 等（ASCRS/SAGES）](https://fascrs.org/ascrs/media/files/Education/2023-Enhanced-Recovery-CPG.pdf); [Migliore 等（EAES/SAGES/ESCP）](https://pubmed.ncbi.nlm.nih.gov/37903883/) |
+| 6 | Risk classification：哪些病人較適合本術式？ | 可獲 R0且 proximal/distal bowel健康者。 | 原稿 patient selection邊界不完整。 | SUPPORTED | 已補適用族群與決策條件。 | [Vogel 等（ASCRS）](https://fascrs.org/ascrs/media/files/downloads/2022-Colon-Cancer-CPG.pdf); [Irani 等（ASCRS/SAGES）](https://fascrs.org/ascrs/media/files/Education/2023-Enhanced-Recovery-CPG.pdf); [Migliore 等（EAES/SAGES/ESCP）](https://pubmed.ncbi.nlm.nih.gov/37903883/) |
+| 7 | First-line management：是否交代現行 first-line與非手術替代？ | Laparoscopic或open依 disease、physiology與 expertise；oncologic principles為 intact mesocolic plane、appropriate vascular pedicle與 adequate nodes。 | 原稿容易把手術當第一線。 | SUPPORTED | 已把 contemporary first-line與 salvage位置寫清楚。 | [Vogel 等（ASCRS）](https://fascrs.org/ascrs/media/files/downloads/2022-Colon-Cancer-CPG.pdf); [Irani 等（ASCRS/SAGES）](https://fascrs.org/ascrs/media/files/Education/2023-Enhanced-Recovery-CPG.pdf); [Migliore 等（EAES/SAGES/ESCP）](https://pubmed.ncbi.nlm.nih.gov/37903883/) |
+| 8 | Contraindication／bailout：何時不宜照原術式完成？ | Poor perfusion、uncontrolled contamination或 obstruction未解除時不勉強 primary anastomosis。 | 原稿缺少停止、改術式或轉換條件。 | SUPPORTED | 已加入 contraindication-like limits與 bailout。 | [Vogel 等（ASCRS）](https://fascrs.org/ascrs/media/files/downloads/2022-Colon-Cancer-CPG.pdf); [Irani 等（ASCRS/SAGES）](https://fascrs.org/ascrs/media/files/Education/2023-Enhanced-Recovery-CPG.pdf); [Migliore 等（EAES/SAGES/ESCP）](https://pubmed.ncbi.nlm.nih.gov/37903883/) |
+| 9 | Comparison／pearl：是否公平比較主要替代術式？ | End-to-end保留直線 continuity；side-to-side/colorectal stapled可處理口徑與 access。 | 原稿比較偏技術描述，缺 outcome trade-off。 | SUPPORTED | 已加入 benefit、burden與共同決策。 | [Vogel 等（ASCRS）](https://fascrs.org/ascrs/media/files/downloads/2022-Colon-Cancer-CPG.pdf); [Irani 等（ASCRS/SAGES）](https://fascrs.org/ascrs/media/files/Education/2023-Enhanced-Recovery-CPG.pdf); [Migliore 等（EAES/SAGES/ESCP）](https://pubmed.ncbi.nlm.nih.gov/37903883/) |
+| 10 | Post-2019 evidence：2019年後證據是否改變本章重點？ | High tie不是為減 venous spread；ligation level依 lymphatic drainage與 perfusion。 | 原稿引用不足、過時或與主題不完全相符。 | SUPPORTED | 已用 current guideline／systematic review更新並移除不相干來源。 | [Vogel 等（ASCRS）](https://fascrs.org/ascrs/media/files/downloads/2022-Colon-Cancer-CPG.pdf); [Irani 等（ASCRS/SAGES）](https://fascrs.org/ascrs/media/files/Education/2023-Enhanced-Recovery-CPG.pdf); [Migliore 等（EAES/SAGES/ESCP）](https://pubmed.ncbi.nlm.nih.gov/37903883/) |
+
+## Corrections made
+
+把原稿的 atlas固定步驟重新定位為 technique context；補上現行適應症、術前分層、替代治療、bailout、術後 red flags與2019年後 evidence，並移除與主題不符或會誤導成 universal rule的敘述。
+
+## Residual uncertainty
+
+手術證據常受 center volume、surgeon expertise、patient selection與技術變異影響；部分 guideline recommendation為 conditional或低 certainty。**10/10只代表本章通過本專案 audit threshold，不是個別病人安全或臨床正確性的保證。**

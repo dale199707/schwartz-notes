@@ -1,7 +1,7 @@
 # Medical Notes Library 專案完整交接
 
-- 最後更新：2026-07-22
-- 交接版本：v6（Zollinger Chapter 11–20 驗證完成；Chapter 6–20 待使用者決定提交與部署）
+- 最後更新：2026-07-23
+- 交接版本：v7（Zollinger Chapter 21–70 驗證完成；本批尚未提交、推送或部署）
 - 本機 repo：`/Users/tinrepin/Desktop/medical`
 - GitHub repo：`dale199707/schwartz-notes`
 - 正式網站：<https://dale199707.github.io/schwartz-notes/>
@@ -59,7 +59,7 @@ Claude 原稿預計放置位置：
 - `main` 與 `origin/main` 當時同步。
 - Schwartz 54 / 54 章完成，54 / 54 章通過 evidence audit。
 - ICU Book 53 / 53 章完成，53 / 53 章通過 evidence audit。
-- Zollinger Chapter 1–20 已完成，20 / 150 章通過 evidence audit；Chapter 5 有一張原創上腹動脈血流關係 SVG，Chapter 6–20 依使用者指示未新增圖片。
+- Zollinger Chapter 1–70 已完成，70 / 150 章通過 evidence audit；Chapter 5 有一張原創上腹動脈血流關係 SVG，Chapter 6–70 依使用者指示未新增圖片。
 - ICU Book 的書籍狀態已是 `complete`，網站選單不再顯示「整理中」。
 - 網站預設開啟 Schwartz Chapter 1。
 - 右側「詢問 AI」在首次載入時預設收合。
@@ -116,7 +116,7 @@ ICU Book 是下一本書應優先參考的資料夾模型。網站永遠讀取 `
 - 圖片授權紀錄：`books/zollinger-10e/figures/README.md`
 - Audit：`books/zollinger-10e/audits/`
 - Claude 規格：`books/zollinger-10e/CLAUDE_INSTRUCTIONS.md`
-- 狀態：網站骨架完成，Chapter 1–20 為 `ready` 且 20 / 150 `passed`；其餘 130 章待整理。Chapter 6–20 已在 `codex/zollinger-ch6-10-validation` 完成驗證，尚未合併或部署。
+- 狀態：網站骨架完成，Chapter 1–70 為 `ready` 且 70 / 150 `passed`；其餘 80 章待整理。Chapter 21–70 已在 `codex/zollinger-ch21-70-validation` 完成驗證，本批尚未提交、推送或部署。
 
 Zollinger 的原書手術圖可由工具從 PDF 轉成頁面 PNG 或抽出內嵌 JPEG；本機 `Zollinger_Images/` 已包含按 chapter 分類的裁切圖版與 `_INDEX.csv`，僅可供私人定位與理解。McGraw-Hill 版權頁禁止未經授權重製或散布，因此不得直接提交或放上 GitHub Pages；正式網站只使用 Public Domain、相容 Creative Commons、已取得授權或未仿製教材構圖的原創圖解。
 
@@ -435,11 +435,11 @@ Endpoints：
 
 ## 18. 下一個任務
 
-Schwartz 與 ICU Book 已完成；Zollinger Chapter 1–5 已完成驗證與首批部署，Chapter 6–20 已完成驗證並等待提交／部署。下一個合理任務是：
+Schwartz 與 ICU Book 已完成；Zollinger Chapter 1–20 已部署，Chapter 21–70 已完成驗證並等待使用者決定提交／部署。下一個合理任務是：
 
-1. 請 Claude 依 `books/zollinger-10e/CLAUDE_INSTRUCTIONS.md` 整理下一批（建議 Chapter 21–30），原稿仍放 `books/zollinger-10e/claude/`。
+1. 請 Claude 依 `books/zollinger-10e/CLAUDE_INSTRUCTIONS.md` 整理下一批（建議 Chapter 71–80），原稿仍放 `books/zollinger-10e/claude/`。
 2. Codex 逐章做格式整理、來源與臨床主張查核、十題 evidence audit，再同步到 `chapters/`。
-3. 若使用者之後要求圖片，再查看 `Zollinger/Zollinger_Images/` 作私人理解；未取得公開權利前不複製原書圖版。本輪 Chapter 11–20 未搜尋、設計或新增圖片。
+3. 若使用者之後要求圖片，再查看 `Zollinger/Zollinger_Images/` 作私人理解；未取得公開權利前不複製原書圖版。本輪 Chapter 21–70 未搜尋、設計、新增或掛載圖片。
 4. 每批更新 `readyChapterIds`、`audits/index.md`、README 與必要的合法圖片 manifest。
 5. 依使用者指示 commit／push 功能分支；部署 `main` 前仍須取得明確同意。
 
