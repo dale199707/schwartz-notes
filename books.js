@@ -29,7 +29,7 @@ window.MEDICAL_BOOKS = [
     publicationYear: 2016,
     languagePolicy: '繁體中文整理，醫學專有名詞保留英文',
     chapterCount: 150,
-    status: 'drafting',
+    status: 'complete',
     source: 'zollinger'
   }
 ];

@@ -2,7 +2,7 @@
 
 來源：E. Christopher Ellison、Robert M. Zollinger, Jr., *Zollinger's Atlas of Surgical Operations*, 10th Edition, McGraw-Hill Education, 2016。
 
-目前狀態：網站骨架與 150 章正式目錄完成；Chapter 1–70 已完成 Codex evidence audit，70 / 150 章通過。
+目前狀態：Chapter 1–150 已完成 Codex evidence audit，150 / 150 章通過；書籍狀態為 `complete`。
 
 ## 目錄
 
@@ -35,8 +35,11 @@
 
 ## 已完成內容
 
-- Chapter 1–70 已由 Claude 交付原稿，Codex 完成主張查核、修訂與每章十題 evidence audit。
-- Chapter 1–70 已同步至 `chapters/`，並列入 `readyChapterIds`。
+- Chapter 1–80 已由 Claude 交付原稿，Codex 完成主張查核、修訂與每章十題 evidence audit。
+- Chapter 81–150 因 Claude 額度用盡，由 Codex 依原書章節架構與近期 evidence 直接整理，並完成每章十題獨立 audit。
+- Chapter 1–150 已同步至 `chapters/`，並列入 `readyChapterIds`。
 - Chapter 6–20 依使用者指示未新增、搜尋或設計任何圖片。
 - Chapter 21–70 依使用者指示只處理文字與 evidence audit，未新增、搜尋、設計或掛載任何圖片。
+- Chapter 71–80 依使用者指示只處理文字與 evidence audit，未新增、搜尋、設計或掛載任何圖片。
+- Chapter 81–150 依使用者指示只處理文字與 evidence audit，未新增、搜尋、設計或掛載任何圖片。
 - Chapter 5 已加入一張本專案原創的上腹動脈血流關係 SVG；Chapter 1–4 的本機圖庫無對應原書圖版，因此本批未硬加無關圖片。

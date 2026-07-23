@@ -1,6 +1,6 @@
 # Zollinger's Atlas of Surgical Operations 10th Edition Evidence Audit
 
-目前進度：70 / 150 章通過。
+目前進度：150 / 150 章通過。
 
 | Chapter | Title | Draft status | Audit score | Audit status |
 |---:|---|---|---:|---|
@@ -74,85 +74,85 @@
 | 68 | Excision of Pilonidal Sinus | ready | 10/10 | passed |
 | 69 | Cholecystectomy, Laparoscopic | ready | 10/10 | passed |
 | 70 | Cholecystectomy, Open Retrograde Technique | ready | 10/10 | passed |
-| 71 | Common Bile Duct Exploration, Open | draft | — | pending |
-| 72 | Common Bile Duct Exploration, Transduodenal Technique | draft | — | pending |
-| 73 | Choledochoduodenostomy | draft | — | pending |
-| 74 | Cholecystectomy, Partial Cholecystectomy | draft | — | pending |
-| 75 | Cholecystostomy | draft | — | pending |
-| 76 | Choledochojejunostomy | draft | — | pending |
-| 77 | Local Resection of Hilar Tumor, Klatskin | draft | — | pending |
-| 78 | Biopsy of Liver, Open | draft | — | pending |
-| 79 | Anatomy and Resections of the Liver | draft | — | pending |
-| 80 | Local Resection of Hepatic Tumor (Nonanatomic) | draft | — | pending |
-| 81 | Right Hepatectomy (Segments 5, 6, 7, 8 ± Segment 1) | draft | — | pending |
-| 82 | Left Hepatectomy (Segments 2, 3, 4 ± Segment 1) | draft | — | pending |
-| 83 | Extended Right Hepatectomy (Segments 4, 5, 6, 7, 8 ± Segment 1) | draft | — | pending |
-| 84 | Drainage of Cyst or Pseudocyst of the Pancreas | draft | — | pending |
-| 85 | Pancreaticojejunostomy (Puestow–Gillesby Procedure) | draft | — | pending |
-| 86 | Resection of the Tail of the Pancreas | draft | — | pending |
-| 87 | Resection of the Tail of the Pancreas with Splenic Preservation, Laparoscopic | draft | — | pending |
-| 88 | Pancreaticoduodenectomy (Whipple Procedure) | draft | — | pending |
-| 89 | Total Pancreatectomy | draft | — | pending |
-| 90 | Splenectomy | draft | — | pending |
-| 91 | Splenectomy, Laparoscopic | draft | — | pending |
-| 92 | Splenic Conservation | draft | — | pending |
-| 93 | A Gynecologic Procedures Overview | draft | — | pending |
-| 94 | Total Abdominal Hysterectomy | draft | — | pending |
-| 95 | Salpingectomy—Oophorectomy | draft | — | pending |
-| 96 | Gynecologic System—Routine for Vaginal Procedures | draft | — | pending |
-| 97 | Diagnostic Techniques for Cervical Lesions—Dilatation and Curettage | draft | — | pending |
-| 98 | Ureteral Injury Repair | draft | — | pending |
-| 99 | Donor Nephrectomy, Laparoscopic | draft | — | pending |
-| 100 | Kidney Transplant | draft | — | pending |
-| 101 | Repair of Ventral Hernia, Laparoscopic | draft | — | pending |
-| 102 | Repair of Ventral Hernia, Open Component Parts Separation | draft | — | pending |
-| 103 | Repair of Umbilical Hernia | draft | — | pending |
-| 104 | Repair of Indirect Inguinal Hernia | draft | — | pending |
-| 105 | Repair of Indirect Inguinal Hernia (Shouldice) | draft | — | pending |
-| 106 | Repair of Direct Inguinal Hernia (McVay) | draft | — | pending |
-| 107 | Repair of Inguinal Hernia with Mesh (Lichtenstein) | draft | — | pending |
-| 108 | Repair of Inguinal Hernia with Mesh (Rutkow and Robbins) | draft | — | pending |
-| 109 | Repair of Femoral Hernia | draft | — | pending |
-| 110 | Repair of Femoral Hernia with Mesh | draft | — | pending |
-| 111 | Laparoscopic Anatomy of the Inguinal Region | draft | — | pending |
-| 112 | Repair of Inguinal Hernia, Laparoscopic Transabdominal Preperitoneal (TAPP) | draft | — | pending |
-| 113 | Repair of Inguinal Hernia, Laparoscopic Totally Extraperitoneal (TEP) | draft | — | pending |
-| 114 | Hydrocele Repair | draft | — | pending |
-| 115 | Thyroidectomy, Subtotal | draft | — | pending |
-| 116 | Parathyroidectomy | draft | — | pending |
-| 117 | Adrenalectomy, Bilateral | draft | — | pending |
-| 118 | Adrenalectomy, Left Laparoscopic | draft | — | pending |
-| 119 | Adrenalectomy, Right Laparoscopic | draft | — | pending |
-| 120 | Tracheotomy | draft | — | pending |
-| 121 | Tracheotomy, Percutaneous Dilational | draft | — | pending |
-| 122 | Radical Neck Dissection | draft | — | pending |
-| 123 | Zenker's Diverticulectomy | draft | — | pending |
-| 124 | Parotidectomy, Lateral Lobectomy | draft | — | pending |
-| 125 | Sentinel Lymph Node Dissection, Melanoma | draft | — | pending |
-| 126 | Breast Anatomy and Incisions | draft | — | pending |
-| 127 | Modified Radical Mastectomy | draft | — | pending |
-| 128 | Sentinel Lymph Node Dissection, Breast | draft | — | pending |
-| 129 | Axillary Dissection, Breast | draft | — | pending |
-| 130 | Skin Graft | draft | — | pending |
-| 131 | Carotid Endarterectomy | draft | — | pending |
-| 132 | Vascular Access, Arteriovenous Fistula | draft | — | pending |
-| 133 | Venous Access, Port Placement, Internal Jugular Vein | draft | — | pending |
-| 134 | Venous Access, Central Venous Catheter, Subclavian Vein | draft | — | pending |
-| 135 | Resection of Abdominal Aortic Aneurysm | draft | — | pending |
-| 136 | Aortofemoral Bypass | draft | — | pending |
-| 137 | Thromboembolectomy, Superior Mesenteric Artery | draft | — | pending |
-| 138 | Femorofemoral Bypass | draft | — | pending |
-| 139 | Femoropopliteal Reconstruction | draft | — | pending |
-| 140 | Saphenous Vein In Situ Arterial Bypass | draft | — | pending |
-| 141 | Thromboembolectomy, Femoral | draft | — | pending |
-| 142 | Inferior Vena Caval Filter Insertion | draft | — | pending |
-| 143 | Endovenous Laser Ablation of the Great Saphenous Vein and Stab Phlebectomy | draft | — | pending |
-| 144 | Shunting Procedures for Portal Hypertension | draft | — | pending |
-| 145 | Fasciotomy | draft | — | pending |
-| 146 | Escharotomy | draft | — | pending |
-| 147 | Principles of Amputation | draft | — | pending |
-| 148 | Amputation, Supracondylar | draft | — | pending |
-| 149 | Incision and Drainage of Infections of the Hand | draft | — | pending |
-| 150 | Suture of Tendon | draft | — | pending |
+| 71 | Common Bile Duct Exploration, Open | ready | 10/10 | passed |
+| 72 | Common Bile Duct Exploration, Transduodenal Technique | ready | 10/10 | passed |
+| 73 | Choledochoduodenostomy | ready | 10/10 | passed |
+| 74 | Cholecystectomy, Partial Cholecystectomy | ready | 10/10 | passed |
+| 75 | Cholecystostomy | ready | 10/10 | passed |
+| 76 | Choledochojejunostomy | ready | 10/10 | passed |
+| 77 | Local Resection of Hilar Tumor, Klatskin | ready | 10/10 | passed |
+| 78 | Biopsy of Liver, Open | ready | 10/10 | passed |
+| 79 | Anatomy and Resections of the Liver | ready | 10/10 | passed |
+| 80 | Local Resection of Hepatic Tumor (Nonanatomic) | ready | 10/10 | passed |
+| 81 | Right Hepatectomy (Segments 5, 6, 7, 8 ± Segment 1) | ready | 10/10 | passed |
+| 82 | Left Hepatectomy (Segments 2, 3, 4 ± Segment 1) | ready | 10/10 | passed |
+| 83 | Extended Right Hepatectomy (Segments 4, 5, 6, 7, 8 ± Segment 1) | ready | 10/10 | passed |
+| 84 | Drainage of Cyst or Pseudocyst of the Pancreas | ready | 10/10 | passed |
+| 85 | Pancreaticojejunostomy (Puestow–Gillesby Procedure) | ready | 10/10 | passed |
+| 86 | Resection of the Tail of the Pancreas | ready | 10/10 | passed |
+| 87 | Resection of the Tail of the Pancreas with Splenic Preservation, Laparoscopic | ready | 10/10 | passed |
+| 88 | Pancreaticoduodenectomy (Whipple Procedure) | ready | 10/10 | passed |
+| 89 | Total Pancreatectomy | ready | 10/10 | passed |
+| 90 | Splenectomy | ready | 10/10 | passed |
+| 91 | Splenectomy, Laparoscopic | ready | 10/10 | passed |
+| 92 | Splenic Conservation | ready | 10/10 | passed |
+| 93 | A Gynecologic Procedures Overview | ready | 10/10 | passed |
+| 94 | Total Abdominal Hysterectomy | ready | 10/10 | passed |
+| 95 | Salpingectomy—Oophorectomy | ready | 10/10 | passed |
+| 96 | Gynecologic System—Routine for Vaginal Procedures | ready | 10/10 | passed |
+| 97 | Diagnostic Techniques for Cervical Lesions—Dilatation and Curettage | ready | 10/10 | passed |
+| 98 | Ureteral Injury Repair | ready | 10/10 | passed |
+| 99 | Donor Nephrectomy, Laparoscopic | ready | 10/10 | passed |
+| 100 | Kidney Transplant | ready | 10/10 | passed |
+| 101 | Repair of Ventral Hernia, Laparoscopic | ready | 10/10 | passed |
+| 102 | Repair of Ventral Hernia, Open Component Parts Separation | ready | 10/10 | passed |
+| 103 | Repair of Umbilical Hernia | ready | 10/10 | passed |
+| 104 | Repair of Indirect Inguinal Hernia | ready | 10/10 | passed |
+| 105 | Repair of Indirect Inguinal Hernia (Shouldice) | ready | 10/10 | passed |
+| 106 | Repair of Direct Inguinal Hernia (McVay) | ready | 10/10 | passed |
+| 107 | Repair of Inguinal Hernia with Mesh (Lichtenstein) | ready | 10/10 | passed |
+| 108 | Repair of Inguinal Hernia with Mesh (Rutkow and Robbins) | ready | 10/10 | passed |
+| 109 | Repair of Femoral Hernia | ready | 10/10 | passed |
+| 110 | Repair of Femoral Hernia with Mesh | ready | 10/10 | passed |
+| 111 | Laparoscopic Anatomy of the Inguinal Region | ready | 10/10 | passed |
+| 112 | Repair of Inguinal Hernia, Laparoscopic Transabdominal Preperitoneal (TAPP) | ready | 10/10 | passed |
+| 113 | Repair of Inguinal Hernia, Laparoscopic Totally Extraperitoneal (TEP) | ready | 10/10 | passed |
+| 114 | Hydrocele Repair | ready | 10/10 | passed |
+| 115 | Thyroidectomy, Subtotal | ready | 10/10 | passed |
+| 116 | Parathyroidectomy | ready | 10/10 | passed |
+| 117 | Adrenalectomy, Bilateral | ready | 10/10 | passed |
+| 118 | Adrenalectomy, Left Laparoscopic | ready | 10/10 | passed |
+| 119 | Adrenalectomy, Right Laparoscopic | ready | 10/10 | passed |
+| 120 | Tracheotomy | ready | 10/10 | passed |
+| 121 | Tracheotomy, Percutaneous Dilational | ready | 10/10 | passed |
+| 122 | Radical Neck Dissection | ready | 10/10 | passed |
+| 123 | Zenker's Diverticulectomy | ready | 10/10 | passed |
+| 124 | Parotidectomy, Lateral Lobectomy | ready | 10/10 | passed |
+| 125 | Sentinel Lymph Node Dissection, Melanoma | ready | 10/10 | passed |
+| 126 | Breast Anatomy and Incisions | ready | 10/10 | passed |
+| 127 | Modified Radical Mastectomy | ready | 10/10 | passed |
+| 128 | Sentinel Lymph Node Dissection, Breast | ready | 10/10 | passed |
+| 129 | Axillary Dissection, Breast | ready | 10/10 | passed |
+| 130 | Skin Graft | ready | 10/10 | passed |
+| 131 | Carotid Endarterectomy | ready | 10/10 | passed |
+| 132 | Vascular Access, Arteriovenous Fistula | ready | 10/10 | passed |
+| 133 | Venous Access, Port Placement, Internal Jugular Vein | ready | 10/10 | passed |
+| 134 | Venous Access, Central Venous Catheter, Subclavian Vein | ready | 10/10 | passed |
+| 135 | Resection of Abdominal Aortic Aneurysm | ready | 10/10 | passed |
+| 136 | Aortofemoral Bypass | ready | 10/10 | passed |
+| 137 | Thromboembolectomy, Superior Mesenteric Artery | ready | 10/10 | passed |
+| 138 | Femorofemoral Bypass | ready | 10/10 | passed |
+| 139 | Femoropopliteal Reconstruction | ready | 10/10 | passed |
+| 140 | Saphenous Vein In Situ Arterial Bypass | ready | 10/10 | passed |
+| 141 | Thromboembolectomy, Femoral | ready | 10/10 | passed |
+| 142 | Inferior Vena Caval Filter Insertion | ready | 10/10 | passed |
+| 143 | Endovenous Laser Ablation of the Great Saphenous Vein and Stab Phlebectomy | ready | 10/10 | passed |
+| 144 | Shunting Procedures for Portal Hypertension | ready | 10/10 | passed |
+| 145 | Fasciotomy | ready | 10/10 | passed |
+| 146 | Escharotomy | ready | 10/10 | passed |
+| 147 | Principles of Amputation | ready | 10/10 | passed |
+| 148 | Amputation, Supracondylar | ready | 10/10 | passed |
+| 149 | Incision and Drainage of Infections of the Hand | ready | 10/10 | passed |
+| 150 | Suture of Tendon | ready | 10/10 | passed |
 
 > 每章完成內容後，須使用 `validate-medical-chapter` skill 提出十個獨立、可反證問題並逐題查核。只有 10/10 `SUPPORTED` 且來源有效，才可標為 `passed`。
