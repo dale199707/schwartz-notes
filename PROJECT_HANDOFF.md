@@ -1,7 +1,7 @@
 # Medical Notes Library 專案完整交接
 
 - 最後更新：2026-07-24
-- 交接版本：v15（Zollinger Chapter 141–150 由 Codex 撰寫並驗證完成；全書 150 / 150 `passed`；Chapter 71–150 尚未提交、推送或部署）
+- 交接版本：v17（repository 已由使用者改為 private；Zollinger 原書圖版完成 144 章／260 張對應，納入私人閉源版本）
 - 本機 repo：`/Users/tinrepin/Desktop/medical`
 - GitHub repo：`dale199707/schwartz-notes`
 - 正式網站：<https://dale199707.github.io/schwartz-notes/>
@@ -53,13 +53,13 @@ Claude 原稿預計放置位置：
 
 ## 3. 目前正式狀態
 
-2026-07-22 的已部署基準：
+2026-07-24 的已部署基準：
 
-- 正式 commit 與 GitHub Pages run 以 `main` 最新成功部署為準；本次交付將 Zollinger Chapter 1–5 併入正式網站。
-- `main` 與 `origin/main` 當時同步。
+- 正式 commit 為 `ffab2be`（`Complete Zollinger chapters 71-150`），GitHub Pages deployment 已成功。
+- `main` 與 `origin/main` 同步於 `ffab2be`。
 - Schwartz 54 / 54 章完成，54 / 54 章通過 evidence audit。
 - ICU Book 53 / 53 章完成，53 / 53 章通過 evidence audit。
-- Zollinger Chapter 1–150 已完成，150 / 150 章通過 evidence audit；Chapter 5 有一張原創上腹動脈血流關係 SVG，Chapter 6–150 依使用者指示未新增圖片。
+- Zollinger Chapter 1–150 已完成，150 / 150 章通過 evidence audit。私人版本另加入 144 章／260 張原書圖版；Chapter 5 同時保留原創上腹動脈血流關係 SVG。
 - ICU Book 的書籍狀態已是 `complete`，網站選單不再顯示「整理中」。
 - 網站預設開啟 Schwartz Chapter 1。
 - 右側「詢問 AI」在首次載入時預設收合。
@@ -68,7 +68,7 @@ Claude 原稿預計放置位置：
 
 接手時仍須重新以 Git 與正式網站確認，不可只相信本段日期。
 
-Zollinger 第三本書骨架與第一批內容先在 `codex/zollinger-10e-library` 完成；本次交付已取得使用者明確授權，可在驗證後合併並部署 `main`。
+Zollinger 全書內容已完成；原書圖版整合在 `codex/zollinger-private-images` 完成。使用者已以 GitHub 設定頁截圖確認 repository 為 private，並明確要求直接上傳私人版本。
 
 ## 4. 目前書籍
 
@@ -107,7 +107,10 @@ ICU Book 是下一本書應優先參考的資料夾模型。網站永遠讀取 `
 - 作者：E. Christopher Ellison、Robert M. Zollinger, Jr.
 - 章數：150（14 sections）
 - 本機教材：`Zollinger/Zollinger's Atlas of Surgical Operations 10th ed.pdf`（由 `*.pdf` 規則忽略，不得提交）
-- 本機原書圖版：`Zollinger/Zollinger_Images/`（由 `.gitignore` 排除，只供私人定位與理解，不得提交）
+- 本機原書圖版來源：`Zollinger/Zollinger_Images/`（由 `.gitignore` 排除）
+- 私人網站圖版：`books/zollinger-10e/private-figures/`（144 章、260 張 JPG）
+- 私人圖片 manifest：`books/zollinger-10e/private-figures.js`
+- 產生工具：`scripts/build-zollinger-private-figures.mjs`
 - Metadata：`books/zollinger-10e/book.json`
 - Claude 原稿：`books/zollinger-10e/claude/`
 - 網站正式 Markdown：`books/zollinger-10e/chapters/`
@@ -116,11 +119,13 @@ ICU Book 是下一本書應優先參考的資料夾模型。網站永遠讀取 `
 - 圖片授權紀錄：`books/zollinger-10e/figures/README.md`
 - Audit：`books/zollinger-10e/audits/`
 - Claude 規格：`books/zollinger-10e/CLAUDE_INSTRUCTIONS.md`
-- 狀態：正式內容完成，Chapter 1–150 為 `ready` 且 150 / 150 `passed`，書籍 metadata為 `complete`。Chapter 21–70 已由 commit `c8de670` 部署；Chapter 71–150 已在 `codex/zollinger-ch71-80-validation` 完成整理與驗證，尚未提交、推送或部署。
+- 狀態：正式內容完成，Chapter 1–150 為 `ready` 且 150 / 150 `passed`，書籍 metadata 為 `complete`。Chapter 71–150 已由 commit `ffab2be` 部署。
 
 Zollinger 的原書手術圖可由工具從 PDF 轉成頁面 PNG 或抽出內嵌 JPEG；本機 `Zollinger_Images/` 已包含按 chapter 分類的裁切圖版與 `_INDEX.csv`，僅可供私人定位與理解。McGraw-Hill 版權頁禁止未經授權重製或散布，因此不得直接提交或放上 GitHub Pages；正式網站只使用 Public Domain、相容 Creative Commons、已取得授權或未仿製教材構圖的原創圖解。
 
-Chapter 1–4 在本機 `Zollinger_Images/` 沒有對應圖版，因此未加入無關圖片。Chapter 5 的原書圖版只供核對；正式網站改用 `books/zollinger-10e/figures/chapter-005-upper-abdominal-arterial-map.svg`，其節點式構圖為本專案原創，授權紀錄見 `books/zollinger-10e/figures/README.md`。
+使用者於 2026-07-24 要求為未來的私人／閉源版本加入原書圖版。本機 `codex/zollinger-private-images` 已完成 Chapter 5–150 對應：Chapter 1–4、93、96 無圖，其餘 144 章共 260 張；Chapter 150 的來源資料夾雖名為 `Ch150_Index`，實際影像為 Suture of Tendon，已依內容正確對應。Chapter 5 保留原創 SVG，並在私人版本追加原書圖版。
+
+使用者已於 2026-07-24 以 GitHub 設定頁截圖確認 `dale199707/schwartz-notes` 為 private，並表示已自行檢查存取狀態、要求略過額外閘門直接上傳。整理後的 `private-figures.js` 與 `private-figures/` 可納入此私人 repository；原始 `Zollinger/Zollinger_Images/` 與 PDF 仍保持忽略。此 repository 不得再次改為 public，也不得將私人圖版發布到公開 Pages、其他公開 branch 或第三方網站。
 
 ## 5. 網站與服務架構
 
@@ -340,7 +345,8 @@ Endpoints：
 
 ## 13. 圖片與版權
 
-- 不得複製、截圖或上傳教材內受版權保護的圖片。
+- Public／可散布版本不得複製、截圖或上傳教材內受版權保護的圖片。
+- `books/zollinger-10e/private-figures/` 是使用者明確要求、只供私人閉源 repository 使用的例外；不得重新公開或分享。
 - 優先使用 Public Domain、CC BY、CC BY-SA 等允許使用的來源。
 - 新增圖片前必須確認原始來源授權。
 - Caption 保留作者、授權與來源連結。
@@ -428,17 +434,19 @@ Endpoints：
 4. 不要讓第三本書 chapter 1 覆蓋其他書 chapter 1 的 localStorage。
 5. 不要把 `ready` 寫成 `passed`；兩者含義不同。
 6. 不要大幅重構 Schwartz legacy 資料，除非使用者另行授權。
-7. 不要把教材 PDF、教材圖片、`.DS_Store` 或 secrets 加入 Git。
+7. 不要把教材 PDF、未整理的來源圖片、`.DS_Store` 或 secrets 加入 Git；`private-figures/` 只可存在於確認為 private 的 repository。
 8. 不要用 HTTP 200 取代內容核對；錯誤 landing page 仍是失效 reference。
 9. 不要在未確認正式目錄時自行猜 chapter title 或總章數。
 10. 不要在功能分支尚未驗證時直接 push `main`。
 
 ## 18. 下一個任務
 
-Schwartz、ICU Book 與 Zollinger 全書內容均已完成；Zollinger Chapter 1–70 已部署，Chapter 71–150 已完成驗證並等待使用者決定提交／部署。下一個合理任務是：
+Schwartz、ICU Book 與 Zollinger 全書內容均已完成；Zollinger 私人圖版亦完成。此次私人圖片提交必須維持下列結果：
 
-1. 完成 Chapter 71–150 的整批 loader、reference link與 browser regression驗證，保留既有 Schwartz／ICU內容。
-2. 本輪 Chapter 141–150 依使用者指示未搜尋、設計、新增或掛載圖片；未取得公開權利前仍不得複製 `Zollinger/Zollinger_Images/` 原書圖版。
-3. 依使用者明確指示後才 stage指定檔案、commit與 push；部署 `main` 前仍須再次取得明確同意。
+1. `private-figures/` 共 260 張 JPG，對應 144 個章節。
+2. Chapter 5 共兩張圖（原創 SVG + 私人原書圖版）、Chapter 88 九張、Chapter 150 一張。
+3. Chapter 1–4、93、96 沒有誤配圖片。
+4. 原始 PDF、`Zollinger/Zollinger_Images/`、`.DS_Store` 與 secrets 不得追蹤。
+5. Repository 必須持續保持 private；若未來要重新公開，必須先從完整 Git history 移除所有 `private-figures/` 內容，而不只是刪除目前工作樹檔案。
 
 處理 Zollinger 時必須保護 Schwartz 與 ICU Book 正式版本，不得重新做或大幅改寫既有兩本書。

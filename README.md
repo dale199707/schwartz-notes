@@ -18,7 +18,7 @@
 - `books/<bookId>/book.json`：每本書可獨立維護的 metadata。
 - 現有 `notes.js`、`notes-extra*.js`、`chapter-*.md` 與 `audits/`：保留為 Schwartz 正式資料來源，migration 期間不搬動。
 - ICU Book 的 53 章正式稿位於 `books/icu-book-5e/chapters/`；Claude 原稿保留於 `books/icu-book-5e/claude/`，Codex 完成查核、修訂與 evidence audit 後同步為網站版本。
-- Zollinger 的 metadata、150 章正式目錄、Claude 規格、圖片授權紀錄與 audit index 位於 `books/zollinger-10e/`；原書插圖受版權保護，不直接上傳，正式網站只採合法授權或原創圖解。
+- Zollinger 的 metadata、150 章正式目錄、Claude 規格、圖片 manifest 與 audit index 位於 `books/zollinger-10e/`。本 repository 已改為私人／閉源；`private-figures/` 內的原書圖版只限 repository 擁有者私人學習，不得重新公開、分享或散布。
 - 新書須建立自己的 chapters 與 audits；`ready` 表示可預覽，不等同驗證通過，只有完成十題 evidence audit 才可在 audit index 標為 `passed`。
 - AI request 會一併帶入 `bookId`、書名、edition、出版年份與章節背景。
 
