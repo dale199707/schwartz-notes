@@ -41,6 +41,10 @@
       && String(config.supabasePublishableKey || '').length > 20;
   }
 
+  function available() {
+    return configured() && Boolean(global.supabase?.createClient);
+  }
+
   function tableName() {
     return config.tableName || 'medical_note_state';
   }
@@ -141,16 +145,16 @@
     elements.syncNow.hidden = !signedIn;
     elements.user.hidden = !signedIn;
     elements.user.textContent = signedIn ? currentUser.email : '';
-    elements.loginForm.hidden = signedIn || !configured();
+    elements.loginForm.hidden = signedIn || !available();
     elements.signedInPanel.hidden = !signedIn;
-    elements.setupPanel.hidden = configured();
+    elements.setupPanel.hidden = available();
     if (signedIn) {
       elements.signedInEmail.textContent = currentUser.email || '已登入';
       setStatus('synced', '已登入，正在確認雲端資料…');
-    } else if (configured()) {
+    } else if (available()) {
       setStatus('local', '未登入；筆記目前只保存在這台裝置');
     } else {
-      setStatus('local', '雲端同步尚未設定；目前使用本機模式');
+      setStatus('local', '雲端同步目前不可用；目前使用本機模式');
     }
   }
 
@@ -450,7 +454,7 @@
     global.addEventListener('focus', syncAll);
     renderAccount();
 
-    if (!configured() || !global.supabase?.createClient) return;
+    if (!available()) return;
     client = global.supabase.createClient(
       config.supabaseUrl,
       config.supabasePublishableKey,
