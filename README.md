@@ -10,7 +10,18 @@
 
 網站預設開啟 Schwartz Chapter 1，右側「詢問 AI」預設收合。上方書籍選單會切換目前書籍；章節搜尋、完成度、重要標記、個人筆記與螢光標記皆以目前書籍為範圍。
 
-在「核心整理」或「Clinical pearl」選取文字後，可套用黃、綠、藍三種螢光標記；點擊既有標記可以改色或清除。個人筆記、重要標記與螢光標記只保存在目前瀏覽器，不會上傳。舊版 Schwartz 瀏覽器資料會自動複製到新的含 `bookId` 儲存鍵，舊鍵不會刪除。
+在「核心整理」或「Clinical pearl」選取文字後，可套用黃、綠、藍三種螢光標記；點擊既有標記可以改色或清除。未登入時，個人筆記、重要標記與螢光標記保存在目前瀏覽器；連接 Supabase 並以 Email Magic Link 登入後，三類資料會依帳號、書籍與章節同步至其他裝置。舊版 Schwartz 瀏覽器資料會自動複製到新的含 `bookId` 儲存鍵，舊鍵不會刪除。
+
+## 帳號與跨裝置同步
+
+- 網站內容可維持公開閱讀，不登入也能使用原有本機功能。
+- 登入採 Supabase Email Magic Link，不在網站保存使用者密碼。
+- 雲端表格以 Row Level Security 限制每位使用者只能讀寫自己的資料。
+- 本機資料仍是離線快取；離線變更會排隊，恢復連線後重試。
+- 第一次登入會保留既有 localStorage：雲端為空時上傳本機資料，新裝置本機為空時下載雲端資料。
+- 不同裝置同時修改造成衝突時，★取聯集、螢光標記合併，同章文字筆記保留兩個版本。
+
+啟用步驟與 SQL migration 位於 [`supabase/README.md`](supabase/README.md)。`sync-config.js` 只可填入 project URL 與瀏覽器用 publishable key；不得放入 service role key 或其他 secret。
 
 ## 多書架構
 
@@ -21,6 +32,9 @@
 - Zollinger 的 metadata、150 章正式目錄、Claude 規格、圖片 manifest 與 audit index 位於 `books/zollinger-10e/`。本 repository 已改為私人／閉源；`private-figures/` 內的原書圖版只限 repository 擁有者私人學習，不得重新公開、分享或散布。
 - 新書須建立自己的 chapters 與 audits；`ready` 表示可預覽，不等同驗證通過，只有完成十題 evidence audit 才可在 audit index 標為 `passed`。
 - AI request 會一併帶入 `bookId`、書名、edition、出版年份與章節背景。
+- `account-sync.js`：登入、離線 outbox、首次資料遷移與跨裝置同步。
+- `account-sync-core.js`：可獨立測試的資料合併與 fingerprint 邏輯。
+- `supabase/migrations/`：帳號同步資料表、RLS policy 與更新時間 trigger。
 
 ## 編輯規則
 
